@@ -45,9 +45,11 @@ def main() -> None:
         assert recommendation["officers"] >= 2
         assert recommendation["barricades"] >= 0
         assert recommendation["allocation_explanation"]
+        assert recommendation["officer_allocation_rationale"]
+        assert recommendation["barricade_allocation_rationale"]
         diversion = recommendation["diversion_advisory"]
         assert diversion["type"] == "diversion_plan"
-        assert 0 <= diversion["estimated_congestion_reduction"] <= 45
+        assert 0 <= diversion["estimated_congestion_reduction"] <= 35
         assert 0 <= diversion["diversion_confidence_score"] <= 95
         assert diversion["after_diversion_score"] <= diversion["before_diversion_score"]
         assert diversion["rationale"]
@@ -58,6 +60,11 @@ def main() -> None:
             assert 0 <= candidate["average_hotspot_density"] <= 1
             assert 0 <= candidate["closure_rate"] <= 1
             assert 0 <= candidate["diversion_score"] <= 100
+            assert candidate["count"] >= context["diversion_config"]["minimum_corridor_support"]
+            assert candidate["distance_km"] <= context["diversion_config"]["maximum_distance_km"]
+            assert candidate["tis_standard_deviation"] >= 0
+            if candidate["risk_reduction_percentage"] <= 0:
+                assert diversion["estimated_congestion_reduction"] == 0
         if score >= 80:
             assert category == "Critical"
         elif score >= 65:
@@ -68,10 +75,16 @@ def main() -> None:
             assert category == "Low"
 
     assert hotspots["clusters"], "Expected DBSCAN clusters"
-    planned = next(event for event in events if event["event_type"].lower() == "planned")
-    unplanned = next(event for event in events if event["event_type"].lower() == "unplanned")
-    assert planned["expected_attendance"] > unplanned["expected_attendance"]
-    assert planned["recommendation"]["officers"] > unplanned["recommendation"]["officers"]
+    attendance_expectations = {
+        "public_event": (20000, 30000),
+        "accident": (50, 100),
+        "vehicle_breakdown": (10, 20),
+        "water_logging": (0, 0),
+        "tree_fall": (0, 0),
+    }
+    for cause, expected in attendance_expectations.items():
+        event = next(item for item in events if item["event_cause"].lower() == cause)
+        assert (event["expected_attendance"], event["venue_capacity"]) == expected
     assert any(event["recommendation"]["diversion_advisory"]["primary_diversion_corridor"] for event in events)
     assert summary["data_source"].lower().find("instructor") >= 0
     assert context["scoring_version"] == "tis-v1-standard-library"

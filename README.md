@@ -13,6 +13,7 @@ GridSense AI turns the instructor-provided ASTraM event dataset into an operatio
 - Estimates event attendance and venue capacity from historical event type.
 - Dynamically recommends officers, barricades, patrol units, and response priority from attendance and operational risk factors.
 - Plans primary and secondary diversion corridors using local historical risk, hotspot density, closure resilience, zone density, and event proximity.
+- Compares four intervention strategies and recommends the lowest-risk operational scenario.
 - Renders a Mapbox-based Bengaluru operations map with heatmap and event layers.
 - Includes an offline copilot that answers from processed local dataset insights.
 
@@ -145,6 +146,7 @@ scripts\run-prod.cmd
 - Do not commit `.env.local`.
 - The app reads generated JSON files from `data/processed`.
 - The current version is a demo app using Next.js API routes, not FastAPI/PostgreSQL.
+- The post-event learning schema is documented for future integration; no feedback database is implemented.
 
 ## License
 

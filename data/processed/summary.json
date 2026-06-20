@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T09:59:57.403033+00:00",
+  "generated_at": "2026-06-20T10:23:26.612717+00:00",
   "data_source": "ASTraM instructor-provided anonymized event dataset only",
   "honesty_notice": "The dataset does not contain measured congestion, vehicle counts, travel time, or delay duration. Scores represent operational traffic impact risk.",
   "data_quality": {
@@ -589,8 +589,8 @@
       "row_index": 6893,
       "id": "FKID006893",
       "event_type": "unplanned",
-      "expected_attendance": 250,
-      "venue_capacity": 500,
+      "expected_attendance": 25,
+      "venue_capacity": 50,
       "event_scale": "Small",
       "latitude": 13.0991084,
       "longitude": 77.5971696,
@@ -696,8 +696,18 @@
         "patrol_units": 4,
         "response_priority": "Immediate intervention",
         "risk_category": "Critical",
+        "officer_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based officer units.",
+          "TIS 80.2 and 72.0 hours add 14 operational officer units.",
+          "Road closure adds 4 traffic-control officers."
+        ],
+        "barricade_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based barricade units.",
+          "Critical severity and hotspot exposure add 9 barricade units.",
+          "Road closure adds 3 perimeter barricades."
+        ],
         "allocation_explanation": [
-          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "25 expected attendees add 1 officer units and 1 barricade units.",
           "TIS 80.2 adds 5 officer units; critical severity adds 5 barricade units.",
           "Road closure adds 4 officers and 3 barricades.",
           "72.0 hours adds 9 officer units.",
@@ -717,31 +727,32 @@
         ],
         "diversion_advisory": {
           "type": "diversion_plan",
-          "message": "Route traffic primarily via Hennur Main Road, with ORR North 2 as secondary relief.",
+          "message": "Route traffic primarily via Tumkur Road, with ORR North 2 as secondary relief.",
           "avoid_corridor": "Bellary Road 2",
-          "primary_diversion_corridor": "Hennur Main Road",
+          "primary_diversion_corridor": "Tumkur Road",
           "secondary_diversion_corridor": "ORR North 2",
-          "estimated_congestion_reduction": 27.9,
-          "diversion_confidence_score": 64.2,
+          "estimated_congestion_reduction": 7.6,
+          "diversion_confidence_score": 46.6,
           "before_diversion_score": 80.2,
-          "after_diversion_score": 57.8,
+          "after_diversion_score": 74.1,
           "rationale": [
-            "Selected because corridor risk is 23.4% lower than affected corridor.",
-            "Candidate hotspot density is 0.0% with a 0.0% historical closure rate.",
-            "Composite score 74.5 balances historical risk, zone density, hotspot density, closure resilience, and 4.2 km proximity."
+            "Selected because corridor risk is 7.1% lower than affected corridor.",
+            "Candidate has 32 historical records, TIS deviation 3.4, and lies 11.0 km away.",
+            "Confidence 46.6% is derived independently from support, stability, and candidate quality."
           ],
           "candidate_corridors": [
             {
-              "corridor": "Hennur Main Road",
-              "average_tis": 43.1,
-              "count": 4,
-              "average_hotspot_density": 0.0,
-              "closure_rate": 0.0,
-              "latitude": 13.1102732,
-              "longitude": 77.6340292,
-              "diversion_score": 74.5,
-              "risk_reduction_percentage": 23.4,
-              "distance_km": 4.2
+              "corridor": "Tumkur Road",
+              "average_tis": 52.3,
+              "count": 32,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0312,
+              "tis_standard_deviation": 3.4106,
+              "latitude": 13.0425159,
+              "longitude": 77.5140631,
+              "diversion_score": 48.5,
+              "risk_reduction_percentage": 7.1,
+              "distance_km": 11.0
             },
             {
               "corridor": "ORR North 2",
@@ -749,9 +760,10 @@
               "count": 63,
               "average_hotspot_density": 1.0,
               "closure_rate": 0.0794,
+              "tis_standard_deviation": 5.6357,
               "latitude": 13.042103,
               "longitude": 77.55001,
-              "diversion_score": 48.1,
+              "diversion_score": 48.2,
               "risk_reduction_percentage": 9.2,
               "distance_km": 8.1
             },
@@ -761,9 +773,10 @@
               "count": 109,
               "average_hotspot_density": 1.0,
               "closure_rate": 0.0642,
+              "tis_standard_deviation": 5.4204,
               "latitude": 13.0285921,
               "longitude": 77.5867649,
-              "diversion_score": 47.6,
+              "diversion_score": 47.8,
               "risk_reduction_percentage": 5.2,
               "distance_km": 7.9
             }
@@ -775,9 +788,9 @@
       "row_index": 6647,
       "id": "FKID006647",
       "event_type": "planned",
-      "expected_attendance": 5000,
-      "venue_capacity": 7500,
-      "event_scale": "Large",
+      "expected_attendance": 25,
+      "venue_capacity": 50,
+      "event_scale": "Small",
       "latitude": 12.9887246,
       "longitude": 77.5741049,
       "end_latitude": 12.9875849,
@@ -877,13 +890,23 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 28,
-        "barricades": 15,
-        "patrol_units": 5,
+        "officers": 19,
+        "barricades": 11,
+        "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "officer_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based officer units.",
+          "TIS 77.2 and 72.0 hours add 13 operational officer units.",
+          "Road closure adds 4 traffic-control officers."
+        ],
+        "barricade_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based barricade units.",
+          "High severity and hotspot exposure add 7 barricade units.",
+          "Road closure adds 3 perimeter barricades."
+        ],
         "allocation_explanation": [
-          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "25 expected attendees add 1 officer units and 1 barricade units.",
           "TIS 77.2 adds 4 officer units; high severity adds 3 barricade units.",
           "Road closure adds 4 officers and 3 barricades.",
           "72.0 hours adds 9 officer units.",
@@ -903,55 +926,58 @@
         ],
         "diversion_advisory": {
           "type": "diversion_plan",
-          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
+          "message": "Route traffic primarily via Bellary Road 1, with CBD 2 as secondary relief.",
           "avoid_corridor": "Non-corridor",
-          "primary_diversion_corridor": "CBD 1",
-          "secondary_diversion_corridor": "Old Madras Road",
-          "estimated_congestion_reduction": 31.0,
-          "diversion_confidence_score": 48.4,
+          "primary_diversion_corridor": "Bellary Road 1",
+          "secondary_diversion_corridor": "CBD 2",
+          "estimated_congestion_reduction": 22.0,
+          "diversion_confidence_score": 67.4,
           "before_diversion_score": 77.2,
-          "after_diversion_score": 53.2,
+          "after_diversion_score": 60.2,
           "rationale": [
-            "Selected because corridor risk is 37.3% lower than affected corridor.",
-            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
-            "Composite score 49.2 balances historical risk, zone density, hotspot density, closure resilience, and 3.6 km proximity."
+            "Selected because corridor risk is 29.3% lower than affected corridor.",
+            "Candidate has 53 historical records, TIS deviation 3.0, and lies 1.3 km away.",
+            "Confidence 67.4% is derived independently from support, stability, and candidate quality."
           ],
           "candidate_corridors": [
-            {
-              "corridor": "CBD 1",
-              "average_tis": 48.4,
-              "count": 7,
-              "average_hotspot_density": 1.0,
-              "closure_rate": 0.0,
-              "latitude": 12.9809984,
-              "longitude": 77.6067277,
-              "diversion_score": 49.2,
-              "risk_reduction_percentage": 37.3,
-              "distance_km": 3.6
-            },
-            {
-              "corridor": "Old Madras Road",
-              "average_tis": 51.3,
-              "count": 18,
-              "average_hotspot_density": 1.0,
-              "closure_rate": 0.0,
-              "latitude": 12.9751618,
-              "longitude": 77.6123312,
-              "diversion_score": 47.7,
-              "risk_reduction_percentage": 33.5,
-              "distance_km": 4.4
-            },
             {
               "corridor": "Bellary Road 1",
               "average_tis": 54.6,
               "count": 53,
               "average_hotspot_density": 1.0,
               "closure_rate": 0.0189,
+              "tis_standard_deviation": 2.9768,
               "latitude": 12.9933494,
               "longitude": 77.5856178,
-              "diversion_score": 47.2,
+              "diversion_score": 48.6,
               "risk_reduction_percentage": 29.3,
               "distance_km": 1.3
+            },
+            {
+              "corridor": "CBD 2",
+              "average_tis": 53.3,
+              "count": 44,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0455,
+              "tis_standard_deviation": 4.3459,
+              "latitude": 12.9825909,
+              "longitude": 77.5958784,
+              "diversion_score": 47.5,
+              "risk_reduction_percentage": 31.0,
+              "distance_km": 2.5
+            },
+            {
+              "corridor": "Mysore Road",
+              "average_tis": 57.4,
+              "count": 190,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0842,
+              "tis_standard_deviation": 4.8726,
+              "latitude": 12.9636739,
+              "longitude": 77.5756136,
+              "diversion_score": 45.1,
+              "risk_reduction_percentage": 25.6,
+              "distance_km": 2.8
             }
           ]
         }
@@ -961,9 +987,9 @@
       "row_index": 6648,
       "id": "FKID006648",
       "event_type": "planned",
-      "expected_attendance": 5000,
-      "venue_capacity": 7500,
-      "event_scale": "Large",
+      "expected_attendance": 25,
+      "venue_capacity": 50,
+      "event_scale": "Small",
       "latitude": 12.9887246,
       "longitude": 77.5741049,
       "end_latitude": 12.9875849,
@@ -1063,13 +1089,23 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 28,
-        "barricades": 15,
-        "patrol_units": 5,
+        "officers": 19,
+        "barricades": 11,
+        "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "officer_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based officer units.",
+          "TIS 77.2 and 72.0 hours add 13 operational officer units.",
+          "Road closure adds 4 traffic-control officers."
+        ],
+        "barricade_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based barricade units.",
+          "High severity and hotspot exposure add 7 barricade units.",
+          "Road closure adds 3 perimeter barricades."
+        ],
         "allocation_explanation": [
-          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "25 expected attendees add 1 officer units and 1 barricade units.",
           "TIS 77.2 adds 4 officer units; high severity adds 3 barricade units.",
           "Road closure adds 4 officers and 3 barricades.",
           "72.0 hours adds 9 officer units.",
@@ -1089,55 +1125,58 @@
         ],
         "diversion_advisory": {
           "type": "diversion_plan",
-          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
+          "message": "Route traffic primarily via Bellary Road 1, with CBD 2 as secondary relief.",
           "avoid_corridor": "Non-corridor",
-          "primary_diversion_corridor": "CBD 1",
-          "secondary_diversion_corridor": "Old Madras Road",
-          "estimated_congestion_reduction": 31.0,
-          "diversion_confidence_score": 48.4,
+          "primary_diversion_corridor": "Bellary Road 1",
+          "secondary_diversion_corridor": "CBD 2",
+          "estimated_congestion_reduction": 22.0,
+          "diversion_confidence_score": 67.4,
           "before_diversion_score": 77.2,
-          "after_diversion_score": 53.2,
+          "after_diversion_score": 60.2,
           "rationale": [
-            "Selected because corridor risk is 37.3% lower than affected corridor.",
-            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
-            "Composite score 49.2 balances historical risk, zone density, hotspot density, closure resilience, and 3.6 km proximity."
+            "Selected because corridor risk is 29.3% lower than affected corridor.",
+            "Candidate has 53 historical records, TIS deviation 3.0, and lies 1.3 km away.",
+            "Confidence 67.4% is derived independently from support, stability, and candidate quality."
           ],
           "candidate_corridors": [
-            {
-              "corridor": "CBD 1",
-              "average_tis": 48.4,
-              "count": 7,
-              "average_hotspot_density": 1.0,
-              "closure_rate": 0.0,
-              "latitude": 12.9809984,
-              "longitude": 77.6067277,
-              "diversion_score": 49.2,
-              "risk_reduction_percentage": 37.3,
-              "distance_km": 3.6
-            },
-            {
-              "corridor": "Old Madras Road",
-              "average_tis": 51.3,
-              "count": 18,
-              "average_hotspot_density": 1.0,
-              "closure_rate": 0.0,
-              "latitude": 12.9751618,
-              "longitude": 77.6123312,
-              "diversion_score": 47.7,
-              "risk_reduction_percentage": 33.5,
-              "distance_km": 4.4
-            },
             {
               "corridor": "Bellary Road 1",
               "average_tis": 54.6,
               "count": 53,
               "average_hotspot_density": 1.0,
               "closure_rate": 0.0189,
+              "tis_standard_deviation": 2.9768,
               "latitude": 12.9933494,
               "longitude": 77.5856178,
-              "diversion_score": 47.2,
+              "diversion_score": 48.6,
               "risk_reduction_percentage": 29.3,
               "distance_km": 1.3
+            },
+            {
+              "corridor": "CBD 2",
+              "average_tis": 53.3,
+              "count": 44,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0455,
+              "tis_standard_deviation": 4.3459,
+              "latitude": 12.9825909,
+              "longitude": 77.5958784,
+              "diversion_score": 47.5,
+              "risk_reduction_percentage": 31.0,
+              "distance_km": 2.5
+            },
+            {
+              "corridor": "Mysore Road",
+              "average_tis": 57.4,
+              "count": 190,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0842,
+              "tis_standard_deviation": 4.8726,
+              "latitude": 12.9636739,
+              "longitude": 77.5756136,
+              "diversion_score": 45.1,
+              "risk_reduction_percentage": 25.6,
+              "distance_km": 2.8
             }
           ]
         }
@@ -1147,8 +1186,8 @@
       "row_index": 1670,
       "id": "FKID001670",
       "event_type": "unplanned",
-      "expected_attendance": 250,
-      "venue_capacity": 500,
+      "expected_attendance": 25,
+      "venue_capacity": 50,
       "event_scale": "Small",
       "latitude": 13.0977085,
       "longitude": 77.5984317,
@@ -1254,8 +1293,18 @@
         "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "officer_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based officer units.",
+          "TIS 77.1 and 72.0 hours add 13 operational officer units.",
+          "Road closure adds 4 traffic-control officers."
+        ],
+        "barricade_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based barricade units.",
+          "High severity and hotspot exposure add 7 barricade units.",
+          "Road closure adds 3 perimeter barricades."
+        ],
         "allocation_explanation": [
-          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "25 expected attendees add 1 officer units and 1 barricade units.",
           "TIS 77.1 adds 4 officer units; high severity adds 3 barricade units.",
           "Road closure adds 4 officers and 3 barricades.",
           "72.0 hours adds 9 officer units.",
@@ -1279,14 +1328,14 @@
           "avoid_corridor": "Bellary Road 2",
           "primary_diversion_corridor": "Airport New South Road",
           "secondary_diversion_corridor": "Hennur Main Road",
-          "estimated_congestion_reduction": 16.6,
-          "diversion_confidence_score": 57.5,
+          "estimated_congestion_reduction": 6.7,
+          "diversion_confidence_score": 42.1,
           "before_diversion_score": 77.1,
-          "after_diversion_score": 64.3,
+          "after_diversion_score": 71.9,
           "rationale": [
             "Selected because corridor risk is 5.7% lower than affected corridor.",
-            "Candidate hotspot density is 81.9% with a 4.5% historical closure rate.",
-            "Composite score 58.6 balances historical risk, zone density, hotspot density, closure resilience, and 9.3 km proximity."
+            "Candidate has 22 historical records, TIS deviation 4.0, and lies 9.3 km away.",
+            "Confidence 42.1% is derived independently from support, stability, and candidate quality."
           ],
           "candidate_corridors": [
             {
@@ -1295,9 +1344,10 @@
               "count": 22,
               "average_hotspot_density": 0.8194,
               "closure_rate": 0.0455,
+              "tis_standard_deviation": 3.9926,
               "latitude": 13.0188624,
               "longitude": 77.6283721,
-              "diversion_score": 58.6,
+              "diversion_score": 59.1,
               "risk_reduction_percentage": 5.7,
               "distance_km": 9.3
             },
@@ -1307,9 +1357,10 @@
               "count": 62,
               "average_hotspot_density": 0.8388,
               "closure_rate": 0.0806,
+              "tis_standard_deviation": 5.7895,
               "latitude": 13.0483749,
               "longitude": 77.6263797,
-              "diversion_score": 57.7,
+              "diversion_score": 57.6,
               "risk_reduction_percentage": 0.4,
               "distance_km": 6.3
             },
@@ -1319,9 +1370,10 @@
               "count": 148,
               "average_hotspot_density": 1.0,
               "closure_rate": 0.027,
+              "tis_standard_deviation": 3.23,
               "latitude": 13.0429179,
               "longitude": 77.5630693,
-              "diversion_score": 55.2,
+              "diversion_score": 56.2,
               "risk_reduction_percentage": 0.6,
               "distance_km": 7.2
             }
@@ -1333,9 +1385,9 @@
       "row_index": 7660,
       "id": "FKID007660",
       "event_type": "planned",
-      "expected_attendance": 5000,
-      "venue_capacity": 7500,
-      "event_scale": "Large",
+      "expected_attendance": 25,
+      "venue_capacity": 50,
+      "event_scale": "Small",
       "latitude": 12.9743854,
       "longitude": 77.5747985,
       "end_latitude": 12.9746882,
@@ -1435,13 +1487,23 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 28,
-        "barricades": 15,
-        "patrol_units": 5,
+        "officers": 19,
+        "barricades": 11,
+        "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "officer_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based officer units.",
+          "TIS 77.0 and 72.0 hours add 13 operational officer units.",
+          "Road closure adds 4 traffic-control officers."
+        ],
+        "barricade_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based barricade units.",
+          "High severity and hotspot exposure add 7 barricade units.",
+          "Road closure adds 3 perimeter barricades."
+        ],
         "allocation_explanation": [
-          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "25 expected attendees add 1 officer units and 1 barricade units.",
           "TIS 77.0 adds 4 officer units; high severity adds 3 barricade units.",
           "Road closure adds 4 officers and 3 barricades.",
           "72.0 hours adds 9 officer units.",
@@ -1461,55 +1523,58 @@
         ],
         "diversion_advisory": {
           "type": "diversion_plan",
-          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
+          "message": "Route traffic primarily via Bellary Road 1, with CBD 2 as secondary relief.",
           "avoid_corridor": "Non-corridor",
-          "primary_diversion_corridor": "CBD 1",
-          "secondary_diversion_corridor": "Old Madras Road",
-          "estimated_congestion_reduction": 30.9,
-          "diversion_confidence_score": 48.4,
+          "primary_diversion_corridor": "Bellary Road 1",
+          "secondary_diversion_corridor": "CBD 2",
+          "estimated_congestion_reduction": 21.9,
+          "diversion_confidence_score": 67.1,
           "before_diversion_score": 77.0,
-          "after_diversion_score": 53.2,
+          "after_diversion_score": 60.1,
           "rationale": [
-            "Selected because corridor risk is 37.1% lower than affected corridor.",
-            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
-            "Composite score 49.2 balances historical risk, zone density, hotspot density, closure resilience, and 3.5 km proximity."
+            "Selected because corridor risk is 29.1% lower than affected corridor.",
+            "Candidate has 53 historical records, TIS deviation 3.0, and lies 2.4 km away.",
+            "Confidence 67.1% is derived independently from support, stability, and candidate quality."
           ],
           "candidate_corridors": [
             {
-              "corridor": "CBD 1",
-              "average_tis": 48.4,
-              "count": 7,
+              "corridor": "Bellary Road 1",
+              "average_tis": 54.6,
+              "count": 53,
               "average_hotspot_density": 1.0,
-              "closure_rate": 0.0,
-              "latitude": 12.9809984,
-              "longitude": 77.6067277,
-              "diversion_score": 49.2,
-              "risk_reduction_percentage": 37.1,
-              "distance_km": 3.5
+              "closure_rate": 0.0189,
+              "tis_standard_deviation": 2.9768,
+              "latitude": 12.9933494,
+              "longitude": 77.5856178,
+              "diversion_score": 48.2,
+              "risk_reduction_percentage": 29.1,
+              "distance_km": 2.4
             },
             {
-              "corridor": "Old Madras Road",
-              "average_tis": 51.3,
-              "count": 18,
+              "corridor": "CBD 2",
+              "average_tis": 53.3,
+              "count": 44,
               "average_hotspot_density": 1.0,
-              "closure_rate": 0.0,
-              "latitude": 12.9751618,
-              "longitude": 77.6123312,
-              "diversion_score": 47.9,
-              "risk_reduction_percentage": 33.4,
-              "distance_km": 4.1
+              "closure_rate": 0.0455,
+              "tis_standard_deviation": 4.3459,
+              "latitude": 12.9825909,
+              "longitude": 77.5958784,
+              "diversion_score": 47.5,
+              "risk_reduction_percentage": 30.8,
+              "distance_km": 2.5
             },
             {
-              "corridor": "Bannerghata Road",
-              "average_tis": 51.0,
-              "count": 4,
+              "corridor": "Mysore Road",
+              "average_tis": 57.4,
+              "count": 190,
               "average_hotspot_density": 1.0,
-              "closure_rate": 0.0,
-              "latitude": 12.9307092,
-              "longitude": 77.6004631,
-              "diversion_score": 47.4,
-              "risk_reduction_percentage": 33.8,
-              "distance_km": 5.6
+              "closure_rate": 0.0842,
+              "tis_standard_deviation": 4.8726,
+              "latitude": 12.9636739,
+              "longitude": 77.5756136,
+              "diversion_score": 45.7,
+              "risk_reduction_percentage": 25.5,
+              "distance_km": 1.2
             }
           ]
         }
@@ -1519,9 +1584,9 @@
       "row_index": 2486,
       "id": "FKID002486",
       "event_type": "planned",
-      "expected_attendance": 5000,
-      "venue_capacity": 7500,
-      "event_scale": "Large",
+      "expected_attendance": 25,
+      "venue_capacity": 50,
+      "event_scale": "Small",
       "latitude": 12.9832468,
       "longitude": 77.5771577,
       "end_latitude": 12.9810302,
@@ -1621,13 +1686,23 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 28,
-        "barricades": 15,
-        "patrol_units": 5,
+        "officers": 19,
+        "barricades": 11,
+        "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "officer_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based officer units.",
+          "TIS 76.8 and 72.0 hours add 13 operational officer units.",
+          "Road closure adds 4 traffic-control officers."
+        ],
+        "barricade_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based barricade units.",
+          "High severity and hotspot exposure add 7 barricade units.",
+          "Road closure adds 3 perimeter barricades."
+        ],
         "allocation_explanation": [
-          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "25 expected attendees add 1 officer units and 1 barricade units.",
           "TIS 76.8 adds 4 officer units; high severity adds 3 barricade units.",
           "Road closure adds 4 officers and 3 barricades.",
           "72.0 hours adds 9 officer units.",
@@ -1647,55 +1722,58 @@
         ],
         "diversion_advisory": {
           "type": "diversion_plan",
-          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
+          "message": "Route traffic primarily via Bellary Road 1, with CBD 2 as secondary relief.",
           "avoid_corridor": "Non-corridor",
-          "primary_diversion_corridor": "CBD 1",
-          "secondary_diversion_corridor": "Old Madras Road",
-          "estimated_congestion_reduction": 30.9,
-          "diversion_confidence_score": 48.5,
+          "primary_diversion_corridor": "Bellary Road 1",
+          "secondary_diversion_corridor": "CBD 2",
+          "estimated_congestion_reduction": 21.8,
+          "diversion_confidence_score": 67.2,
           "before_diversion_score": 76.8,
-          "after_diversion_score": 53.1,
+          "after_diversion_score": 60.1,
           "rationale": [
-            "Selected because corridor risk is 37.0% lower than affected corridor.",
-            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
-            "Composite score 49.4 balances historical risk, zone density, hotspot density, closure resilience, and 3.2 km proximity."
+            "Selected because corridor risk is 28.9% lower than affected corridor.",
+            "Candidate has 53 historical records, TIS deviation 3.0, and lies 1.4 km away.",
+            "Confidence 67.2% is derived independently from support, stability, and candidate quality."
           ],
           "candidate_corridors": [
-            {
-              "corridor": "CBD 1",
-              "average_tis": 48.4,
-              "count": 7,
-              "average_hotspot_density": 1.0,
-              "closure_rate": 0.0,
-              "latitude": 12.9809984,
-              "longitude": 77.6067277,
-              "diversion_score": 49.4,
-              "risk_reduction_percentage": 37.0,
-              "distance_km": 3.2
-            },
-            {
-              "corridor": "Old Madras Road",
-              "average_tis": 51.3,
-              "count": 18,
-              "average_hotspot_density": 1.0,
-              "closure_rate": 0.0,
-              "latitude": 12.9751618,
-              "longitude": 77.6123312,
-              "diversion_score": 47.9,
-              "risk_reduction_percentage": 33.2,
-              "distance_km": 3.9
-            },
             {
               "corridor": "Bellary Road 1",
               "average_tis": 54.6,
               "count": 53,
               "average_hotspot_density": 1.0,
               "closure_rate": 0.0189,
+              "tis_standard_deviation": 2.9768,
               "latitude": 12.9933494,
               "longitude": 77.5856178,
-              "diversion_score": 47.2,
+              "diversion_score": 48.5,
               "risk_reduction_percentage": 28.9,
               "distance_km": 1.4
+            },
+            {
+              "corridor": "CBD 2",
+              "average_tis": 53.3,
+              "count": 44,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0455,
+              "tis_standard_deviation": 4.3459,
+              "latitude": 12.9825909,
+              "longitude": 77.5958784,
+              "diversion_score": 47.7,
+              "risk_reduction_percentage": 30.6,
+              "distance_km": 2.0
+            },
+            {
+              "corridor": "Mysore Road",
+              "average_tis": 57.4,
+              "count": 190,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0842,
+              "tis_standard_deviation": 4.8726,
+              "latitude": 12.9636739,
+              "longitude": 77.5756136,
+              "diversion_score": 45.3,
+              "risk_reduction_percentage": 25.3,
+              "distance_km": 2.2
             }
           ]
         }
@@ -1705,9 +1783,9 @@
       "row_index": 4711,
       "id": "FKID004711",
       "event_type": "planned",
-      "expected_attendance": 5000,
-      "venue_capacity": 7500,
-      "event_scale": "Large",
+      "expected_attendance": 20000,
+      "venue_capacity": 30000,
+      "event_scale": "Mega",
       "latitude": 12.990028,
       "longitude": 77.4871935,
       "end_latitude": 12.989977,
@@ -1807,13 +1885,23 @@
         "Longer estimated event duration raises deployment and barricading needs."
       ],
       "recommendation": {
-        "officers": 27,
-        "barricades": 15,
-        "patrol_units": 5,
+        "officers": 57,
+        "barricades": 30,
+        "patrol_units": 10,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "officer_allocation_rationale": [
+          "20,000 expected attendees require 40 attendance-based officer units.",
+          "TIS 76.7 and 61.0 hours add 12 operational officer units.",
+          "Road closure adds 4 traffic-control officers."
+        ],
+        "barricade_allocation_rationale": [
+          "20,000 expected attendees require 20 attendance-based barricade units.",
+          "High severity and hotspot exposure add 7 barricade units.",
+          "Road closure adds 3 perimeter barricades."
+        ],
         "allocation_explanation": [
-          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "20,000 expected attendees add 40 officer units and 20 barricade units.",
           "TIS 76.7 adds 4 officer units; high severity adds 3 barricade units.",
           "Road closure adds 4 officers and 3 barricades.",
           "61.0 hours adds 8 officer units.",
@@ -1833,43 +1921,45 @@
         ],
         "diversion_advisory": {
           "type": "diversion_plan",
-          "message": "Route traffic primarily via Magadi Road, with Tumkur Road as secondary relief.",
+          "message": "Route traffic primarily via Tumkur Road, with Magadi Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
-          "primary_diversion_corridor": "Magadi Road",
-          "secondary_diversion_corridor": "Tumkur Road",
-          "estimated_congestion_reduction": 27.9,
-          "diversion_confidence_score": 57.9,
+          "primary_diversion_corridor": "Tumkur Road",
+          "secondary_diversion_corridor": "Magadi Road",
+          "estimated_congestion_reduction": 23.3,
+          "diversion_confidence_score": 86.7,
           "before_diversion_score": 76.7,
-          "after_diversion_score": 55.3,
+          "after_diversion_score": 58.8,
           "rationale": [
-            "Selected because corridor risk is 31.0% lower than affected corridor.",
-            "Candidate hotspot density is 100.0% with a 7.4% historical closure rate.",
-            "Composite score 49.4 balances historical risk, zone density, hotspot density, closure resilience, and 2.5 km proximity."
+            "Selected because corridor risk is 31.2% lower than affected corridor.",
+            "Candidate has 126 historical records, TIS deviation 2.6, and lies 6.7 km away.",
+            "Confidence 86.7% is derived independently from support, stability, and candidate quality."
           ],
           "candidate_corridors": [
-            {
-              "corridor": "Magadi Road",
-              "average_tis": 52.9,
-              "count": 54,
-              "average_hotspot_density": 1.0,
-              "closure_rate": 0.0741,
-              "latitude": 12.9881258,
-              "longitude": 77.509846,
-              "diversion_score": 49.4,
-              "risk_reduction_percentage": 31.0,
-              "distance_km": 2.5
-            },
             {
               "corridor": "Tumkur Road",
               "average_tis": 52.8,
               "count": 126,
               "average_hotspot_density": 0.9921,
               "closure_rate": 0.0079,
+              "tis_standard_deviation": 2.6311,
               "latitude": 13.0329453,
               "longitude": 77.5310219,
-              "diversion_score": 49.2,
+              "diversion_score": 50.6,
               "risk_reduction_percentage": 31.2,
               "distance_km": 6.7
+            },
+            {
+              "corridor": "Magadi Road",
+              "average_tis": 52.9,
+              "count": 54,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0741,
+              "tis_standard_deviation": 5.1688,
+              "latitude": 12.9881258,
+              "longitude": 77.509846,
+              "diversion_score": 49.9,
+              "risk_reduction_percentage": 31.0,
+              "distance_km": 2.5
             },
             {
               "corridor": "Mysore Road",
@@ -1877,9 +1967,10 @@
               "count": 55,
               "average_hotspot_density": 0.7821,
               "closure_rate": 0.1818,
+              "tis_standard_deviation": 7.8631,
               "latitude": 12.9316981,
               "longitude": 77.5103993,
-              "diversion_score": 49.2,
+              "diversion_score": 48.9,
               "risk_reduction_percentage": 29.1,
               "distance_km": 7.0
             }
@@ -1891,8 +1982,8 @@
       "row_index": 7729,
       "id": "FKID007729",
       "event_type": "unplanned",
-      "expected_attendance": 250,
-      "venue_capacity": 500,
+      "expected_attendance": 25,
+      "venue_capacity": 50,
       "event_scale": "Small",
       "latitude": 13.0460503,
       "longitude": 77.5560309,
@@ -1998,8 +2089,18 @@
         "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "officer_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based officer units.",
+          "TIS 76.4 and 72.0 hours add 13 operational officer units.",
+          "Road closure adds 4 traffic-control officers."
+        ],
+        "barricade_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based barricade units.",
+          "High severity and hotspot exposure add 7 barricade units.",
+          "Road closure adds 3 perimeter barricades."
+        ],
         "allocation_explanation": [
-          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "25 expected attendees add 1 officer units and 1 barricade units.",
           "TIS 76.4 adds 4 officer units; high severity adds 3 barricade units.",
           "Road closure adds 4 officers and 3 barricades.",
           "72.0 hours adds 9 officer units.",
@@ -2019,41 +2120,30 @@
         ],
         "diversion_advisory": {
           "type": "diversion_plan",
-          "message": "Route traffic primarily via Hennur Main Road, with Tumkur Road as secondary relief.",
+          "message": "Route traffic primarily via Tumkur Road, with Bellary Road 1 as secondary relief.",
           "avoid_corridor": "ORR North 2",
-          "primary_diversion_corridor": "Hennur Main Road",
-          "secondary_diversion_corridor": "Tumkur Road",
-          "estimated_congestion_reduction": 23.6,
-          "diversion_confidence_score": 62.4,
+          "primary_diversion_corridor": "Tumkur Road",
+          "secondary_diversion_corridor": "Bellary Road 1",
+          "estimated_congestion_reduction": 0.0,
+          "diversion_confidence_score": 44.5,
           "before_diversion_score": 76.4,
-          "after_diversion_score": 58.4,
+          "after_diversion_score": 76.4,
           "rationale": [
-            "Selected because corridor risk is 15.7% lower than affected corridor.",
-            "Candidate hotspot density is 0.0% with a 0.0% historical closure rate.",
-            "Composite score 71.7 balances historical risk, zone density, hotspot density, closure resilience, and 11.1 km proximity."
+            "Selected on composite resilience despite corridor risk being 2.3% higher than affected corridor.",
+            "Candidate has 32 historical records, TIS deviation 3.4, and lies 4.6 km away.",
+            "Confidence 44.5% is derived independently from support, stability, and candidate quality."
           ],
           "candidate_corridors": [
-            {
-              "corridor": "Hennur Main Road",
-              "average_tis": 43.1,
-              "count": 4,
-              "average_hotspot_density": 0.0,
-              "closure_rate": 0.0,
-              "latitude": 13.1102732,
-              "longitude": 77.6340292,
-              "diversion_score": 71.7,
-              "risk_reduction_percentage": 15.7,
-              "distance_km": 11.1
-            },
             {
               "corridor": "Tumkur Road",
               "average_tis": 52.3,
               "count": 32,
               "average_hotspot_density": 1.0,
               "closure_rate": 0.0312,
+              "tis_standard_deviation": 3.4106,
               "latitude": 13.0425159,
               "longitude": 77.5140631,
-              "diversion_score": 50.0,
+              "diversion_score": 51.1,
               "risk_reduction_percentage": -2.3,
               "distance_km": 4.6
             },
@@ -2063,11 +2153,25 @@
               "count": 109,
               "average_hotspot_density": 1.0,
               "closure_rate": 0.0642,
+              "tis_standard_deviation": 5.4204,
               "latitude": 13.0285921,
               "longitude": 77.5867649,
-              "diversion_score": 49.2,
+              "diversion_score": 49.5,
               "risk_reduction_percentage": -4.5,
               "distance_km": 3.9
+            },
+            {
+              "corridor": "Bellary Road 2",
+              "average_tis": 56.3,
+              "count": 118,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0339,
+              "tis_standard_deviation": 4.0655,
+              "latitude": 13.1070355,
+              "longitude": 77.6029678,
+              "diversion_score": 47.7,
+              "risk_reduction_percentage": -10.2,
+              "distance_km": 8.5
             }
           ]
         }
@@ -2077,8 +2181,8 @@
       "row_index": 7189,
       "id": "FKID007189",
       "event_type": "unplanned",
-      "expected_attendance": 250,
-      "venue_capacity": 500,
+      "expected_attendance": 0,
+      "venue_capacity": 0,
       "event_scale": "Small",
       "latitude": 13.1008567,
       "longitude": 77.582507,
@@ -2179,13 +2283,23 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 19,
-        "barricades": 11,
-        "patrol_units": 4,
+        "officers": 18,
+        "barricades": 10,
+        "patrol_units": 3,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "officer_allocation_rationale": [
+          "0 expected attendees require 0 attendance-based officer units.",
+          "TIS 76.3 and 72.0 hours add 13 operational officer units.",
+          "Road closure adds 4 traffic-control officers."
+        ],
+        "barricade_allocation_rationale": [
+          "0 expected attendees require 0 attendance-based barricade units.",
+          "High severity and hotspot exposure add 7 barricade units.",
+          "Road closure adds 3 perimeter barricades."
+        ],
         "allocation_explanation": [
-          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "0 expected attendees add 0 officer units and 0 barricade units.",
           "TIS 76.3 adds 4 officer units; high severity adds 3 barricade units.",
           "Road closure adds 4 officers and 3 barricades.",
           "72.0 hours adds 9 officer units.",
@@ -2205,43 +2319,45 @@
         ],
         "diversion_advisory": {
           "type": "diversion_plan",
-          "message": "Route traffic primarily via Hennur Main Road, with Bellary Road 2 as secondary relief.",
+          "message": "Route traffic primarily via Bellary Road 2, with Tumkur Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
-          "primary_diversion_corridor": "Hennur Main Road",
-          "secondary_diversion_corridor": "Bellary Road 2",
-          "estimated_congestion_reduction": 37.8,
-          "diversion_confidence_score": 63.8,
+          "primary_diversion_corridor": "Bellary Road 2",
+          "secondary_diversion_corridor": "Tumkur Road",
+          "estimated_congestion_reduction": 20.0,
+          "diversion_confidence_score": 82.9,
           "before_diversion_score": 76.3,
-          "after_diversion_score": 47.4,
+          "after_diversion_score": 61.0,
           "rationale": [
-            "Selected because corridor risk is 43.5% lower than affected corridor.",
-            "Candidate hotspot density is 0.0% with a 0.0% historical closure rate.",
-            "Composite score 73.9 balances historical risk, zone density, hotspot density, closure resilience, and 5.7 km proximity."
+            "Selected because corridor risk is 26.2% lower than affected corridor.",
+            "Candidate has 118 historical records, TIS deviation 4.1, and lies 2.3 km away.",
+            "Confidence 82.9% is derived independently from support, stability, and candidate quality."
           ],
           "candidate_corridors": [
-            {
-              "corridor": "Hennur Main Road",
-              "average_tis": 43.1,
-              "count": 4,
-              "average_hotspot_density": 0.0,
-              "closure_rate": 0.0,
-              "latitude": 13.1102732,
-              "longitude": 77.6340292,
-              "diversion_score": 73.9,
-              "risk_reduction_percentage": 43.5,
-              "distance_km": 5.7
-            },
             {
               "corridor": "Bellary Road 2",
               "average_tis": 56.3,
               "count": 118,
               "average_hotspot_density": 1.0,
               "closure_rate": 0.0339,
+              "tis_standard_deviation": 4.0655,
               "latitude": 13.1070355,
               "longitude": 77.6029678,
-              "diversion_score": 49.2,
+              "diversion_score": 50.2,
               "risk_reduction_percentage": 26.2,
               "distance_km": 2.3
+            },
+            {
+              "corridor": "Tumkur Road",
+              "average_tis": 52.3,
+              "count": 32,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0312,
+              "tis_standard_deviation": 3.4106,
+              "latitude": 13.0425159,
+              "longitude": 77.5140631,
+              "diversion_score": 49.0,
+              "risk_reduction_percentage": 31.5,
+              "distance_km": 9.9
             },
             {
               "corridor": "ORR North 2",
@@ -2249,9 +2365,10 @@
               "count": 63,
               "average_hotspot_density": 1.0,
               "closure_rate": 0.0794,
+              "tis_standard_deviation": 5.6357,
               "latitude": 13.042103,
               "longitude": 77.55001,
-              "diversion_score": 48.4,
+              "diversion_score": 48.5,
               "risk_reduction_percentage": 33.0,
               "distance_km": 7.4
             }
@@ -2263,9 +2380,9 @@
       "row_index": 894,
       "id": "FKID000894",
       "event_type": "planned",
-      "expected_attendance": 5000,
-      "venue_capacity": 7500,
-      "event_scale": "Large",
+      "expected_attendance": 25,
+      "venue_capacity": 50,
+      "event_scale": "Small",
       "latitude": 12.985061,
       "longitude": 77.5721347,
       "end_latitude": 12.9895606,
@@ -2365,13 +2482,23 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 28,
-        "barricades": 15,
-        "patrol_units": 5,
+        "officers": 19,
+        "barricades": 11,
+        "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "officer_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based officer units.",
+          "TIS 76.1 and 72.0 hours add 13 operational officer units.",
+          "Road closure adds 4 traffic-control officers."
+        ],
+        "barricade_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based barricade units.",
+          "High severity and hotspot exposure add 7 barricade units.",
+          "Road closure adds 3 perimeter barricades."
+        ],
         "allocation_explanation": [
-          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "25 expected attendees add 1 officer units and 1 barricade units.",
           "TIS 76.1 adds 4 officer units; high severity adds 3 barricade units.",
           "Road closure adds 4 officers and 3 barricades.",
           "72.0 hours adds 9 officer units.",
@@ -2391,55 +2518,58 @@
         ],
         "diversion_advisory": {
           "type": "diversion_plan",
-          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
+          "message": "Route traffic primarily via Bellary Road 1, with CBD 2 as secondary relief.",
           "avoid_corridor": "Non-corridor",
-          "primary_diversion_corridor": "CBD 1",
-          "secondary_diversion_corridor": "Old Madras Road",
-          "estimated_congestion_reduction": 30.6,
-          "diversion_confidence_score": 48.3,
+          "primary_diversion_corridor": "Bellary Road 1",
+          "secondary_diversion_corridor": "CBD 2",
+          "estimated_congestion_reduction": 21.4,
+          "diversion_confidence_score": 66.9,
           "before_diversion_score": 76.1,
-          "after_diversion_score": 52.8,
+          "after_diversion_score": 59.8,
           "rationale": [
-            "Selected because corridor risk is 36.4% lower than affected corridor.",
-            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
-            "Composite score 49.1 balances historical risk, zone density, hotspot density, closure resilience, and 3.8 km proximity."
+            "Selected because corridor risk is 28.3% lower than affected corridor.",
+            "Candidate has 53 historical records, TIS deviation 3.0, and lies 1.7 km away.",
+            "Confidence 66.9% is derived independently from support, stability, and candidate quality."
           ],
           "candidate_corridors": [
-            {
-              "corridor": "CBD 1",
-              "average_tis": 48.4,
-              "count": 7,
-              "average_hotspot_density": 1.0,
-              "closure_rate": 0.0,
-              "latitude": 12.9809984,
-              "longitude": 77.6067277,
-              "diversion_score": 49.1,
-              "risk_reduction_percentage": 36.4,
-              "distance_km": 3.8
-            },
-            {
-              "corridor": "Old Madras Road",
-              "average_tis": 51.3,
-              "count": 18,
-              "average_hotspot_density": 1.0,
-              "closure_rate": 0.0,
-              "latitude": 12.9751618,
-              "longitude": 77.6123312,
-              "diversion_score": 47.7,
-              "risk_reduction_percentage": 32.6,
-              "distance_km": 4.5
-            },
             {
               "corridor": "Bellary Road 1",
               "average_tis": 54.6,
               "count": 53,
               "average_hotspot_density": 1.0,
               "closure_rate": 0.0189,
+              "tis_standard_deviation": 2.9768,
               "latitude": 12.9933494,
               "longitude": 77.5856178,
-              "diversion_score": 47.1,
+              "diversion_score": 48.4,
               "risk_reduction_percentage": 28.3,
               "distance_km": 1.7
+            },
+            {
+              "corridor": "CBD 2",
+              "average_tis": 53.3,
+              "count": 44,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0455,
+              "tis_standard_deviation": 4.3459,
+              "latitude": 12.9825909,
+              "longitude": 77.5958784,
+              "diversion_score": 47.5,
+              "risk_reduction_percentage": 30.0,
+              "distance_km": 2.6
+            },
+            {
+              "corridor": "Mysore Road",
+              "average_tis": 57.4,
+              "count": 190,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0842,
+              "tis_standard_deviation": 4.8726,
+              "latitude": 12.9636739,
+              "longitude": 77.5756136,
+              "diversion_score": 45.2,
+              "risk_reduction_percentage": 24.6,
+              "distance_km": 2.4
             }
           ]
         }
@@ -2449,9 +2579,9 @@
       "row_index": 898,
       "id": "FKID000898",
       "event_type": "planned",
-      "expected_attendance": 5000,
-      "venue_capacity": 7500,
-      "event_scale": "Large",
+      "expected_attendance": 25,
+      "venue_capacity": 50,
+      "event_scale": "Small",
       "latitude": 12.985061,
       "longitude": 77.5721347,
       "end_latitude": 12.9895606,
@@ -2551,13 +2681,23 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 28,
-        "barricades": 15,
-        "patrol_units": 5,
+        "officers": 19,
+        "barricades": 11,
+        "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "officer_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based officer units.",
+          "TIS 76.1 and 72.0 hours add 13 operational officer units.",
+          "Road closure adds 4 traffic-control officers."
+        ],
+        "barricade_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based barricade units.",
+          "High severity and hotspot exposure add 7 barricade units.",
+          "Road closure adds 3 perimeter barricades."
+        ],
         "allocation_explanation": [
-          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "25 expected attendees add 1 officer units and 1 barricade units.",
           "TIS 76.1 adds 4 officer units; high severity adds 3 barricade units.",
           "Road closure adds 4 officers and 3 barricades.",
           "72.0 hours adds 9 officer units.",
@@ -2577,55 +2717,58 @@
         ],
         "diversion_advisory": {
           "type": "diversion_plan",
-          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
+          "message": "Route traffic primarily via Bellary Road 1, with CBD 2 as secondary relief.",
           "avoid_corridor": "Non-corridor",
-          "primary_diversion_corridor": "CBD 1",
-          "secondary_diversion_corridor": "Old Madras Road",
-          "estimated_congestion_reduction": 30.6,
-          "diversion_confidence_score": 48.3,
+          "primary_diversion_corridor": "Bellary Road 1",
+          "secondary_diversion_corridor": "CBD 2",
+          "estimated_congestion_reduction": 21.4,
+          "diversion_confidence_score": 66.9,
           "before_diversion_score": 76.1,
-          "after_diversion_score": 52.8,
+          "after_diversion_score": 59.8,
           "rationale": [
-            "Selected because corridor risk is 36.4% lower than affected corridor.",
-            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
-            "Composite score 49.1 balances historical risk, zone density, hotspot density, closure resilience, and 3.8 km proximity."
+            "Selected because corridor risk is 28.3% lower than affected corridor.",
+            "Candidate has 53 historical records, TIS deviation 3.0, and lies 1.7 km away.",
+            "Confidence 66.9% is derived independently from support, stability, and candidate quality."
           ],
           "candidate_corridors": [
-            {
-              "corridor": "CBD 1",
-              "average_tis": 48.4,
-              "count": 7,
-              "average_hotspot_density": 1.0,
-              "closure_rate": 0.0,
-              "latitude": 12.9809984,
-              "longitude": 77.6067277,
-              "diversion_score": 49.1,
-              "risk_reduction_percentage": 36.4,
-              "distance_km": 3.8
-            },
-            {
-              "corridor": "Old Madras Road",
-              "average_tis": 51.3,
-              "count": 18,
-              "average_hotspot_density": 1.0,
-              "closure_rate": 0.0,
-              "latitude": 12.9751618,
-              "longitude": 77.6123312,
-              "diversion_score": 47.7,
-              "risk_reduction_percentage": 32.6,
-              "distance_km": 4.5
-            },
             {
               "corridor": "Bellary Road 1",
               "average_tis": 54.6,
               "count": 53,
               "average_hotspot_density": 1.0,
               "closure_rate": 0.0189,
+              "tis_standard_deviation": 2.9768,
               "latitude": 12.9933494,
               "longitude": 77.5856178,
-              "diversion_score": 47.1,
+              "diversion_score": 48.4,
               "risk_reduction_percentage": 28.3,
               "distance_km": 1.7
+            },
+            {
+              "corridor": "CBD 2",
+              "average_tis": 53.3,
+              "count": 44,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0455,
+              "tis_standard_deviation": 4.3459,
+              "latitude": 12.9825909,
+              "longitude": 77.5958784,
+              "diversion_score": 47.5,
+              "risk_reduction_percentage": 30.0,
+              "distance_km": 2.6
+            },
+            {
+              "corridor": "Mysore Road",
+              "average_tis": 57.4,
+              "count": 190,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0842,
+              "tis_standard_deviation": 4.8726,
+              "latitude": 12.9636739,
+              "longitude": 77.5756136,
+              "diversion_score": 45.2,
+              "risk_reduction_percentage": 24.6,
+              "distance_km": 2.4
             }
           ]
         }
@@ -2635,8 +2778,8 @@
       "row_index": 2312,
       "id": "FKID002312",
       "event_type": "unplanned",
-      "expected_attendance": 250,
-      "venue_capacity": 500,
+      "expected_attendance": 25,
+      "venue_capacity": 50,
       "event_scale": "Small",
       "latitude": 13.0248346,
       "longitude": 77.5824579,
@@ -2742,8 +2885,18 @@
         "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "officer_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based officer units.",
+          "TIS 75.8 and 72.0 hours add 13 operational officer units.",
+          "Road closure adds 4 traffic-control officers."
+        ],
+        "barricade_allocation_rationale": [
+          "25 expected attendees require 1 attendance-based barricade units.",
+          "High severity and hotspot exposure add 7 barricade units.",
+          "Road closure adds 3 perimeter barricades."
+        ],
         "allocation_explanation": [
-          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "25 expected attendees add 1 officer units and 1 barricade units.",
           "TIS 75.8 adds 4 officer units; high severity adds 3 barricade units.",
           "Road closure adds 4 officers and 3 barricades.",
           "72.0 hours adds 9 officer units.",
@@ -2767,14 +2920,14 @@
           "avoid_corridor": "Bellary Road 1",
           "primary_diversion_corridor": "Airport New South Road",
           "secondary_diversion_corridor": "Hennur Main Road",
-          "estimated_congestion_reduction": 17.8,
-          "diversion_confidence_score": 58.6,
+          "estimated_congestion_reduction": 7.9,
+          "diversion_confidence_score": 43.7,
           "before_diversion_score": 75.8,
-          "after_diversion_score": 62.3,
+          "after_diversion_score": 69.8,
           "rationale": [
             "Selected because corridor risk is 7.5% lower than affected corridor.",
-            "Candidate hotspot density is 81.9% with a 4.5% historical closure rate.",
-            "Composite score 60.3 balances historical risk, zone density, hotspot density, closure resilience, and 5.0 km proximity."
+            "Candidate has 22 historical records, TIS deviation 4.0, and lies 5.0 km away.",
+            "Confidence 43.7% is derived independently from support, stability, and candidate quality."
           ],
           "candidate_corridors": [
             {
@@ -2783,9 +2936,10 @@
               "count": 22,
               "average_hotspot_density": 0.8194,
               "closure_rate": 0.0455,
+              "tis_standard_deviation": 3.9926,
               "latitude": 13.0188624,
               "longitude": 77.6283721,
-              "diversion_score": 60.3,
+              "diversion_score": 60.9,
               "risk_reduction_percentage": 7.5,
               "distance_km": 5.0
             },
@@ -2795,6 +2949,7 @@
               "count": 62,
               "average_hotspot_density": 0.8388,
               "closure_rate": 0.0806,
+              "tis_standard_deviation": 5.7895,
               "latitude": 13.0483749,
               "longitude": 77.6263797,
               "diversion_score": 58.0,
@@ -2807,9 +2962,10 @@
               "count": 148,
               "average_hotspot_density": 1.0,
               "closure_rate": 0.027,
+              "tis_standard_deviation": 3.23,
               "latitude": 13.0429179,
               "longitude": 77.5630693,
-              "diversion_score": 56.9,
+              "diversion_score": 57.9,
               "risk_reduction_percentage": 2.4,
               "distance_km": 2.9
             }

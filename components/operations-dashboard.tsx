@@ -71,6 +71,23 @@ const VIEWS: Array<{ id: ViewId; label: string; icon: typeof Activity }> = [
   { id: "copilot", label: "Copilot", icon: MessageSquare }
 ];
 
+const ATTENDANCE_DEFAULTS: Record<string, number> = {
+  public_event: 20000,
+  procession: 10000,
+  protest: 5000,
+  vip_movement: 2000,
+  congestion: 200,
+  others: 100,
+  accident: 50,
+  construction: 25,
+  vehicle_breakdown: 10,
+  water_logging: 0,
+  tree_fall: 0,
+  pot_holes: 0,
+  road_conditions: 0,
+  debris: 0
+};
+
 const RISK_COLORS: Record<RiskCategory, string> = {
   Critical: "#ef4444",
   High: "#f97316",
@@ -295,7 +312,7 @@ export function OperationsDashboard() {
   }, [selectedEvent?.id]);
 
   const zones = useMemo(() => ["all", ...(summary?.top_zones.map((zone) => zone.name) || [])], [summary]);
-  const causes = useMemo(() => ["vehicle_breakdown", "construction", "accident", "water_logging", "public_event", "procession", "vip_movement", "protest", "pot_holes", "others"], []);
+  const causes = useMemo(() => ["vehicle_breakdown", "construction", "accident", "water_logging", "tree_fall", "public_event", "procession", "vip_movement", "protest", "congestion", "pot_holes", "road_conditions", "debris", "others"], []);
   const filteredEvents = useMemo(() => {
     return events.filter((event) => {
       const riskOk = riskFilter === "all" || event.risk_category === riskFilter;
@@ -619,7 +636,10 @@ export function OperationsDashboard() {
                   <div className="rounded border border-ops-line bg-slate-950 p-4">
                     <div className="flex items-center gap-2 text-ops-cyan"><Users size={17} /> Allocation rationale</div>
                     <div className="mt-3 grid gap-2">
-                      {displayEvent.recommendation.allocation_explanation.map((reason) => (
+                      {displayEvent.recommendation.officer_allocation_rationale.map((reason) => (
+                        <div key={reason} className="rounded border border-ops-cyan/30 px-3 py-2 text-sm text-ops-muted">Officer: {reason}</div>
+                      ))}
+                      {displayEvent.recommendation.barricade_allocation_rationale.map((reason) => (
                         <div key={reason} className="rounded border border-ops-line px-3 py-2 text-sm text-ops-muted">{reason}</div>
                       ))}
                     </div>
@@ -666,7 +686,15 @@ export function OperationsDashboard() {
             <Panel title="Scenario Simulator" kicker="What-if controls">
               <div className="grid gap-4">
                 <SelectControl label="Event" value={selectedEventId} onChange={setSelectedEventId} options={events.slice(0, 40).map((event) => event.id)} />
-                <SelectControl label="Cause" value={simCause} onChange={setSimCause} options={causes} />
+                <SelectControl
+                  label="Cause"
+                  value={simCause}
+                  onChange={(value) => {
+                    setSimCause(value);
+                    setSimAttendance(ATTENDANCE_DEFAULTS[value] ?? simAttendance);
+                  }}
+                  options={causes}
+                />
                 <SelectControl label="Priority" value={simPriority} onChange={setSimPriority} options={["High", "Low"]} />
                 <label className="grid gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-ops-muted">
                   Expected Attendance
@@ -728,8 +756,32 @@ export function OperationsDashboard() {
                     <ScoreBreakdown event={{ ...(displayEvent as RiskEvent), score_components: simulationResult.score_components }} />
                     <div className="mt-5 grid gap-2 text-sm text-ops-muted">
                       {simulationResult.recommendation.diversion_advisory.rationale.map((item) => <div key={item} className="rounded border border-ops-green/30 bg-slate-950 p-3">{item}</div>)}
-                      {simulationResult.recommendation.allocation_explanation.map((item) => <div key={item} className="rounded border border-ops-cyan/30 bg-slate-950 p-3">{item}</div>)}
+                      {simulationResult.recommendation.officer_allocation_rationale.map((item) => <div key={item} className="rounded border border-ops-cyan/30 bg-slate-950 p-3">Officer: {item}</div>)}
+                      {simulationResult.recommendation.barricade_allocation_rationale.map((item) => <div key={item} className="rounded border border-ops-amber/30 bg-slate-950 p-3">Barricade: {item}</div>)}
                       {simulationResult.explanation.map((item) => <div key={item} className="rounded border border-ops-line bg-slate-950 p-3">{item}</div>)}
+                    </div>
+                  </div>
+                  <div className="rounded border border-ops-line bg-slate-950 p-5 xl:col-span-2">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <div>
+                        <div className="text-sm font-semibold uppercase tracking-[0.14em] text-ops-cyan">Intervention Comparison</div>
+                        <div className="mt-1 text-sm text-ops-muted">Best: {simulationResult.intervention_analysis.best_scenario_name}</div>
+                      </div>
+                      <div className="text-2xl font-semibold text-ops-green">{simulationResult.intervention_analysis.improvement_percentage}% improvement</div>
+                    </div>
+                    <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+                      {simulationResult.intervention_analysis.scenarios.map((scenario) => (
+                        <div key={scenario.id} className={`rounded border p-4 ${scenario.id === simulationResult.intervention_analysis.best_scenario ? "border-ops-green bg-emerald-950/20" : "border-ops-line"}`}>
+                          <div className="text-sm font-semibold text-ops-text">{scenario.name}</div>
+                          <div className="mt-3 text-3xl font-semibold text-ops-text">{scenario.projected_tis}</div>
+                          <div className="text-xs uppercase tracking-wide text-ops-muted">Projected TIS</div>
+                          <div className="mt-3 text-sm text-ops-green">{scenario.estimated_operational_risk_reduction}% risk reduction</div>
+                          <div className="mt-2 text-xs leading-5 text-ops-muted">{scenario.projected_resources.officers} officers - {scenario.projected_resources.barricades} barricades - {scenario.projected_resources.patrol_units} patrols</div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-4 grid gap-2 text-sm text-ops-muted">
+                      {simulationResult.intervention_analysis.rationale.map((item) => <div key={item} className="rounded border border-ops-green/30 px-3 py-2">{item}</div>)}
                     </div>
                   </div>
                 </div>

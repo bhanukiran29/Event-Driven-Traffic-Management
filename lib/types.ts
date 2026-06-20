@@ -7,6 +7,7 @@ export type DiversionCandidate = {
   count: number;
   average_hotspot_density: number;
   closure_rate: number;
+  tis_standard_deviation: number;
   latitude: number;
   longitude: number;
   diversion_score?: number;
@@ -42,6 +43,8 @@ export type ResourceRecommendation = {
   response_priority: string;
   risk_category: RiskCategory;
   allocation_explanation: string[];
+  officer_allocation_rationale: string[];
+  barricade_allocation_rationale: string[];
   barricade_points: Array<{
     label: string;
     latitude: number;
@@ -175,6 +178,10 @@ export type ScoringContext = {
   day_risk: Record<string, number>;
   priority_risk: Record<string, number>;
   risk_thresholds: Record<RiskCategory, number>;
+  diversion_config: {
+    minimum_corridor_support: number;
+    maximum_distance_km: number;
+  };
   zone_corridor_advisories: Record<
     string,
     DiversionCandidate[]
@@ -199,6 +206,35 @@ export type SimulationRequest = {
   longitude?: number;
 };
 
+export type ProjectedResources = {
+  officers: number;
+  barricades: number;
+  patrol_units: number;
+};
+
+export type InterventionScenarioId =
+  | "no_intervention"
+  | "diversion_only"
+  | "diversion_barricades"
+  | "full_intervention";
+
+export type InterventionScenario = {
+  id: InterventionScenarioId;
+  name: string;
+  projected_tis: number;
+  projected_resources: ProjectedResources;
+  estimated_operational_risk_reduction: number;
+  rationale: string[];
+};
+
+export type InterventionAnalysis = {
+  scenarios: InterventionScenario[];
+  best_scenario: InterventionScenarioId;
+  best_scenario_name: string;
+  improvement_percentage: number;
+  rationale: string[];
+};
+
 export type SimulationResult = {
   event_id: string | null;
   baseline_score: number | null;
@@ -209,6 +245,25 @@ export type SimulationResult = {
   score_components: ScoreComponent[];
   explanation: string[];
   recommendation: ResourceRecommendation;
+  intervention_analysis: InterventionAnalysis;
+};
+
+export type OperatorFeedback = {
+  rating: 1 | 2 | 3 | 4 | 5;
+  accepted_plan: boolean;
+  diversion_effective: boolean | null;
+  notes: string;
+};
+
+export type PostEventLearningRecord = {
+  event_id: string;
+  model_version: string;
+  recorded_at: string;
+  predicted_tis: number;
+  actual_tis: number;
+  predicted_resources: ProjectedResources;
+  actual_resources: ProjectedResources;
+  operator_feedback: OperatorFeedback;
 };
 
 export type CopilotResponse = {

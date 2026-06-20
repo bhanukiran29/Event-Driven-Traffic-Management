@@ -457,6 +457,10 @@
     "medium": 0.62,
     "low": 0.35
   },
+  "diversion_config": {
+    "minimum_corridor_support": 20,
+    "maximum_distance_km": 20.0
+  },
   "zone_corridor_advisories": {
     "Unmapped Zone": [
       {
@@ -465,6 +469,7 @@
         "count": 44,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0227,
+        "tis_standard_deviation": 4.6075,
         "latitude": 12.9407772,
         "longitude": 77.6291849
       },
@@ -474,6 +479,7 @@
         "count": 117,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0427,
+        "tis_standard_deviation": 3.936,
         "latitude": 12.9036015,
         "longitude": 77.599273
       },
@@ -483,6 +489,7 @@
         "count": 101,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0594,
+        "tis_standard_deviation": 4.9373,
         "latitude": 12.9832197,
         "longitude": 77.5464347
       },
@@ -492,17 +499,9 @@
         "count": 22,
         "average_hotspot_density": 0.8194,
         "closure_rate": 0.0455,
+        "tis_standard_deviation": 3.9926,
         "latitude": 13.0188624,
         "longitude": 77.6283721
-      },
-      {
-        "corridor": "CBD 1",
-        "average_tis": 46.1,
-        "count": 19,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.1579,
-        "latitude": 12.9810314,
-        "longitude": 77.6068472
       },
       {
         "corridor": "ORR West 1",
@@ -510,6 +509,7 @@
         "count": 99,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0303,
+        "tis_standard_deviation": 4.7366,
         "latitude": 12.9192944,
         "longitude": 77.5614389
       },
@@ -519,6 +519,7 @@
         "count": 140,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0714,
+        "tis_standard_deviation": 5.0038,
         "latitude": 12.9136362,
         "longitude": 77.6257576
       },
@@ -528,6 +529,7 @@
         "count": 148,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0676,
+        "tis_standard_deviation": 5.4551,
         "latitude": 12.9805706,
         "longitude": 77.6288618
       },
@@ -537,6 +539,7 @@
         "count": 147,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0136,
+        "tis_standard_deviation": 3.2881,
         "latitude": 12.9856248,
         "longitude": 77.5206276
       },
@@ -546,6 +549,7 @@
         "count": 48,
         "average_hotspot_density": 0.9583,
         "closure_rate": 0.0833,
+        "tis_standard_deviation": 5.5871,
         "latitude": 12.9589943,
         "longitude": 77.6615483
       },
@@ -555,6 +559,7 @@
         "count": 57,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0877,
+        "tis_standard_deviation": 5.9116,
         "latitude": 12.9820519,
         "longitude": 77.5964474
       },
@@ -564,6 +569,7 @@
         "count": 144,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0486,
+        "tis_standard_deviation": 4.4515,
         "latitude": 12.9283657,
         "longitude": 77.6716469
       },
@@ -573,6 +579,7 @@
         "count": 252,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0278,
+        "tis_standard_deviation": 3.9454,
         "latitude": 13.0320926,
         "longitude": 77.5324937
       },
@@ -582,6 +589,7 @@
         "count": 148,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0608,
+        "tis_standard_deviation": 4.5215,
         "latitude": 13.0235521,
         "longitude": 77.6397679
       },
@@ -591,6 +599,7 @@
         "count": 148,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.027,
+        "tis_standard_deviation": 3.23,
         "latitude": 13.0429179,
         "longitude": 77.5630693
       },
@@ -600,6 +609,7 @@
         "count": 62,
         "average_hotspot_density": 0.8388,
         "closure_rate": 0.0806,
+        "tis_standard_deviation": 5.7895,
         "latitude": 13.0483749,
         "longitude": 77.6263797
       },
@@ -609,6 +619,7 @@
         "count": 214,
         "average_hotspot_density": 0.8602,
         "closure_rate": 0.0187,
+        "tis_standard_deviation": 5.5304,
         "latitude": 13.1122004,
         "longitude": 77.6058157
       },
@@ -618,6 +629,7 @@
         "count": 321,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0717,
+        "tis_standard_deviation": 4.9064,
         "latitude": 13.0153162,
         "longitude": 77.586521
       },
@@ -627,6 +639,7 @@
         "count": 38,
         "average_hotspot_density": 0.87,
         "closure_rate": 0.1579,
+        "tis_standard_deviation": 7.1158,
         "latitude": 12.9567094,
         "longitude": 77.7160499
       },
@@ -636,6 +649,7 @@
         "count": 401,
         "average_hotspot_density": 0.9701,
         "closure_rate": 0.1172,
+        "tis_standard_deviation": 6.2367,
         "latitude": 12.9579758,
         "longitude": 77.5643527
       },
@@ -645,6 +659,7 @@
         "count": 119,
         "average_hotspot_density": 0.9832,
         "closure_rate": 0.0252,
+        "tis_standard_deviation": 5.9702,
         "latitude": 12.9754849,
         "longitude": 77.6963863
       }
@@ -656,6 +671,7 @@
         "count": 30,
         "average_hotspot_density": 0.6008,
         "closure_rate": 0.0333,
+        "tis_standard_deviation": 6.9778,
         "latitude": 13.0489934,
         "longitude": 77.6247567
       },
@@ -665,17 +681,9 @@
         "count": 40,
         "average_hotspot_density": 0.455,
         "closure_rate": 0.125,
+        "tis_standard_deviation": 7.1232,
         "latitude": 13.0309878,
         "longitude": 77.6355205
-      },
-      {
-        "corridor": "ORR North 2",
-        "average_tis": 51.7,
-        "count": 17,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.0,
-        "latitude": 13.0451441,
-        "longitude": 77.5622833
       },
       {
         "corridor": "Bellary Road 1",
@@ -683,6 +691,7 @@
         "count": 39,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0256,
+        "tis_standard_deviation": 3.6906,
         "latitude": 13.0490365,
         "longitude": 77.5926088
       },
@@ -692,6 +701,7 @@
         "count": 81,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.1111,
+        "tis_standard_deviation": 5.9201,
         "latitude": 13.0370975,
         "longitude": 77.6208315
       },
@@ -701,6 +711,7 @@
         "count": 46,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.087,
+        "tis_standard_deviation": 4.5533,
         "latitude": 13.0760424,
         "longitude": 77.5932434
       }
@@ -712,6 +723,7 @@
         "count": 42,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0476,
+        "tis_standard_deviation": 4.5863,
         "latitude": 12.929263,
         "longitude": 77.6219608
       },
@@ -721,6 +733,7 @@
         "count": 50,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.02,
+        "tis_standard_deviation": 4.5171,
         "latitude": 12.8960393,
         "longitude": 77.5988138
       },
@@ -730,6 +743,7 @@
         "count": 134,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0075,
+        "tis_standard_deviation": 3.4472,
         "latitude": 12.9113201,
         "longitude": 77.6261817
       },
@@ -739,26 +753,19 @@
         "count": 36,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.1944,
+        "tis_standard_deviation": 6.022,
         "latitude": 12.9179121,
         "longitude": 77.6324811
       }
     ],
     "North Zone 2": [
       {
-        "corridor": "Hennur Main Road",
-        "average_tis": 43.1,
-        "count": 4,
-        "average_hotspot_density": 0.0,
-        "closure_rate": 0.0,
-        "latitude": 13.1102732,
-        "longitude": 77.6340292
-      },
-      {
         "corridor": "ORR North 2",
         "average_tis": 51.1,
         "count": 63,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0794,
+        "tis_standard_deviation": 5.6357,
         "latitude": 13.042103,
         "longitude": 77.55001
       },
@@ -768,6 +775,7 @@
         "count": 32,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0312,
+        "tis_standard_deviation": 3.4106,
         "latitude": 13.0425159,
         "longitude": 77.5140631
       },
@@ -777,6 +785,7 @@
         "count": 109,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0642,
+        "tis_standard_deviation": 5.4204,
         "latitude": 13.0285921,
         "longitude": 77.5867649
       },
@@ -786,55 +795,21 @@
         "count": 118,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0339,
+        "tis_standard_deviation": 4.0655,
         "latitude": 13.1070355,
         "longitude": 77.6029678
       }
     ],
     "Central Zone 1": [
       {
-        "corridor": "Old Airport Road",
-        "average_tis": 48.0,
-        "count": 17,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.0588,
-        "latitude": 12.9600498,
-        "longitude": 77.6482238
-      },
-      {
         "corridor": "Old Madras Road",
         "average_tis": 48.7,
         "count": 97,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0206,
+        "tis_standard_deviation": 3.7465,
         "latitude": 12.982503,
         "longitude": 77.633179
-      },
-      {
-        "corridor": "ORR East 1",
-        "average_tis": 49.9,
-        "count": 8,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.125,
-        "latitude": 12.9230606,
-        "longitude": 77.6550372
-      },
-      {
-        "corridor": "IRR(Thanisandra road)",
-        "average_tis": 51.2,
-        "count": 9,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.3333,
-        "latitude": 12.9599853,
-        "longitude": 77.6392528
-      },
-      {
-        "corridor": "ORR North 1",
-        "average_tis": 51.4,
-        "count": 10,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.1,
-        "latitude": 13.0010787,
-        "longitude": 77.6630281
       },
       {
         "corridor": "Mysore Road",
@@ -842,6 +817,7 @@
         "count": 41,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.1951,
+        "tis_standard_deviation": 6.8652,
         "latitude": 12.9680531,
         "longitude": 77.6034468
       },
@@ -851,44 +827,19 @@
         "count": 22,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.2727,
+        "tis_standard_deviation": 8.7093,
         "latitude": 12.9566218,
         "longitude": 77.6057432
       }
     ],
     "Central Zone 2": [
       {
-        "corridor": "CBD 1",
-        "average_tis": 48.4,
-        "count": 7,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.0,
-        "latitude": 12.9809984,
-        "longitude": 77.6067277
-      },
-      {
-        "corridor": "Bannerghata Road",
-        "average_tis": 51.0,
-        "count": 4,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.0,
-        "latitude": 12.9307092,
-        "longitude": 77.6004631
-      },
-      {
-        "corridor": "Old Madras Road",
-        "average_tis": 51.3,
-        "count": 18,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.0,
-        "latitude": 12.9751618,
-        "longitude": 77.6123312
-      },
-      {
         "corridor": "CBD 2",
         "average_tis": 53.3,
         "count": 44,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0455,
+        "tis_standard_deviation": 4.3459,
         "latitude": 12.9825909,
         "longitude": 77.5958784
       },
@@ -898,6 +849,7 @@
         "count": 53,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0189,
+        "tis_standard_deviation": 2.9768,
         "latitude": 12.9933494,
         "longitude": 77.5856178
       },
@@ -907,6 +859,7 @@
         "count": 20,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.15,
+        "tis_standard_deviation": 7.099,
         "latitude": 12.9754688,
         "longitude": 77.5637
       },
@@ -916,6 +869,7 @@
         "count": 190,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0842,
+        "tis_standard_deviation": 4.8726,
         "latitude": 12.9636739,
         "longitude": 77.5756136
       }
@@ -927,6 +881,7 @@
         "count": 38,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0263,
+        "tis_standard_deviation": 4.1335,
         "latitude": 12.8709631,
         "longitude": 77.5920879
       },
@@ -936,35 +891,19 @@
         "count": 28,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0714,
+        "tis_standard_deviation": 5.6015,
         "latitude": 12.9114578,
         "longitude": 77.5728895
       }
     ],
     "West Zone 1": [
       {
-        "corridor": "West of Chord Road",
-        "average_tis": 50.2,
-        "count": 16,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.125,
-        "latitude": 13.0046962,
-        "longitude": 77.5509687
-      },
-      {
-        "corridor": "ORR West 1",
-        "average_tis": 51.8,
-        "count": 15,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.0,
-        "latitude": 12.93448,
-        "longitude": 77.538902
-      },
-      {
         "corridor": "Tumkur Road",
         "average_tis": 52.8,
         "count": 126,
         "average_hotspot_density": 0.9921,
         "closure_rate": 0.0079,
+        "tis_standard_deviation": 2.6311,
         "latitude": 13.0329453,
         "longitude": 77.5310219
       },
@@ -974,6 +913,7 @@
         "count": 54,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0741,
+        "tis_standard_deviation": 5.1688,
         "latitude": 12.9881258,
         "longitude": 77.509846
       },
@@ -983,17 +923,9 @@
         "count": 55,
         "average_hotspot_density": 0.7821,
         "closure_rate": 0.1818,
+        "tis_standard_deviation": 7.8631,
         "latitude": 12.9316981,
         "longitude": 77.5103993
-      },
-      {
-        "corridor": "ORR North 2",
-        "average_tis": 54.4,
-        "count": 6,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.1667,
-        "latitude": 13.0349786,
-        "longitude": 77.5414922
       }
     ],
     "West Zone 2": [
@@ -1003,6 +935,7 @@
         "count": 23,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0,
+        "tis_standard_deviation": 3.1454,
         "latitude": 12.9319234,
         "longitude": 77.5437631
       },
@@ -1012,6 +945,7 @@
         "count": 24,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0417,
+        "tis_standard_deviation": 4.6144,
         "latitude": 12.9826984,
         "longitude": 77.5367241
       },
@@ -1021,6 +955,7 @@
         "count": 57,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0526,
+        "tis_standard_deviation": 5.6624,
         "latitude": 12.9764354,
         "longitude": 77.5448718
       },
@@ -1030,6 +965,7 @@
         "count": 48,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0625,
+        "tis_standard_deviation": 4.7652,
         "latitude": 13.0168555,
         "longitude": 77.5598003
       },
@@ -1039,6 +975,7 @@
         "count": 88,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0114,
+        "tis_standard_deviation": 3.6497,
         "latitude": 13.0074457,
         "longitude": 77.5832535
       },
@@ -1048,6 +985,7 @@
         "count": 55,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0182,
+        "tis_standard_deviation": 3.3359,
         "latitude": 12.9528966,
         "longitude": 77.5417118
       }
@@ -1059,6 +997,7 @@
         "count": 39,
         "average_hotspot_density": 0.8733,
         "closure_rate": 0.0769,
+        "tis_standard_deviation": 6.7656,
         "latitude": 12.9564011,
         "longitude": 77.7158242
       },
@@ -1068,17 +1007,9 @@
         "count": 56,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0536,
+        "tis_standard_deviation": 5.492,
         "latitude": 12.9355803,
         "longitude": 77.6882367
-      },
-      {
-        "corridor": "Old Airport Road",
-        "average_tis": 53.5,
-        "count": 6,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.0,
-        "latitude": 12.9561539,
-        "longitude": 77.6942356
       },
       {
         "corridor": "ORR East 2",
@@ -1086,46 +1017,21 @@
         "count": 52,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0,
+        "tis_standard_deviation": 3.7978,
         "latitude": 12.9690635,
         "longitude": 77.7006413
       }
     ],
     "East Zone 2": [
       {
-        "corridor": "ORR East 2",
-        "average_tis": 46.9,
-        "count": 16,
-        "average_hotspot_density": 1.0,
-        "closure_rate": 0.0,
-        "latitude": 13.0004412,
-        "longitude": 77.6783441
-      },
-      {
-        "corridor": "Airport New South Road",
-        "average_tis": 48.1,
-        "count": 5,
-        "average_hotspot_density": 0.2073,
-        "closure_rate": 0.2,
-        "latitude": 13.037862,
-        "longitude": 77.6402592
-      },
-      {
         "corridor": "ORR North 1",
         "average_tis": 48.7,
         "count": 35,
         "average_hotspot_density": 1.0,
         "closure_rate": 0.0857,
+        "tis_standard_deviation": 5.9946,
         "latitude": 13.0066193,
         "longitude": 77.6610541
-      },
-      {
-        "corridor": "Old Airport Road",
-        "average_tis": 51.4,
-        "count": 5,
-        "average_hotspot_density": 0.4,
-        "closure_rate": 0.2,
-        "latitude": 12.9569005,
-        "longitude": 77.6721434
       }
     ]
   },
