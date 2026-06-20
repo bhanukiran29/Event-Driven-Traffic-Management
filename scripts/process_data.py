@@ -6,7 +6,7 @@ import math
 from collections import Counter, defaultdict, deque
 from datetime import datetime, timezone
 from pathlib import Path
-from statistics import mean
+from statistics import mean, pstdev
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -44,6 +44,30 @@ CAUSE_RISK = {
     "others": 0.50,
 }
 PRIORITY_RISK = {"high": 1.0, "medium": 0.62, "low": 0.35}
+CAUSE_ATTENDANCE_PROFILES = {
+    "public_event": {"expected_attendance": 20000, "venue_capacity": 30000},
+    "procession": {"expected_attendance": 10000, "venue_capacity": 15000},
+    "protest": {"expected_attendance": 5000, "venue_capacity": 8000},
+    "vip_movement": {"expected_attendance": 2000, "venue_capacity": 3000},
+    "congestion": {"expected_attendance": 200, "venue_capacity": 500},
+    "others": {"expected_attendance": 100, "venue_capacity": 250},
+    "accident": {"expected_attendance": 50, "venue_capacity": 100},
+    "construction": {"expected_attendance": 25, "venue_capacity": 50},
+    "vehicle_breakdown": {"expected_attendance": 10, "venue_capacity": 20},
+    "water_logging": {"expected_attendance": 0, "venue_capacity": 0},
+    "tree_fall": {"expected_attendance": 0, "venue_capacity": 0},
+    "pot_holes": {"expected_attendance": 0, "venue_capacity": 0},
+    "road_conditions": {"expected_attendance": 0, "venue_capacity": 0},
+    "debris": {"expected_attendance": 0, "venue_capacity": 0},
+    "fog_/_low_visibility": {"expected_attendance": 0, "venue_capacity": 0},
+    "test_demo": {"expected_attendance": 500, "venue_capacity": 1000},
+}
+EVENT_TYPE_ATTENDANCE_FALLBACKS = {
+    "planned": {"expected_attendance": 5000, "venue_capacity": 7500},
+    "unplanned": {"expected_attendance": 50, "venue_capacity": 100},
+    "unknown": {"expected_attendance": 100, "venue_capacity": 250},
+}
+DIVERSION_CONFIG = {"minimum_corridor_support": 20, "maximum_distance_km": 20.0}
 
 
 def clean(value: Any) -> str | None:
@@ -134,6 +158,24 @@ def risk_category(score: float) -> str:
     if score >= 45:
         return "Medium"
     return "Low"
+
+
+def event_scale(attendance: int) -> str:
+    if attendance <= 500:
+        return "Small"
+    if attendance <= 2500:
+        return "Medium"
+    if attendance <= 10000:
+        return "Large"
+    return "Mega"
+
+
+def attendance_estimate(event_cause: str, event_type: str) -> dict[str, Any]:
+    profile = CAUSE_ATTENDANCE_PROFILES.get(key_text(event_cause))
+    if profile is None:
+        profile = EVENT_TYPE_ATTENDANCE_FALLBACKS.get(key_text(event_type), EVENT_TYPE_ATTENDANCE_FALLBACKS["unknown"])
+    attendance = int(profile["expected_attendance"])
+    return {**profile, "event_scale": event_scale(attendance)}
 
 
 def normalized_counter(counter: Counter[str], missing_fallbacks: set[str] | None = None) -> dict[str, float]:
@@ -246,19 +288,152 @@ def score_components(row: dict[str, Any], context: dict[str, Any]) -> tuple[floa
     return round(min(max(total, 0.0), 100.0), 1), sorted(components, key=lambda item: item["contribution"], reverse=True)
 
 
-def recommendation(score: float, closure: bool) -> dict[str, Any]:
+def recommendation(score: float, closure: bool, attendance: int, duration_hours: float, cluster_risk: float) -> dict[str, Any]:
     category = risk_category(score)
-    base = {
-        "Low": {"officers": 2, "barricades": 0 if score < 35 else 1, "patrol_units": 0, "response_priority": "Monitor"},
-        "Medium": {"officers": 4, "barricades": 2, "patrol_units": 1, "response_priority": "Scheduled deployment"},
-        "High": {"officers": 7, "barricades": 3, "patrol_units": 2, "response_priority": "Priority intervention"},
-        "Critical": {"officers": 10, "barricades": 5, "patrol_units": 3, "response_priority": "Immediate intervention"},
-    }[category].copy()
-    if closure:
-        base["officers"] = min(12, base["officers"] + 2)
-        base["barricades"] = min(6, base["barricades"] + 2)
-    base["risk_category"] = category
-    return base
+    safe_attendance = max(0, round(attendance))
+    safe_duration = min(72.0, max(0.0, duration_hours))
+    attendance_officers = math.ceil(safe_attendance / 500)
+    impact_officers = math.ceil(score / 20)
+    closure_officers = 4 if closure else 0
+    duration_officers = math.ceil(safe_duration / 8)
+    officers = min(80, max(2, 1 + attendance_officers + impact_officers + closure_officers + duration_officers))
+    severity_barricades = {"Low": 0, "Medium": 1, "High": 3, "Critical": 5}[category]
+    attendance_barricades = math.ceil(safe_attendance / 1000)
+    closure_barricades = 3 if closure else 0
+    bounded_hotspot_risk = min(1.0, max(0.0, cluster_risk))
+    hotspot_barricades = math.ceil(bounded_hotspot_risk * 4)
+    barricades = min(40, attendance_barricades + closure_barricades + severity_barricades + hotspot_barricades)
+    response_priority = {
+        "Low": "Monitor", "Medium": "Scheduled deployment",
+        "High": "Priority intervention", "Critical": "Immediate intervention",
+    }[category]
+    return {
+        "officers": officers,
+        "barricades": barricades,
+        "patrol_units": max(1, math.ceil(officers / 6)),
+        "response_priority": response_priority,
+        "risk_category": category,
+        "officer_allocation_rationale": [
+            f"{safe_attendance:,} expected attendees require {attendance_officers} attendance-based officer units.",
+            f"TIS {score:.1f} and {safe_duration:.1f} hours add {impact_officers + duration_officers} operational officer units.",
+            "Road closure adds 4 traffic-control officers." if closure else "No closure-specific officers are added.",
+        ],
+        "barricade_allocation_rationale": [
+            f"{safe_attendance:,} expected attendees require {attendance_barricades} attendance-based barricade units.",
+            f"{category} severity and hotspot exposure add {severity_barricades + hotspot_barricades} barricade units.",
+            "Road closure adds 3 perimeter barricades." if closure else "No closure-specific barricades are added.",
+        ],
+        "allocation_explanation": [
+            f"{safe_attendance:,} expected attendees add {attendance_officers} officer units and {attendance_barricades} barricade units.",
+            f"TIS {score:.1f} adds {impact_officers} officer units; {category.lower()} severity adds {severity_barricades} barricade units.",
+            "Road closure adds 4 officers and 3 barricades." if closure else "No road closure increment is applied.",
+            f"{safe_duration:.1f} hours adds {duration_officers} officer units.",
+            f"Hotspot risk {bounded_hotspot_risk * 100:.0f}% adds {hotspot_barricades} barricade units.",
+        ],
+    }
+
+
+def diversion_plan(
+    corridor: str,
+    zone: str,
+    score: float,
+    closure: bool,
+    cluster_risk: float,
+    latitude: float,
+    longitude: float,
+    context: dict[str, Any],
+) -> dict[str, Any]:
+    minimum_support = int(context.get("diversion_config", DIVERSION_CONFIG)["minimum_corridor_support"])
+    maximum_distance_km = float(context.get("diversion_config", DIVERSION_CONFIG)["maximum_distance_km"])
+    zone_density = min(1.0, max(0.0, context["zone_density"].get(zone, 0.2)))
+    candidates = context["zone_corridor_advisories"].get(zone, [])
+    affected = next((item for item in candidates if item["corridor"] == corridor), None)
+    affected_risk = float(affected["average_tis"] if affected else score)
+    ranked = []
+    for item in candidates:
+        if item["corridor"] in {corridor, "Non-corridor"}:
+            continue
+        if item["count"] < minimum_support:
+            continue
+        distance_km = haversine_m(latitude, longitude, item["latitude"], item["longitude"]) / 1000.0
+        if distance_km > maximum_distance_km:
+            continue
+        historical_safety = 1.0 - min(1.0, item["average_tis"] / 100.0)
+        candidate_hotspot_safety = 1.0 - min(1.0, max(0.0, item["average_hotspot_density"]))
+        event_hotspot_relief = max(0.0, min(1.0, cluster_risk) - item["average_hotspot_density"])
+        hotspot_safety = candidate_hotspot_safety * 0.7 + event_hotspot_relief * 0.3
+        zone_relief = 1.0 - zone_density
+        closure_resilience = (
+            1.0 - min(1.0, item["closure_rate"])
+            if closure
+            else 0.5 + (1.0 - min(1.0, item["closure_rate"])) * 0.5
+        )
+        proximity = 1.0 - min(1.0, distance_km / 25.0)
+        stability = 1.0 - min(1.0, item["tis_standard_deviation"] / 20.0)
+        candidate_score = 100.0 * (
+            historical_safety * 0.35
+            + hotspot_safety * 0.2
+            + zone_relief * 0.1
+            + closure_resilience * 0.15
+            + proximity * 0.1
+            + stability * 0.1
+        )
+        risk_reduction = ((affected_risk - item["average_tis"]) / affected_risk) * 100.0 if affected_risk > 0 else 0.0
+        ranked.append({
+            **item,
+            "diversion_score": round(candidate_score, 1),
+            "risk_reduction_percentage": round(risk_reduction, 1),
+            "distance_km": round(distance_km, 1),
+        })
+    ranked.sort(key=lambda item: item["diversion_score"], reverse=True)
+    if not ranked:
+        return {
+            "type": "diversion_plan",
+            "message": f"No eligible same-zone corridor has at least {minimum_support} records within {maximum_distance_km:g} km.",
+            "avoid_corridor": corridor,
+            "primary_diversion_corridor": None,
+            "secondary_diversion_corridor": None,
+            "estimated_congestion_reduction": 0.0,
+            "diversion_confidence_score": 0.0,
+            "before_diversion_score": score,
+            "after_diversion_score": score,
+            "rationale": [f"Candidates require at least {minimum_support} historical records and must be within {maximum_distance_km:g} km."],
+            "candidate_corridors": [],
+        }
+    primary = ranked[0]
+    secondary = ranked[1] if len(ranked) > 1 else None
+    risk_reduction = primary["risk_reduction_percentage"]
+    estimated_reduction = min(35.0, max(0.0, risk_reduction * 0.65 + (3.0 if closure else 0.0))) if risk_reduction > 0 else 0.0
+    support_score = min(1.0, primary["count"] / 100.0)
+    stability_score = 1.0 - min(1.0, primary["tis_standard_deviation"] / 20.0)
+    risk_advantage = max(0.0, min(1.0, risk_reduction / 40.0))
+    hotspot_quality = 1.0 - min(1.0, primary["average_hotspot_density"])
+    closure_quality = 1.0 - min(1.0, primary["closure_rate"])
+    proximity_quality = 1.0 - min(1.0, primary["distance_km"] / maximum_distance_km)
+    candidate_quality = risk_advantage * 0.6 + (hotspot_quality * 0.35 + closure_quality * 0.35 + proximity_quality * 0.3) * 0.4
+    confidence = min(95.0, max(0.0, 100.0 * (support_score * 0.4 + stability_score * 0.3 + candidate_quality * 0.3)))
+    risk_rationale = (
+        f"Selected because corridor risk is {risk_reduction:.1f}% lower than affected corridor."
+        if risk_reduction >= 0
+        else f"Selected on composite resilience despite corridor risk being {abs(risk_reduction):.1f}% higher than affected corridor."
+    )
+    return {
+        "type": "diversion_plan",
+        "message": f"Route traffic primarily via {primary['corridor']}" + (f", with {secondary['corridor']} as secondary relief." if secondary else "."),
+        "avoid_corridor": corridor,
+        "primary_diversion_corridor": primary["corridor"],
+        "secondary_diversion_corridor": secondary["corridor"] if secondary else None,
+        "estimated_congestion_reduction": round(estimated_reduction, 1),
+        "diversion_confidence_score": round(confidence, 1),
+        "before_diversion_score": score,
+        "after_diversion_score": round(score * (1.0 - estimated_reduction / 100.0), 1),
+        "rationale": [
+            risk_rationale,
+            f"Candidate has {primary['count']} historical records, TIS deviation {primary['tis_standard_deviation']:.1f}, and lies {primary['distance_km']:.1f} km away.",
+            f"Confidence {confidence:.1f}% is derived independently from support, stability, and candidate quality.",
+        ],
+        "candidate_corridors": ranked[:3],
+    }
 
 
 def explanation(components: list[dict[str, Any]]) -> list[str]:
@@ -328,11 +503,16 @@ def main() -> None:
         end_coords = valid_coordinate(raw.get("endlatitude"), raw.get("endlongitude"))
         duration, duration_source = duration_hours(raw)
         duration_source_counts[duration_source] += 1
+        attendance = attendance_estimate(
+            display_text(raw.get("event_cause"), "others"),
+            display_text(raw.get("event_type"), "unplanned"),
+        )
         rows.append(
             {
                 "row_index": index,
                 "id": display_text(raw.get("id"), f"ASTRAM-{index:05d}"),
                 "event_type": display_text(raw.get("event_type"), "unplanned"),
+                **attendance,
                 "latitude": round(coords[0], 7),
                 "longitude": round(coords[1], 7),
                 "end_latitude": round(end_coords[0], 7) if end_coords else None,
@@ -379,6 +559,7 @@ def main() -> None:
         "hour_risk": normalized_counter(hour_counter),
         "day_risk": normalized_counter(day_counter),
         "priority_risk": PRIORITY_RISK,
+        "diversion_config": DIVERSION_CONFIG,
     }
 
     points = [(idx, row["latitude"], row["longitude"]) for idx, row in enumerate(rows)]
@@ -400,19 +581,31 @@ def main() -> None:
         for component in components:
             contribution_totals[component["name"]] += float(component["contribution"])
 
-    zone_corridors: dict[str, dict[str, list[float]]] = defaultdict(lambda: defaultdict(list))
+    zone_corridors: dict[str, dict[str, list[dict[str, Any]]]] = defaultdict(lambda: defaultdict(list))
     for row in rows:
         corridor = row["corridor"]
         if corridor != "Non-corridor":
-            zone_corridors[row["zone"]][corridor].append(row["traffic_impact_score"])
+            zone_corridors[row["zone"]][corridor].append(row)
 
     zone_corridor_advisories: dict[str, list[dict[str, Any]]] = {}
     for zone, corridors in zone_corridors.items():
         zone_corridor_advisories[zone] = [
-            {"corridor": corridor, "average_tis": round(mean(scores), 1), "count": len(scores)}
-            for corridor, scores in sorted(corridors.items(), key=lambda item: mean(item[1]))
-            if len(scores) >= 4
+            {
+                "corridor": corridor,
+                "average_tis": round(mean(row["traffic_impact_score"] for row in members), 1),
+                "count": len(members),
+                "average_hotspot_density": round(mean(row["cluster_risk"] for row in members), 4),
+                "closure_rate": round(sum(1 for row in members if row["requires_road_closure"]) / len(members), 4),
+                "tis_standard_deviation": round(pstdev(row["traffic_impact_score"] for row in members), 4),
+                "latitude": round(mean(row["latitude"] for row in members), 7),
+                "longitude": round(mean(row["longitude"] for row in members), 7),
+            }
+            for corridor, members in sorted(
+                corridors.items(), key=lambda item: mean(row["traffic_impact_score"] for row in item[1])
+            )
+            if len(members) >= DIVERSION_CONFIG["minimum_corridor_support"]
         ]
+    context["zone_corridor_advisories"] = zone_corridor_advisories
 
     cluster_members: dict[int, list[dict[str, Any]]] = defaultdict(list)
     for row in rows:
@@ -438,7 +631,10 @@ def main() -> None:
     cluster_by_id = {cluster["id"]: cluster for cluster in clusters}
 
     for row in rows:
-        rec = recommendation(row["traffic_impact_score"], row["requires_road_closure"])
+        rec = recommendation(
+            row["traffic_impact_score"], row["requires_road_closure"], row["expected_attendance"],
+            row["event_duration_hours"], row["cluster_risk"],
+        )
         barricade_points = [
             {"label": "Primary incident point", "latitude": row["latitude"], "longitude": row["longitude"]}
         ]
@@ -459,16 +655,10 @@ def main() -> None:
                     "longitude": cluster["longitude"],
                 }
             )
-        alternatives = [
-            item for item in zone_corridor_advisories.get(row["zone"], [])
-            if item["corridor"] not in {row["corridor"], "Non-corridor"}
-        ][:3]
-        diversion = {
-            "type": "dataset_advisory",
-            "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
-            "avoid_corridor": row["corridor"],
-            "candidate_corridors": alternatives,
-        }
+        diversion = diversion_plan(
+            row["corridor"], row["zone"], row["traffic_impact_score"], row["requires_road_closure"],
+            row["cluster_risk"], row["latitude"], row["longitude"], context,
+        )
         rec["barricade_points"] = barricade_points
         rec["diversion_advisory"] = diversion
         row["recommendation"] = rec

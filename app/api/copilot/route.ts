@@ -26,17 +26,19 @@ export async function POST(request: Request) {
     answer = `The highest attention zones by average TIS are ${list(zones.map((item) => `${item.name} (${item.average_tis})`))}. Prioritize the top zones for command-room monitoring and reserve deployment.`;
     supporting_facts = zones.map((item) => `${item.name}: ${item.count} events, average TIS ${item.average_tis}`);
   } else if (question.includes("corridor") || question.includes("diversion")) {
-    const corridors = corpus.corridor_hotspots.slice(0, 5);
-    answer = `Corridor risk is led by ${list(corridors.map((item) => `${item.name} (${item.average_tis})`))}. Diversion guidance is dataset-only: avoid the affected corridor and prefer lower-risk corridors in the same zone when available.`;
-    supporting_facts = corridors.map((item) => `${item.name}: ${item.count} events, average TIS ${item.average_tis}`);
+    const events = corpus.top_events.filter((event) => event.recommendation.diversion_advisory.primary_diversion_corridor).slice(0, 3);
+    answer = events.length
+      ? `The local diversion engine prioritizes ${list(events.map((event) => `${event.recommendation.diversion_advisory.primary_diversion_corridor} for ${event.id}`))}. Plans rank same-zone corridors by historical risk, hotspot density, closure resilience, and proximity.`
+      : "No eligible same-zone diversion corridor was found for the highest-risk events.";
+    supporting_facts = events.map((event) => `${event.id}: ${event.recommendation.diversion_advisory.estimated_congestion_reduction}% estimated reduction at ${event.recommendation.diversion_advisory.diversion_confidence_score}% confidence`);
   } else if (question.includes("hotspot") || question.includes("cluster")) {
     const clusters = corpus.hotspots.slice(0, 5);
     answer = `DBSCAN found ${corpus.hotspots.length} hotspot clusters. The largest operational watch area is cluster ${clusters[0]?.id}, with ${clusters[0]?.count} events and average TIS ${clusters[0]?.average_tis}.`;
     supporting_facts = clusters.map((item) => `Cluster ${item.id}: ${item.count} events near ${item.top_police_station}, top cause ${item.top_cause}`);
   } else if (question.includes("resource") || question.includes("officer") || question.includes("barricade")) {
     const events = corpus.top_events.slice(0, 3);
-    answer = `For immediate resource planning, start with the top-risk events and apply the TIS recommendation bands. Current top events require ${list(events.map((event) => `${event.recommendation.officers} officers for ${event.id}`))}.`;
-    supporting_facts = events.map((event) => `${event.id}: TIS ${event.traffic_impact_score}, ${event.recommendation.officers} officers, ${event.recommendation.barricades} barricades`);
+    answer = `For immediate resource planning, start with the top-risk events and apply the attendance-aware allocation model. Current top events require ${list(events.map((event) => `${event.recommendation.officers} officers for ${event.id}`))}.`;
+    supporting_facts = events.map((event) => `${event.id}: ${event.expected_attendance} expected attendees, TIS ${event.traffic_impact_score}, ${event.recommendation.officers} officers, ${event.recommendation.barricades} barricades`);
   } else if (question.includes("why") || question.includes("high risk")) {
     const event = corpus.top_events[0];
     answer = `${event.id} is the highest-risk event. Its risk is driven by ${event.explanation.join(" ")}`;

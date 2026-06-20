@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gridsense.local/schemas/post-event-learning.schema.json",
+  "title": "Post Event Learning Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "model_version",
+    "recorded_at",
+    "predicted_tis",
+    "actual_tis",
+    "predicted_resources",
+    "actual_resources",
+    "operator_feedback"
+  ],
+  "properties": {
+    "event_id": { "type": "string", "minLength": 1 },
+    "model_version": { "type": "string", "minLength": 1 },
+    "recorded_at": { "type": "string", "format": "date-time" },
+    "predicted_tis": { "type": "number", "minimum": 0, "maximum": 100 },
+    "actual_tis": { "type": "number", "minimum": 0, "maximum": 100 },
+    "predicted_resources": { "$ref": "#/$defs/resources" },
+    "actual_resources": { "$ref": "#/$defs/resources" },
+    "operator_feedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rating", "accepted_plan", "diversion_effective", "notes"],
+      "properties": {
+        "rating": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "accepted_plan": { "type": "boolean" },
+        "diversion_effective": { "type": ["boolean", "null"] },
+        "notes": { "type": "string", "maxLength": 2000 }
+      }
+    }
+  },
+  "$defs": {
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["officers", "barricades", "patrol_units"],
+      "properties": {
+        "officers": { "type": "integer", "minimum": 0 },
+        "barricades": { "type": "integer", "minimum": 0 },
+        "patrol_units": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

@@ -1,4 +1,33 @@
 export type RiskCategory = "Critical" | "High" | "Medium" | "Low";
+export type EventScale = "Small" | "Medium" | "Large" | "Mega";
+
+export type DiversionCandidate = {
+  corridor: string;
+  average_tis: number;
+  count: number;
+  average_hotspot_density: number;
+  closure_rate: number;
+  tis_standard_deviation: number;
+  latitude: number;
+  longitude: number;
+  diversion_score?: number;
+  risk_reduction_percentage?: number;
+  distance_km?: number;
+};
+
+export type DiversionPlan = {
+  type: "diversion_plan";
+  message: string;
+  avoid_corridor: string;
+  primary_diversion_corridor: string | null;
+  secondary_diversion_corridor: string | null;
+  estimated_congestion_reduction: number;
+  diversion_confidence_score: number;
+  before_diversion_score: number;
+  after_diversion_score: number;
+  rationale: string[];
+  candidate_corridors: DiversionCandidate[];
+};
 
 export type ScoreComponent = {
   name: string;
@@ -13,26 +42,23 @@ export type ResourceRecommendation = {
   patrol_units: number;
   response_priority: string;
   risk_category: RiskCategory;
+  allocation_explanation: string[];
+  officer_allocation_rationale: string[];
+  barricade_allocation_rationale: string[];
   barricade_points: Array<{
     label: string;
     latitude: number;
     longitude: number;
   }>;
-  diversion_advisory: {
-    type: string;
-    message: string;
-    avoid_corridor: string;
-    candidate_corridors: Array<{
-      corridor: string;
-      average_tis: number;
-      count: number;
-    }>;
-  };
+  diversion_advisory: DiversionPlan;
 };
 
 export type EventRecord = {
   id: string;
   event_type: string;
+  expected_attendance: number;
+  venue_capacity: number;
+  event_scale: EventScale;
   latitude: number;
   longitude: number;
   end_latitude: number | null;
@@ -152,9 +178,13 @@ export type ScoringContext = {
   day_risk: Record<string, number>;
   priority_risk: Record<string, number>;
   risk_thresholds: Record<RiskCategory, number>;
+  diversion_config: {
+    minimum_corridor_support: number;
+    maximum_distance_km: number;
+  };
   zone_corridor_advisories: Record<
     string,
-    Array<{ corridor: string; average_tis: number; count: number }>
+    DiversionCandidate[]
   >;
 };
 
@@ -171,6 +201,38 @@ export type SimulationRequest = {
   startHour?: number;
   startDay?: string;
   clusterRisk?: number;
+  expectedAttendance?: number;
+  latitude?: number;
+  longitude?: number;
+};
+
+export type ProjectedResources = {
+  officers: number;
+  barricades: number;
+  patrol_units: number;
+};
+
+export type InterventionScenarioId =
+  | "no_intervention"
+  | "diversion_only"
+  | "diversion_barricades"
+  | "full_intervention";
+
+export type InterventionScenario = {
+  id: InterventionScenarioId;
+  name: string;
+  projected_tis: number;
+  projected_resources: ProjectedResources;
+  estimated_operational_risk_reduction: number;
+  rationale: string[];
+};
+
+export type InterventionAnalysis = {
+  scenarios: InterventionScenario[];
+  best_scenario: InterventionScenarioId;
+  best_scenario_name: string;
+  improvement_percentage: number;
+  rationale: string[];
 };
 
 export type SimulationResult = {
@@ -178,9 +240,30 @@ export type SimulationResult = {
   baseline_score: number | null;
   traffic_impact_score: number;
   risk_category: RiskCategory;
+  expected_attendance: number;
+  event_scale: EventScale;
   score_components: ScoreComponent[];
   explanation: string[];
   recommendation: ResourceRecommendation;
+  intervention_analysis: InterventionAnalysis;
+};
+
+export type OperatorFeedback = {
+  rating: 1 | 2 | 3 | 4 | 5;
+  accepted_plan: boolean;
+  diversion_effective: boolean | null;
+  notes: string;
+};
+
+export type PostEventLearningRecord = {
+  event_id: string;
+  model_version: string;
+  recorded_at: string;
+  predicted_tis: number;
+  actual_tis: number;
+  predicted_resources: ProjectedResources;
+  actual_resources: ProjectedResources;
+  operator_feedback: OperatorFeedback;
 };
 
 export type CopilotResponse = {

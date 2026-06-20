@@ -102,7 +102,7 @@ export function CityMap({ events, clusters, heatmapPoints, mode = "events" }: Ci
     mapboxgl.accessToken = token;
     const map = new mapboxgl.Map({
       container: containerRef.current,
-      style: "mapbox://styles/mapbox/dark-v11",
+      style: "mapbox://styles/mapbox/light-v11",
       center: [77.5946, 12.9716],
       zoom: 10.2,
       pitch: 32,
@@ -131,15 +131,15 @@ export function CityMap({ events, clusters, heatmapPoints, mode = "events" }: Ci
             ["linear"],
             ["heatmap-density"],
             0,
-            "rgba(34, 197, 94, 0)",
+            "rgba(22, 163, 74, 0)",
             0.25,
-            "rgba(56, 189, 248, 0.55)",
+            "rgba(59, 130, 246, 0.45)",
             0.5,
-            "rgba(246, 183, 60, 0.72)",
+            "rgba(245, 158, 11, 0.65)",
             0.78,
-            "rgba(249, 115, 22, 0.86)",
+            "rgba(217, 119, 6, 0.80)",
             1,
-            "rgba(239, 68, 68, 0.95)"
+            "rgba(220, 38, 38, 0.90)"
           ]
         }
       });
@@ -149,11 +149,11 @@ export function CityMap({ events, clusters, heatmapPoints, mode = "events" }: Ci
         type: "circle",
         source: "event-points",
         paint: {
-          "circle-radius": ["interpolate", ["linear"], ["get", "score"], 35, 3, 85, 9],
+          "circle-radius": ["interpolate", ["linear"], ["get", "score"], 35, 4, 85, 11],
           "circle-color": ["get", "color"],
-          "circle-stroke-color": "#07111f",
-          "circle-stroke-width": 1.2,
-          "circle-opacity": mode === "events" ? 0.92 : 0.38
+          "circle-stroke-color": "#FFFFFF",
+          "circle-stroke-width": 1.5,
+          "circle-opacity": mode === "events" ? 0.9 : 0.35
         }
       });
 
@@ -163,10 +163,10 @@ export function CityMap({ events, clusters, heatmapPoints, mode = "events" }: Ci
         source: "hotspot-clusters",
         paint: {
           "circle-radius": ["interpolate", ["linear"], ["get", "count"], 8, 6, 200, 18, 1000, 28],
-          "circle-color": "#38bdf8",
-          "circle-opacity": mode === "hotspots" ? 0.58 : 0.28,
-          "circle-stroke-color": "#e7eef8",
-          "circle-stroke-width": 1
+          "circle-color": "#3B82F6",
+          "circle-opacity": mode === "hotspots" ? 0.55 : 0.25,
+          "circle-stroke-color": "#FFFFFF",
+          "circle-stroke-width": 1.5
         }
       });
 
@@ -177,10 +177,15 @@ export function CityMap({ events, clusters, heatmapPoints, mode = "events" }: Ci
         }
         const props = feature.properties || {};
         const coordinates = feature.geometry.coordinates.slice() as [number, number];
-        new mapboxgl.Popup({ closeButton: false })
+        new mapboxgl.Popup({ closeButton: false, className: "traffic-popup" })
           .setLngLat(coordinates)
           .setHTML(
-            `<strong>${props.id}</strong><br/>TIS ${Number(props.score).toFixed(1)} - ${props.risk_category}<br/>${props.cause}<br/>${props.corridor}<br/>${props.station}`
+            `<div style="font-family:var(--font-inter,system-ui,sans-serif);font-size:13px;color:#0F172A;">
+              <div style="font-weight:600;margin-bottom:4px;">${props.id}</div>
+              <div style="color:#6B7280;margin-bottom:2px;">TIS ${Number(props.score).toFixed(1)} · ${props.risk_category}</div>
+              <div style="color:#374151;">${String(props.cause).replace(/_/g," ").replace(/\b\w/g,(l:string)=>l.toUpperCase())}</div>
+              <div style="color:#6B7280;font-size:12px;margin-top:4px;">${props.corridor}</div>
+            </div>`
           )
           .addTo(map);
       });
@@ -209,11 +214,11 @@ export function CityMap({ events, clusters, heatmapPoints, mode = "events" }: Ci
 
   if (!token) {
     return (
-      <div className="flex h-[520px] items-center justify-center rounded border border-ops-line bg-ops-panel text-sm text-ops-muted">
+      <div className="flex h-[520px] items-center justify-center rounded-xl border border-border-base bg-surface-subtle text-sm text-ink-muted">
         Mapbox token is missing from .env.local.
       </div>
     );
   }
 
-  return <div ref={containerRef} className="h-[520px] w-full overflow-hidden rounded border border-ops-line bg-ops-panel" />;
+  return <div ref={containerRef} className="h-full w-full overflow-hidden rounded-xl bg-surface-subtle" />;
 }
