@@ -12,7 +12,7 @@ GridSense AI turns the instructor-provided ASTraM event dataset into an operatio
 - Detects spatial hotspots with DBSCAN.
 - Estimates event attendance and venue capacity from historical event type.
 - Dynamically recommends officers, barricades, patrol units, and response priority from attendance and operational risk factors.
-- Provides dataset-only diversion advisories without external routing intelligence.
+- Plans primary and secondary diversion corridors using local historical risk, hotspot density, closure resilience, zone density, and event proximity.
 - Renders a Mapbox-based Bengaluru operations map with heatmap and event layers.
 - Includes an offline copilot that answers from processed local dataset insights.
 

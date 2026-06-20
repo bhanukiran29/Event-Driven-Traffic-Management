@@ -322,6 +322,8 @@ export function OperationsDashboard() {
         priority: simPriority,
         durationHours: simDuration,
         expectedAttendance: simAttendance,
+        latitude: selectedEvent.latitude,
+        longitude: selectedEvent.longitude,
         corridor: selectedEvent.corridor,
         zone: selectedEvent.zone,
         junction: selectedEvent.junction,
@@ -625,11 +627,30 @@ export function OperationsDashboard() {
                   <div className="rounded border border-ops-line bg-slate-950 p-4">
                     <div className="flex items-center gap-2 text-ops-amber"><Route size={17} /> Avoid {displayEvent.recommendation.diversion_advisory.avoid_corridor}</div>
                     <p className="mt-2 text-sm leading-6 text-ops-muted">{displayEvent.recommendation.diversion_advisory.message}</p>
+                    <div className="mt-3 grid grid-cols-2 gap-2 text-sm">
+                      <div className="rounded border border-ops-line p-3">
+                        <div className="text-xs uppercase tracking-wide text-ops-muted">Primary</div>
+                        <div className="mt-1 text-ops-text">{displayEvent.recommendation.diversion_advisory.primary_diversion_corridor || "Unavailable"}</div>
+                      </div>
+                      <div className="rounded border border-ops-line p-3">
+                        <div className="text-xs uppercase tracking-wide text-ops-muted">Secondary</div>
+                        <div className="mt-1 text-ops-text">{displayEvent.recommendation.diversion_advisory.secondary_diversion_corridor || "Unavailable"}</div>
+                      </div>
+                    </div>
+                    <div className="mt-3 grid grid-cols-2 gap-2 text-center text-sm">
+                      <div className="rounded border border-ops-line p-3"><div className="text-xl text-ops-green">{displayEvent.recommendation.diversion_advisory.estimated_congestion_reduction}%</div><div className="text-ops-muted">Estimated reduction</div></div>
+                      <div className="rounded border border-ops-line p-3"><div className="text-xl text-ops-cyan">{displayEvent.recommendation.diversion_advisory.diversion_confidence_score}%</div><div className="text-ops-muted">Confidence</div></div>
+                    </div>
+                    <div className="mt-3 grid gap-2">
+                      {displayEvent.recommendation.diversion_advisory.rationale.map((reason) => (
+                        <div key={reason} className="rounded border border-ops-line px-3 py-2 text-sm text-ops-muted">{reason}</div>
+                      ))}
+                    </div>
                     <div className="mt-3 grid gap-2">
                       {displayEvent.recommendation.diversion_advisory.candidate_corridors.map((corridor) => (
                         <div key={corridor.corridor} className="flex items-center justify-between rounded border border-ops-line px-3 py-2 text-sm">
                           <span>{corridor.corridor}</span>
-                          <span className="text-ops-cyan">Avg TIS {corridor.average_tis}</span>
+                          <span className="text-ops-cyan">Score {corridor.diversion_score} - Avg TIS {corridor.average_tis}</span>
                         </div>
                       ))}
                     </div>
@@ -689,6 +710,15 @@ export function OperationsDashboard() {
                       {simulationResult.expected_attendance.toLocaleString("en-IN")} attendees - {simulationResult.event_scale} event
                     </div>
                     <div className="mt-5 grid grid-cols-3 gap-2 text-center text-sm">
+                      <div className="rounded border border-ops-line p-3"><div className="text-xl text-ops-amber">{simulationResult.recommendation.diversion_advisory.before_diversion_score}</div><div className="text-ops-muted">Before diversion</div></div>
+                      <div className="rounded border border-ops-line p-3"><div className="text-xl text-ops-green">{simulationResult.recommendation.diversion_advisory.after_diversion_score}</div><div className="text-ops-muted">After diversion</div></div>
+                      <div className="rounded border border-ops-line p-3"><div className="text-xl text-ops-cyan">{simulationResult.recommendation.diversion_advisory.estimated_congestion_reduction}%</div><div className="text-ops-muted">Improvement</div></div>
+                    </div>
+                    <div className="mt-3 text-sm text-ops-muted">
+                      Primary: <span className="text-ops-text">{simulationResult.recommendation.diversion_advisory.primary_diversion_corridor || "Unavailable"}</span>
+                      {simulationResult.recommendation.diversion_advisory.secondary_diversion_corridor ? ` - Secondary: ${simulationResult.recommendation.diversion_advisory.secondary_diversion_corridor}` : ""}
+                    </div>
+                    <div className="mt-5 grid grid-cols-3 gap-2 text-center text-sm">
                       <div className="rounded border border-ops-line p-3"><div className="text-2xl text-ops-text">{simulationResult.recommendation.officers}</div><div className="text-ops-muted">Officers</div></div>
                       <div className="rounded border border-ops-line p-3"><div className="text-2xl text-ops-text">{simulationResult.recommendation.barricades}</div><div className="text-ops-muted">Barricades</div></div>
                       <div className="rounded border border-ops-line p-3"><div className="text-2xl text-ops-text">{simulationResult.recommendation.patrol_units}</div><div className="text-ops-muted">Patrols</div></div>
@@ -697,6 +727,7 @@ export function OperationsDashboard() {
                   <div>
                     <ScoreBreakdown event={{ ...(displayEvent as RiskEvent), score_components: simulationResult.score_components }} />
                     <div className="mt-5 grid gap-2 text-sm text-ops-muted">
+                      {simulationResult.recommendation.diversion_advisory.rationale.map((item) => <div key={item} className="rounded border border-ops-green/30 bg-slate-950 p-3">{item}</div>)}
                       {simulationResult.recommendation.allocation_explanation.map((item) => <div key={item} className="rounded border border-ops-cyan/30 bg-slate-950 p-3">{item}</div>)}
                       {simulationResult.explanation.map((item) => <div key={item} className="rounded border border-ops-line bg-slate-950 p-3">{item}</div>)}
                     </div>

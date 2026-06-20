@@ -1,6 +1,33 @@
 export type RiskCategory = "Critical" | "High" | "Medium" | "Low";
 export type EventScale = "Small" | "Medium" | "Large" | "Mega";
 
+export type DiversionCandidate = {
+  corridor: string;
+  average_tis: number;
+  count: number;
+  average_hotspot_density: number;
+  closure_rate: number;
+  latitude: number;
+  longitude: number;
+  diversion_score?: number;
+  risk_reduction_percentage?: number;
+  distance_km?: number;
+};
+
+export type DiversionPlan = {
+  type: "diversion_plan";
+  message: string;
+  avoid_corridor: string;
+  primary_diversion_corridor: string | null;
+  secondary_diversion_corridor: string | null;
+  estimated_congestion_reduction: number;
+  diversion_confidence_score: number;
+  before_diversion_score: number;
+  after_diversion_score: number;
+  rationale: string[];
+  candidate_corridors: DiversionCandidate[];
+};
+
 export type ScoreComponent = {
   name: string;
   value: number;
@@ -20,16 +47,7 @@ export type ResourceRecommendation = {
     latitude: number;
     longitude: number;
   }>;
-  diversion_advisory: {
-    type: string;
-    message: string;
-    avoid_corridor: string;
-    candidate_corridors: Array<{
-      corridor: string;
-      average_tis: number;
-      count: number;
-    }>;
-  };
+  diversion_advisory: DiversionPlan;
 };
 
 export type EventRecord = {
@@ -159,7 +177,7 @@ export type ScoringContext = {
   risk_thresholds: Record<RiskCategory, number>;
   zone_corridor_advisories: Record<
     string,
-    Array<{ corridor: string; average_tis: number; count: number }>
+    DiversionCandidate[]
   >;
 };
 
@@ -177,6 +195,8 @@ export type SimulationRequest = {
   startDay?: string;
   clusterRisk?: number;
   expectedAttendance?: number;
+  latitude?: number;
+  longitude?: number;
 };
 
 export type SimulationResult = {

@@ -1,5 +1,7 @@
 import type {
   ResourceRecommendation,
+  DiversionCandidate,
+  DiversionPlan,
   EventScale,
   RiskCategory,
   RiskEvent,
@@ -44,6 +46,111 @@ function eventScale(attendance: number): EventScale {
   if (attendance <= 2500) return "Medium";
   if (attendance <= 10000) return "Large";
   return "Mega";
+}
+
+function haversineKm(lat1: number, lng1: number, lat2: number, lng2: number): number {
+  const radiusKm = 6371;
+  const radians = (value: number) => value * Math.PI / 180;
+  const dLat = radians(lat2 - lat1);
+  const dLng = radians(lng2 - lng1);
+  const a = Math.sin(dLat / 2) ** 2
+    + Math.cos(radians(lat1)) * Math.cos(radians(lat2)) * Math.sin(dLng / 2) ** 2;
+  return 2 * radiusKm * Math.asin(Math.sqrt(a));
+}
+
+function diversionPlan(
+  corridor: string,
+  zone: string,
+  score: number,
+  closure: boolean,
+  clusterRisk: number,
+  context: ScoringContext,
+  latitude?: number,
+  longitude?: number
+): DiversionPlan {
+  const zoneDensity = Math.min(1, Math.max(0, context.zone_density[zone] ?? 0.2));
+  const candidates = context.zone_corridor_advisories[zone] || [];
+  const affectedRisk = candidates.find((item) => item.corridor === corridor)?.average_tis ?? score;
+  const ranked = candidates
+    .filter((item) => item.corridor !== corridor && item.corridor !== "Non-corridor")
+    .map((item): DiversionCandidate => {
+      const distanceKm = latitude !== undefined && longitude !== undefined
+        ? haversineKm(latitude, longitude, item.latitude, item.longitude)
+        : 12.5;
+      const historicalSafety = 1 - Math.min(1, item.average_tis / 100);
+      const candidateHotspotSafety = 1 - Math.min(1, Math.max(0, item.average_hotspot_density));
+      const eventHotspotRelief = Math.max(0, Math.min(1, clusterRisk) - item.average_hotspot_density);
+      const hotspotSafety = candidateHotspotSafety * 0.7 + eventHotspotRelief * 0.3;
+      const zoneRelief = 1 - zoneDensity;
+      const closureResilience = closure
+        ? 1 - Math.min(1, item.closure_rate)
+        : 0.5 + (1 - Math.min(1, item.closure_rate)) * 0.5;
+      const proximity = 1 - Math.min(1, distanceKm / 25);
+      const candidateScore = 100 * (
+        historicalSafety * 0.4
+        + hotspotSafety * 0.2
+        + zoneRelief * 0.1
+        + closureResilience * 0.2
+        + proximity * 0.1
+      );
+      const riskReduction = affectedRisk > 0
+        ? ((affectedRisk - item.average_tis) / affectedRisk) * 100
+        : 0;
+      return {
+        ...item,
+        diversion_score: Number(candidateScore.toFixed(1)),
+        risk_reduction_percentage: Number(riskReduction.toFixed(1)),
+        distance_km: Number(distanceKm.toFixed(1))
+      };
+    })
+    .sort((a, b) => (b.diversion_score ?? 0) - (a.diversion_score ?? 0));
+  const primary = ranked[0];
+  const secondary = ranked[1];
+  if (!primary) {
+    return {
+      type: "diversion_plan",
+      message: "No eligible same-zone corridor is available in the local historical dataset.",
+      avoid_corridor: corridor,
+      primary_diversion_corridor: null,
+      secondary_diversion_corridor: null,
+      estimated_congestion_reduction: 0,
+      diversion_confidence_score: 0,
+      before_diversion_score: score,
+      after_diversion_score: score,
+      rationale: ["No eligible candidate corridor met the local data requirements."],
+      candidate_corridors: []
+    };
+  }
+  const riskReduction = primary.risk_reduction_percentage ?? 0;
+  const estimatedReduction = Math.min(45, Math.max(0,
+    riskReduction * 0.5 + (primary.diversion_score ?? 0) * 0.15 + (closure ? 5 : 0)
+  ));
+  const confidence = Math.min(95, Math.max(0,
+    (primary.diversion_score ?? 0) * 0.65
+    + Math.min(1, primary.count / 100) * 20
+    + (secondary ? 10 : 0)
+    + (riskReduction > 0 ? 5 : 0)
+  ));
+  const riskRationale = riskReduction >= 0
+    ? `Selected because corridor risk is ${riskReduction.toFixed(1)}% lower than affected corridor.`
+    : `Selected on composite resilience despite corridor risk being ${Math.abs(riskReduction).toFixed(1)}% higher than affected corridor.`;
+  return {
+    type: "diversion_plan",
+    message: `Route traffic primarily via ${primary.corridor}${secondary ? `, with ${secondary.corridor} as secondary relief` : ""}.`,
+    avoid_corridor: corridor,
+    primary_diversion_corridor: primary.corridor,
+    secondary_diversion_corridor: secondary?.corridor ?? null,
+    estimated_congestion_reduction: Number(estimatedReduction.toFixed(1)),
+    diversion_confidence_score: Number(confidence.toFixed(1)),
+    before_diversion_score: score,
+    after_diversion_score: Number((score * (1 - estimatedReduction / 100)).toFixed(1)),
+    rationale: [
+      riskRationale,
+      `Candidate hotspot density is ${(primary.average_hotspot_density * 100).toFixed(1)}% with a ${(primary.closure_rate * 100).toFixed(1)}% historical closure rate.`,
+      `Composite score ${primary.diversion_score?.toFixed(1)} balances historical risk, zone density, hotspot density, closure resilience, and ${primary.distance_km?.toFixed(1)} km proximity.`
+    ],
+    candidate_corridors: ranked.slice(0, 3)
+  };
 }
 
 function recommendation(
@@ -105,14 +212,7 @@ function recommendation(
       `Hotspot risk ${(Math.min(1, Math.max(0, clusterRisk)) * 100).toFixed(0)}% adds ${hotspotBarricades} barricade units.`
     ],
     barricade_points: barricadePoints,
-    diversion_advisory: {
-      type: "dataset_advisory",
-      message: "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
-      avoid_corridor: corridor,
-      candidate_corridors: (context.zone_corridor_advisories[zone] || [])
-        .filter((item) => item.corridor !== corridor && item.corridor !== "Non-corridor")
-        .slice(0, 3)
-    }
+    diversion_advisory: diversionPlan(corridor, zone, score, closure, clusterRisk, context, latitude, longitude)
   };
 }
 
@@ -164,6 +264,8 @@ export function scoreScenario(
   const startDay = request.startDay || baseEvent?.start_day || "Monday";
   const clusterRisk = request.clusterRisk ?? baseEvent?.cluster_risk ?? 0;
   const expectedAttendance = Math.max(0, Math.round(request.expectedAttendance ?? baseEvent?.expected_attendance ?? 0));
+  const latitude = request.latitude ?? baseEvent?.latitude;
+  const longitude = request.longitude ?? baseEvent?.longitude;
 
   const durationRisk = Math.log1p(Math.min(Math.max(durationHours, 0), 72)) / Math.log1p(72);
   const values: Record<string, number> = {
@@ -210,8 +312,8 @@ export function scoreScenario(
       expectedAttendance,
       durationHours,
       clusterRisk,
-      baseEvent?.latitude,
-      baseEvent?.longitude,
+      latitude,
+      longitude,
       baseEvent?.end_latitude,
       baseEvent?.end_longitude
     )

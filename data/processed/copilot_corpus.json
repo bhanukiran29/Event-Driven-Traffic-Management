@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generated_at": "2026-06-20T09:51:21.532415+00:00",
+    "generated_at": "2026-06-20T09:59:57.403033+00:00",
     "data_source": "ASTraM instructor-provided anonymized event dataset only",
     "honesty_notice": "The dataset does not contain measured congestion, vehicle counts, travel time, or delay duration. Scores represent operational traffic impact risk.",
     "data_quality": {
@@ -717,24 +717,56 @@
             }
           ],
           "diversion_advisory": {
-            "type": "dataset_advisory",
-            "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+            "type": "diversion_plan",
+            "message": "Route traffic primarily via Hennur Main Road, with ORR North 2 as secondary relief.",
             "avoid_corridor": "Bellary Road 2",
+            "primary_diversion_corridor": "Hennur Main Road",
+            "secondary_diversion_corridor": "ORR North 2",
+            "estimated_congestion_reduction": 27.9,
+            "diversion_confidence_score": 64.2,
+            "before_diversion_score": 80.2,
+            "after_diversion_score": 57.8,
+            "rationale": [
+              "Selected because corridor risk is 23.4% lower than affected corridor.",
+              "Candidate hotspot density is 0.0% with a 0.0% historical closure rate.",
+              "Composite score 74.5 balances historical risk, zone density, hotspot density, closure resilience, and 4.2 km proximity."
+            ],
             "candidate_corridors": [
               {
                 "corridor": "Hennur Main Road",
                 "average_tis": 43.1,
-                "count": 4
+                "count": 4,
+                "average_hotspot_density": 0.0,
+                "closure_rate": 0.0,
+                "latitude": 13.1102732,
+                "longitude": 77.6340292,
+                "diversion_score": 74.5,
+                "risk_reduction_percentage": 23.4,
+                "distance_km": 4.2
               },
               {
                 "corridor": "ORR North 2",
                 "average_tis": 51.1,
-                "count": 63
+                "count": 63,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0794,
+                "latitude": 13.042103,
+                "longitude": 77.55001,
+                "diversion_score": 48.1,
+                "risk_reduction_percentage": 9.2,
+                "distance_km": 8.1
               },
               {
-                "corridor": "Tumkur Road",
-                "average_tis": 52.3,
-                "count": 32
+                "corridor": "Bellary Road 1",
+                "average_tis": 53.4,
+                "count": 109,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0642,
+                "latitude": 13.0285921,
+                "longitude": 77.5867649,
+                "diversion_score": 47.6,
+                "risk_reduction_percentage": 5.2,
+                "distance_km": 7.9
               }
             ]
           }
@@ -871,24 +903,56 @@
             }
           ],
           "diversion_advisory": {
-            "type": "dataset_advisory",
-            "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+            "type": "diversion_plan",
+            "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
             "avoid_corridor": "Non-corridor",
+            "primary_diversion_corridor": "CBD 1",
+            "secondary_diversion_corridor": "Old Madras Road",
+            "estimated_congestion_reduction": 31.0,
+            "diversion_confidence_score": 48.4,
+            "before_diversion_score": 77.2,
+            "after_diversion_score": 53.2,
+            "rationale": [
+              "Selected because corridor risk is 37.3% lower than affected corridor.",
+              "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+              "Composite score 49.2 balances historical risk, zone density, hotspot density, closure resilience, and 3.6 km proximity."
+            ],
             "candidate_corridors": [
               {
                 "corridor": "CBD 1",
                 "average_tis": 48.4,
-                "count": 7
-              },
-              {
-                "corridor": "Bannerghata Road",
-                "average_tis": 51.0,
-                "count": 4
+                "count": 7,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0,
+                "latitude": 12.9809984,
+                "longitude": 77.6067277,
+                "diversion_score": 49.2,
+                "risk_reduction_percentage": 37.3,
+                "distance_km": 3.6
               },
               {
                 "corridor": "Old Madras Road",
                 "average_tis": 51.3,
-                "count": 18
+                "count": 18,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0,
+                "latitude": 12.9751618,
+                "longitude": 77.6123312,
+                "diversion_score": 47.7,
+                "risk_reduction_percentage": 33.5,
+                "distance_km": 4.4
+              },
+              {
+                "corridor": "Bellary Road 1",
+                "average_tis": 54.6,
+                "count": 53,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0189,
+                "latitude": 12.9933494,
+                "longitude": 77.5856178,
+                "diversion_score": 47.2,
+                "risk_reduction_percentage": 29.3,
+                "distance_km": 1.3
               }
             ]
           }
@@ -1025,24 +1089,56 @@
             }
           ],
           "diversion_advisory": {
-            "type": "dataset_advisory",
-            "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+            "type": "diversion_plan",
+            "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
             "avoid_corridor": "Non-corridor",
+            "primary_diversion_corridor": "CBD 1",
+            "secondary_diversion_corridor": "Old Madras Road",
+            "estimated_congestion_reduction": 31.0,
+            "diversion_confidence_score": 48.4,
+            "before_diversion_score": 77.2,
+            "after_diversion_score": 53.2,
+            "rationale": [
+              "Selected because corridor risk is 37.3% lower than affected corridor.",
+              "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+              "Composite score 49.2 balances historical risk, zone density, hotspot density, closure resilience, and 3.6 km proximity."
+            ],
             "candidate_corridors": [
               {
                 "corridor": "CBD 1",
                 "average_tis": 48.4,
-                "count": 7
-              },
-              {
-                "corridor": "Bannerghata Road",
-                "average_tis": 51.0,
-                "count": 4
+                "count": 7,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0,
+                "latitude": 12.9809984,
+                "longitude": 77.6067277,
+                "diversion_score": 49.2,
+                "risk_reduction_percentage": 37.3,
+                "distance_km": 3.6
               },
               {
                 "corridor": "Old Madras Road",
                 "average_tis": 51.3,
-                "count": 18
+                "count": 18,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0,
+                "latitude": 12.9751618,
+                "longitude": 77.6123312,
+                "diversion_score": 47.7,
+                "risk_reduction_percentage": 33.5,
+                "distance_km": 4.4
+              },
+              {
+                "corridor": "Bellary Road 1",
+                "average_tis": 54.6,
+                "count": 53,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0189,
+                "latitude": 12.9933494,
+                "longitude": 77.5856178,
+                "diversion_score": 47.2,
+                "risk_reduction_percentage": 29.3,
+                "distance_km": 1.3
               }
             ]
           }
@@ -1179,24 +1275,56 @@
             }
           ],
           "diversion_advisory": {
-            "type": "dataset_advisory",
-            "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+            "type": "diversion_plan",
+            "message": "Route traffic primarily via Airport New South Road, with Hennur Main Road as secondary relief.",
             "avoid_corridor": "Bellary Road 2",
+            "primary_diversion_corridor": "Airport New South Road",
+            "secondary_diversion_corridor": "Hennur Main Road",
+            "estimated_congestion_reduction": 16.6,
+            "diversion_confidence_score": 57.5,
+            "before_diversion_score": 77.1,
+            "after_diversion_score": 64.3,
+            "rationale": [
+              "Selected because corridor risk is 5.7% lower than affected corridor.",
+              "Candidate hotspot density is 81.9% with a 4.5% historical closure rate.",
+              "Composite score 58.6 balances historical risk, zone density, hotspot density, closure resilience, and 9.3 km proximity."
+            ],
             "candidate_corridors": [
               {
-                "corridor": "IRR(Thanisandra road)",
-                "average_tis": 43.8,
-                "count": 44
+                "corridor": "Airport New South Road",
+                "average_tis": 45.9,
+                "count": 22,
+                "average_hotspot_density": 0.8194,
+                "closure_rate": 0.0455,
+                "latitude": 13.0188624,
+                "longitude": 77.6283721,
+                "diversion_score": 58.6,
+                "risk_reduction_percentage": 5.7,
+                "distance_km": 9.3
               },
               {
-                "corridor": "Bannerghata Road",
-                "average_tis": 45.4,
-                "count": 117
+                "corridor": "Hennur Main Road",
+                "average_tis": 48.5,
+                "count": 62,
+                "average_hotspot_density": 0.8388,
+                "closure_rate": 0.0806,
+                "latitude": 13.0483749,
+                "longitude": 77.6263797,
+                "diversion_score": 57.7,
+                "risk_reduction_percentage": 0.4,
+                "distance_km": 6.3
               },
               {
-                "corridor": "West of Chord Road",
-                "average_tis": 45.4,
-                "count": 101
+                "corridor": "ORR North 2",
+                "average_tis": 48.4,
+                "count": 148,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.027,
+                "latitude": 13.0429179,
+                "longitude": 77.5630693,
+                "diversion_score": 55.2,
+                "risk_reduction_percentage": 0.6,
+                "distance_km": 7.2
               }
             ]
           }
@@ -1333,24 +1461,56 @@
             }
           ],
           "diversion_advisory": {
-            "type": "dataset_advisory",
-            "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+            "type": "diversion_plan",
+            "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
             "avoid_corridor": "Non-corridor",
+            "primary_diversion_corridor": "CBD 1",
+            "secondary_diversion_corridor": "Old Madras Road",
+            "estimated_congestion_reduction": 30.9,
+            "diversion_confidence_score": 48.4,
+            "before_diversion_score": 77.0,
+            "after_diversion_score": 53.2,
+            "rationale": [
+              "Selected because corridor risk is 37.1% lower than affected corridor.",
+              "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+              "Composite score 49.2 balances historical risk, zone density, hotspot density, closure resilience, and 3.5 km proximity."
+            ],
             "candidate_corridors": [
               {
                 "corridor": "CBD 1",
                 "average_tis": 48.4,
-                "count": 7
-              },
-              {
-                "corridor": "Bannerghata Road",
-                "average_tis": 51.0,
-                "count": 4
+                "count": 7,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0,
+                "latitude": 12.9809984,
+                "longitude": 77.6067277,
+                "diversion_score": 49.2,
+                "risk_reduction_percentage": 37.1,
+                "distance_km": 3.5
               },
               {
                 "corridor": "Old Madras Road",
                 "average_tis": 51.3,
-                "count": 18
+                "count": 18,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0,
+                "latitude": 12.9751618,
+                "longitude": 77.6123312,
+                "diversion_score": 47.9,
+                "risk_reduction_percentage": 33.4,
+                "distance_km": 4.1
+              },
+              {
+                "corridor": "Bannerghata Road",
+                "average_tis": 51.0,
+                "count": 4,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0,
+                "latitude": 12.9307092,
+                "longitude": 77.6004631,
+                "diversion_score": 47.4,
+                "risk_reduction_percentage": 33.8,
+                "distance_km": 5.6
               }
             ]
           }
@@ -1487,24 +1647,56 @@
             }
           ],
           "diversion_advisory": {
-            "type": "dataset_advisory",
-            "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+            "type": "diversion_plan",
+            "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
             "avoid_corridor": "Non-corridor",
+            "primary_diversion_corridor": "CBD 1",
+            "secondary_diversion_corridor": "Old Madras Road",
+            "estimated_congestion_reduction": 30.9,
+            "diversion_confidence_score": 48.5,
+            "before_diversion_score": 76.8,
+            "after_diversion_score": 53.1,
+            "rationale": [
+              "Selected because corridor risk is 37.0% lower than affected corridor.",
+              "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+              "Composite score 49.4 balances historical risk, zone density, hotspot density, closure resilience, and 3.2 km proximity."
+            ],
             "candidate_corridors": [
               {
                 "corridor": "CBD 1",
                 "average_tis": 48.4,
-                "count": 7
-              },
-              {
-                "corridor": "Bannerghata Road",
-                "average_tis": 51.0,
-                "count": 4
+                "count": 7,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0,
+                "latitude": 12.9809984,
+                "longitude": 77.6067277,
+                "diversion_score": 49.4,
+                "risk_reduction_percentage": 37.0,
+                "distance_km": 3.2
               },
               {
                 "corridor": "Old Madras Road",
                 "average_tis": 51.3,
-                "count": 18
+                "count": 18,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0,
+                "latitude": 12.9751618,
+                "longitude": 77.6123312,
+                "diversion_score": 47.9,
+                "risk_reduction_percentage": 33.2,
+                "distance_km": 3.9
+              },
+              {
+                "corridor": "Bellary Road 1",
+                "average_tis": 54.6,
+                "count": 53,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0189,
+                "latitude": 12.9933494,
+                "longitude": 77.5856178,
+                "diversion_score": 47.2,
+                "risk_reduction_percentage": 28.9,
+                "distance_km": 1.4
               }
             ]
           }
@@ -1641,24 +1833,56 @@
             }
           ],
           "diversion_advisory": {
-            "type": "dataset_advisory",
-            "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+            "type": "diversion_plan",
+            "message": "Route traffic primarily via Magadi Road, with Tumkur Road as secondary relief.",
             "avoid_corridor": "Non-corridor",
+            "primary_diversion_corridor": "Magadi Road",
+            "secondary_diversion_corridor": "Tumkur Road",
+            "estimated_congestion_reduction": 27.9,
+            "diversion_confidence_score": 57.9,
+            "before_diversion_score": 76.7,
+            "after_diversion_score": 55.3,
+            "rationale": [
+              "Selected because corridor risk is 31.0% lower than affected corridor.",
+              "Candidate hotspot density is 100.0% with a 7.4% historical closure rate.",
+              "Composite score 49.4 balances historical risk, zone density, hotspot density, closure resilience, and 2.5 km proximity."
+            ],
             "candidate_corridors": [
               {
-                "corridor": "West of Chord Road",
-                "average_tis": 50.2,
-                "count": 16
-              },
-              {
-                "corridor": "ORR West 1",
-                "average_tis": 51.8,
-                "count": 15
+                "corridor": "Magadi Road",
+                "average_tis": 52.9,
+                "count": 54,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0741,
+                "latitude": 12.9881258,
+                "longitude": 77.509846,
+                "diversion_score": 49.4,
+                "risk_reduction_percentage": 31.0,
+                "distance_km": 2.5
               },
               {
                 "corridor": "Tumkur Road",
                 "average_tis": 52.8,
-                "count": 126
+                "count": 126,
+                "average_hotspot_density": 0.9921,
+                "closure_rate": 0.0079,
+                "latitude": 13.0329453,
+                "longitude": 77.5310219,
+                "diversion_score": 49.2,
+                "risk_reduction_percentage": 31.2,
+                "distance_km": 6.7
+              },
+              {
+                "corridor": "Mysore Road",
+                "average_tis": 54.4,
+                "count": 55,
+                "average_hotspot_density": 0.7821,
+                "closure_rate": 0.1818,
+                "latitude": 12.9316981,
+                "longitude": 77.5103993,
+                "diversion_score": 49.2,
+                "risk_reduction_percentage": 29.1,
+                "distance_km": 7.0
               }
             ]
           }
@@ -1795,24 +2019,56 @@
             }
           ],
           "diversion_advisory": {
-            "type": "dataset_advisory",
-            "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+            "type": "diversion_plan",
+            "message": "Route traffic primarily via Hennur Main Road, with Tumkur Road as secondary relief.",
             "avoid_corridor": "ORR North 2",
+            "primary_diversion_corridor": "Hennur Main Road",
+            "secondary_diversion_corridor": "Tumkur Road",
+            "estimated_congestion_reduction": 23.6,
+            "diversion_confidence_score": 62.4,
+            "before_diversion_score": 76.4,
+            "after_diversion_score": 58.4,
+            "rationale": [
+              "Selected because corridor risk is 15.7% lower than affected corridor.",
+              "Candidate hotspot density is 0.0% with a 0.0% historical closure rate.",
+              "Composite score 71.7 balances historical risk, zone density, hotspot density, closure resilience, and 11.1 km proximity."
+            ],
             "candidate_corridors": [
               {
                 "corridor": "Hennur Main Road",
                 "average_tis": 43.1,
-                "count": 4
+                "count": 4,
+                "average_hotspot_density": 0.0,
+                "closure_rate": 0.0,
+                "latitude": 13.1102732,
+                "longitude": 77.6340292,
+                "diversion_score": 71.7,
+                "risk_reduction_percentage": 15.7,
+                "distance_km": 11.1
               },
               {
                 "corridor": "Tumkur Road",
                 "average_tis": 52.3,
-                "count": 32
+                "count": 32,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0312,
+                "latitude": 13.0425159,
+                "longitude": 77.5140631,
+                "diversion_score": 50.0,
+                "risk_reduction_percentage": -2.3,
+                "distance_km": 4.6
               },
               {
                 "corridor": "Bellary Road 1",
                 "average_tis": 53.4,
-                "count": 109
+                "count": 109,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0642,
+                "latitude": 13.0285921,
+                "longitude": 77.5867649,
+                "diversion_score": 49.2,
+                "risk_reduction_percentage": -4.5,
+                "distance_km": 3.9
               }
             ]
           }
@@ -1949,24 +2205,56 @@
             }
           ],
           "diversion_advisory": {
-            "type": "dataset_advisory",
-            "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+            "type": "diversion_plan",
+            "message": "Route traffic primarily via Hennur Main Road, with Bellary Road 2 as secondary relief.",
             "avoid_corridor": "Non-corridor",
+            "primary_diversion_corridor": "Hennur Main Road",
+            "secondary_diversion_corridor": "Bellary Road 2",
+            "estimated_congestion_reduction": 37.8,
+            "diversion_confidence_score": 63.8,
+            "before_diversion_score": 76.3,
+            "after_diversion_score": 47.4,
+            "rationale": [
+              "Selected because corridor risk is 43.5% lower than affected corridor.",
+              "Candidate hotspot density is 0.0% with a 0.0% historical closure rate.",
+              "Composite score 73.9 balances historical risk, zone density, hotspot density, closure resilience, and 5.7 km proximity."
+            ],
             "candidate_corridors": [
               {
                 "corridor": "Hennur Main Road",
                 "average_tis": 43.1,
-                "count": 4
+                "count": 4,
+                "average_hotspot_density": 0.0,
+                "closure_rate": 0.0,
+                "latitude": 13.1102732,
+                "longitude": 77.6340292,
+                "diversion_score": 73.9,
+                "risk_reduction_percentage": 43.5,
+                "distance_km": 5.7
+              },
+              {
+                "corridor": "Bellary Road 2",
+                "average_tis": 56.3,
+                "count": 118,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0339,
+                "latitude": 13.1070355,
+                "longitude": 77.6029678,
+                "diversion_score": 49.2,
+                "risk_reduction_percentage": 26.2,
+                "distance_km": 2.3
               },
               {
                 "corridor": "ORR North 2",
                 "average_tis": 51.1,
-                "count": 63
-              },
-              {
-                "corridor": "Tumkur Road",
-                "average_tis": 52.3,
-                "count": 32
+                "count": 63,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0794,
+                "latitude": 13.042103,
+                "longitude": 77.55001,
+                "diversion_score": 48.4,
+                "risk_reduction_percentage": 33.0,
+                "distance_km": 7.4
               }
             ]
           }
@@ -2103,24 +2391,56 @@
             }
           ],
           "diversion_advisory": {
-            "type": "dataset_advisory",
-            "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+            "type": "diversion_plan",
+            "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
             "avoid_corridor": "Non-corridor",
+            "primary_diversion_corridor": "CBD 1",
+            "secondary_diversion_corridor": "Old Madras Road",
+            "estimated_congestion_reduction": 30.6,
+            "diversion_confidence_score": 48.3,
+            "before_diversion_score": 76.1,
+            "after_diversion_score": 52.8,
+            "rationale": [
+              "Selected because corridor risk is 36.4% lower than affected corridor.",
+              "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+              "Composite score 49.1 balances historical risk, zone density, hotspot density, closure resilience, and 3.8 km proximity."
+            ],
             "candidate_corridors": [
               {
                 "corridor": "CBD 1",
                 "average_tis": 48.4,
-                "count": 7
-              },
-              {
-                "corridor": "Bannerghata Road",
-                "average_tis": 51.0,
-                "count": 4
+                "count": 7,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0,
+                "latitude": 12.9809984,
+                "longitude": 77.6067277,
+                "diversion_score": 49.1,
+                "risk_reduction_percentage": 36.4,
+                "distance_km": 3.8
               },
               {
                 "corridor": "Old Madras Road",
                 "average_tis": 51.3,
-                "count": 18
+                "count": 18,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0,
+                "latitude": 12.9751618,
+                "longitude": 77.6123312,
+                "diversion_score": 47.7,
+                "risk_reduction_percentage": 32.6,
+                "distance_km": 4.5
+              },
+              {
+                "corridor": "Bellary Road 1",
+                "average_tis": 54.6,
+                "count": 53,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0189,
+                "latitude": 12.9933494,
+                "longitude": 77.5856178,
+                "diversion_score": 47.1,
+                "risk_reduction_percentage": 28.3,
+                "distance_km": 1.7
               }
             ]
           }
@@ -2257,24 +2577,56 @@
             }
           ],
           "diversion_advisory": {
-            "type": "dataset_advisory",
-            "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+            "type": "diversion_plan",
+            "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
             "avoid_corridor": "Non-corridor",
+            "primary_diversion_corridor": "CBD 1",
+            "secondary_diversion_corridor": "Old Madras Road",
+            "estimated_congestion_reduction": 30.6,
+            "diversion_confidence_score": 48.3,
+            "before_diversion_score": 76.1,
+            "after_diversion_score": 52.8,
+            "rationale": [
+              "Selected because corridor risk is 36.4% lower than affected corridor.",
+              "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+              "Composite score 49.1 balances historical risk, zone density, hotspot density, closure resilience, and 3.8 km proximity."
+            ],
             "candidate_corridors": [
               {
                 "corridor": "CBD 1",
                 "average_tis": 48.4,
-                "count": 7
-              },
-              {
-                "corridor": "Bannerghata Road",
-                "average_tis": 51.0,
-                "count": 4
+                "count": 7,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0,
+                "latitude": 12.9809984,
+                "longitude": 77.6067277,
+                "diversion_score": 49.1,
+                "risk_reduction_percentage": 36.4,
+                "distance_km": 3.8
               },
               {
                 "corridor": "Old Madras Road",
                 "average_tis": 51.3,
-                "count": 18
+                "count": 18,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0,
+                "latitude": 12.9751618,
+                "longitude": 77.6123312,
+                "diversion_score": 47.7,
+                "risk_reduction_percentage": 32.6,
+                "distance_km": 4.5
+              },
+              {
+                "corridor": "Bellary Road 1",
+                "average_tis": 54.6,
+                "count": 53,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.0189,
+                "latitude": 12.9933494,
+                "longitude": 77.5856178,
+                "diversion_score": 47.1,
+                "risk_reduction_percentage": 28.3,
+                "distance_km": 1.7
               }
             ]
           }
@@ -2411,24 +2763,56 @@
             }
           ],
           "diversion_advisory": {
-            "type": "dataset_advisory",
-            "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+            "type": "diversion_plan",
+            "message": "Route traffic primarily via Airport New South Road, with Hennur Main Road as secondary relief.",
             "avoid_corridor": "Bellary Road 1",
+            "primary_diversion_corridor": "Airport New South Road",
+            "secondary_diversion_corridor": "Hennur Main Road",
+            "estimated_congestion_reduction": 17.8,
+            "diversion_confidence_score": 58.6,
+            "before_diversion_score": 75.8,
+            "after_diversion_score": 62.3,
+            "rationale": [
+              "Selected because corridor risk is 7.5% lower than affected corridor.",
+              "Candidate hotspot density is 81.9% with a 4.5% historical closure rate.",
+              "Composite score 60.3 balances historical risk, zone density, hotspot density, closure resilience, and 5.0 km proximity."
+            ],
             "candidate_corridors": [
               {
-                "corridor": "IRR(Thanisandra road)",
-                "average_tis": 43.8,
-                "count": 44
+                "corridor": "Airport New South Road",
+                "average_tis": 45.9,
+                "count": 22,
+                "average_hotspot_density": 0.8194,
+                "closure_rate": 0.0455,
+                "latitude": 13.0188624,
+                "longitude": 77.6283721,
+                "diversion_score": 60.3,
+                "risk_reduction_percentage": 7.5,
+                "distance_km": 5.0
               },
               {
-                "corridor": "Bannerghata Road",
-                "average_tis": 45.4,
-                "count": 117
+                "corridor": "Hennur Main Road",
+                "average_tis": 48.5,
+                "count": 62,
+                "average_hotspot_density": 0.8388,
+                "closure_rate": 0.0806,
+                "latitude": 13.0483749,
+                "longitude": 77.6263797,
+                "diversion_score": 58.0,
+                "risk_reduction_percentage": 2.2,
+                "distance_km": 5.4
               },
               {
-                "corridor": "West of Chord Road",
-                "average_tis": 45.4,
-                "count": 101
+                "corridor": "ORR North 2",
+                "average_tis": 48.4,
+                "count": 148,
+                "average_hotspot_density": 1.0,
+                "closure_rate": 0.027,
+                "latitude": 13.0429179,
+                "longitude": 77.5630693,
+                "diversion_score": 56.9,
+                "risk_reduction_percentage": 2.4,
+                "distance_km": 2.9
               }
             ]
           }
@@ -2568,24 +2952,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via Hennur Main Road, with ORR North 2 as secondary relief.",
           "avoid_corridor": "Bellary Road 2",
+          "primary_diversion_corridor": "Hennur Main Road",
+          "secondary_diversion_corridor": "ORR North 2",
+          "estimated_congestion_reduction": 27.9,
+          "diversion_confidence_score": 64.2,
+          "before_diversion_score": 80.2,
+          "after_diversion_score": 57.8,
+          "rationale": [
+            "Selected because corridor risk is 23.4% lower than affected corridor.",
+            "Candidate hotspot density is 0.0% with a 0.0% historical closure rate.",
+            "Composite score 74.5 balances historical risk, zone density, hotspot density, closure resilience, and 4.2 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "Hennur Main Road",
               "average_tis": 43.1,
-              "count": 4
+              "count": 4,
+              "average_hotspot_density": 0.0,
+              "closure_rate": 0.0,
+              "latitude": 13.1102732,
+              "longitude": 77.6340292,
+              "diversion_score": 74.5,
+              "risk_reduction_percentage": 23.4,
+              "distance_km": 4.2
             },
             {
               "corridor": "ORR North 2",
               "average_tis": 51.1,
-              "count": 63
+              "count": 63,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0794,
+              "latitude": 13.042103,
+              "longitude": 77.55001,
+              "diversion_score": 48.1,
+              "risk_reduction_percentage": 9.2,
+              "distance_km": 8.1
             },
             {
-              "corridor": "Tumkur Road",
-              "average_tis": 52.3,
-              "count": 32
+              "corridor": "Bellary Road 1",
+              "average_tis": 53.4,
+              "count": 109,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0642,
+              "latitude": 13.0285921,
+              "longitude": 77.5867649,
+              "diversion_score": 47.6,
+              "risk_reduction_percentage": 5.2,
+              "distance_km": 7.9
             }
           ]
         }
@@ -2722,24 +3138,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "CBD 1",
+          "secondary_diversion_corridor": "Old Madras Road",
+          "estimated_congestion_reduction": 31.0,
+          "diversion_confidence_score": 48.4,
+          "before_diversion_score": 77.2,
+          "after_diversion_score": 53.2,
+          "rationale": [
+            "Selected because corridor risk is 37.3% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+            "Composite score 49.2 balances historical risk, zone density, hotspot density, closure resilience, and 3.6 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "CBD 1",
               "average_tis": 48.4,
-              "count": 7
-            },
-            {
-              "corridor": "Bannerghata Road",
-              "average_tis": 51.0,
-              "count": 4
+              "count": 7,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9809984,
+              "longitude": 77.6067277,
+              "diversion_score": 49.2,
+              "risk_reduction_percentage": 37.3,
+              "distance_km": 3.6
             },
             {
               "corridor": "Old Madras Road",
               "average_tis": 51.3,
-              "count": 18
+              "count": 18,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9751618,
+              "longitude": 77.6123312,
+              "diversion_score": 47.7,
+              "risk_reduction_percentage": 33.5,
+              "distance_km": 4.4
+            },
+            {
+              "corridor": "Bellary Road 1",
+              "average_tis": 54.6,
+              "count": 53,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0189,
+              "latitude": 12.9933494,
+              "longitude": 77.5856178,
+              "diversion_score": 47.2,
+              "risk_reduction_percentage": 29.3,
+              "distance_km": 1.3
             }
           ]
         }
@@ -2876,24 +3324,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "CBD 1",
+          "secondary_diversion_corridor": "Old Madras Road",
+          "estimated_congestion_reduction": 31.0,
+          "diversion_confidence_score": 48.4,
+          "before_diversion_score": 77.2,
+          "after_diversion_score": 53.2,
+          "rationale": [
+            "Selected because corridor risk is 37.3% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+            "Composite score 49.2 balances historical risk, zone density, hotspot density, closure resilience, and 3.6 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "CBD 1",
               "average_tis": 48.4,
-              "count": 7
-            },
-            {
-              "corridor": "Bannerghata Road",
-              "average_tis": 51.0,
-              "count": 4
+              "count": 7,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9809984,
+              "longitude": 77.6067277,
+              "diversion_score": 49.2,
+              "risk_reduction_percentage": 37.3,
+              "distance_km": 3.6
             },
             {
               "corridor": "Old Madras Road",
               "average_tis": 51.3,
-              "count": 18
+              "count": 18,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9751618,
+              "longitude": 77.6123312,
+              "diversion_score": 47.7,
+              "risk_reduction_percentage": 33.5,
+              "distance_km": 4.4
+            },
+            {
+              "corridor": "Bellary Road 1",
+              "average_tis": 54.6,
+              "count": 53,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0189,
+              "latitude": 12.9933494,
+              "longitude": 77.5856178,
+              "diversion_score": 47.2,
+              "risk_reduction_percentage": 29.3,
+              "distance_km": 1.3
             }
           ]
         }
@@ -3030,24 +3510,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via Airport New South Road, with Hennur Main Road as secondary relief.",
           "avoid_corridor": "Bellary Road 2",
+          "primary_diversion_corridor": "Airport New South Road",
+          "secondary_diversion_corridor": "Hennur Main Road",
+          "estimated_congestion_reduction": 16.6,
+          "diversion_confidence_score": 57.5,
+          "before_diversion_score": 77.1,
+          "after_diversion_score": 64.3,
+          "rationale": [
+            "Selected because corridor risk is 5.7% lower than affected corridor.",
+            "Candidate hotspot density is 81.9% with a 4.5% historical closure rate.",
+            "Composite score 58.6 balances historical risk, zone density, hotspot density, closure resilience, and 9.3 km proximity."
+          ],
           "candidate_corridors": [
             {
-              "corridor": "IRR(Thanisandra road)",
-              "average_tis": 43.8,
-              "count": 44
+              "corridor": "Airport New South Road",
+              "average_tis": 45.9,
+              "count": 22,
+              "average_hotspot_density": 0.8194,
+              "closure_rate": 0.0455,
+              "latitude": 13.0188624,
+              "longitude": 77.6283721,
+              "diversion_score": 58.6,
+              "risk_reduction_percentage": 5.7,
+              "distance_km": 9.3
             },
             {
-              "corridor": "Bannerghata Road",
-              "average_tis": 45.4,
-              "count": 117
+              "corridor": "Hennur Main Road",
+              "average_tis": 48.5,
+              "count": 62,
+              "average_hotspot_density": 0.8388,
+              "closure_rate": 0.0806,
+              "latitude": 13.0483749,
+              "longitude": 77.6263797,
+              "diversion_score": 57.7,
+              "risk_reduction_percentage": 0.4,
+              "distance_km": 6.3
             },
             {
-              "corridor": "West of Chord Road",
-              "average_tis": 45.4,
-              "count": 101
+              "corridor": "ORR North 2",
+              "average_tis": 48.4,
+              "count": 148,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.027,
+              "latitude": 13.0429179,
+              "longitude": 77.5630693,
+              "diversion_score": 55.2,
+              "risk_reduction_percentage": 0.6,
+              "distance_km": 7.2
             }
           ]
         }
@@ -3184,24 +3696,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "CBD 1",
+          "secondary_diversion_corridor": "Old Madras Road",
+          "estimated_congestion_reduction": 30.9,
+          "diversion_confidence_score": 48.4,
+          "before_diversion_score": 77.0,
+          "after_diversion_score": 53.2,
+          "rationale": [
+            "Selected because corridor risk is 37.1% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+            "Composite score 49.2 balances historical risk, zone density, hotspot density, closure resilience, and 3.5 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "CBD 1",
               "average_tis": 48.4,
-              "count": 7
-            },
-            {
-              "corridor": "Bannerghata Road",
-              "average_tis": 51.0,
-              "count": 4
+              "count": 7,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9809984,
+              "longitude": 77.6067277,
+              "diversion_score": 49.2,
+              "risk_reduction_percentage": 37.1,
+              "distance_km": 3.5
             },
             {
               "corridor": "Old Madras Road",
               "average_tis": 51.3,
-              "count": 18
+              "count": 18,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9751618,
+              "longitude": 77.6123312,
+              "diversion_score": 47.9,
+              "risk_reduction_percentage": 33.4,
+              "distance_km": 4.1
+            },
+            {
+              "corridor": "Bannerghata Road",
+              "average_tis": 51.0,
+              "count": 4,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9307092,
+              "longitude": 77.6004631,
+              "diversion_score": 47.4,
+              "risk_reduction_percentage": 33.8,
+              "distance_km": 5.6
             }
           ]
         }
@@ -3338,24 +3882,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "CBD 1",
+          "secondary_diversion_corridor": "Old Madras Road",
+          "estimated_congestion_reduction": 30.9,
+          "diversion_confidence_score": 48.5,
+          "before_diversion_score": 76.8,
+          "after_diversion_score": 53.1,
+          "rationale": [
+            "Selected because corridor risk is 37.0% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+            "Composite score 49.4 balances historical risk, zone density, hotspot density, closure resilience, and 3.2 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "CBD 1",
               "average_tis": 48.4,
-              "count": 7
-            },
-            {
-              "corridor": "Bannerghata Road",
-              "average_tis": 51.0,
-              "count": 4
+              "count": 7,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9809984,
+              "longitude": 77.6067277,
+              "diversion_score": 49.4,
+              "risk_reduction_percentage": 37.0,
+              "distance_km": 3.2
             },
             {
               "corridor": "Old Madras Road",
               "average_tis": 51.3,
-              "count": 18
+              "count": 18,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9751618,
+              "longitude": 77.6123312,
+              "diversion_score": 47.9,
+              "risk_reduction_percentage": 33.2,
+              "distance_km": 3.9
+            },
+            {
+              "corridor": "Bellary Road 1",
+              "average_tis": 54.6,
+              "count": 53,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0189,
+              "latitude": 12.9933494,
+              "longitude": 77.5856178,
+              "diversion_score": 47.2,
+              "risk_reduction_percentage": 28.9,
+              "distance_km": 1.4
             }
           ]
         }
@@ -3492,24 +4068,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via Magadi Road, with Tumkur Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "Magadi Road",
+          "secondary_diversion_corridor": "Tumkur Road",
+          "estimated_congestion_reduction": 27.9,
+          "diversion_confidence_score": 57.9,
+          "before_diversion_score": 76.7,
+          "after_diversion_score": 55.3,
+          "rationale": [
+            "Selected because corridor risk is 31.0% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 7.4% historical closure rate.",
+            "Composite score 49.4 balances historical risk, zone density, hotspot density, closure resilience, and 2.5 km proximity."
+          ],
           "candidate_corridors": [
             {
-              "corridor": "West of Chord Road",
-              "average_tis": 50.2,
-              "count": 16
-            },
-            {
-              "corridor": "ORR West 1",
-              "average_tis": 51.8,
-              "count": 15
+              "corridor": "Magadi Road",
+              "average_tis": 52.9,
+              "count": 54,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0741,
+              "latitude": 12.9881258,
+              "longitude": 77.509846,
+              "diversion_score": 49.4,
+              "risk_reduction_percentage": 31.0,
+              "distance_km": 2.5
             },
             {
               "corridor": "Tumkur Road",
               "average_tis": 52.8,
-              "count": 126
+              "count": 126,
+              "average_hotspot_density": 0.9921,
+              "closure_rate": 0.0079,
+              "latitude": 13.0329453,
+              "longitude": 77.5310219,
+              "diversion_score": 49.2,
+              "risk_reduction_percentage": 31.2,
+              "distance_km": 6.7
+            },
+            {
+              "corridor": "Mysore Road",
+              "average_tis": 54.4,
+              "count": 55,
+              "average_hotspot_density": 0.7821,
+              "closure_rate": 0.1818,
+              "latitude": 12.9316981,
+              "longitude": 77.5103993,
+              "diversion_score": 49.2,
+              "risk_reduction_percentage": 29.1,
+              "distance_km": 7.0
             }
           ]
         }
@@ -3646,24 +4254,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via Hennur Main Road, with Tumkur Road as secondary relief.",
           "avoid_corridor": "ORR North 2",
+          "primary_diversion_corridor": "Hennur Main Road",
+          "secondary_diversion_corridor": "Tumkur Road",
+          "estimated_congestion_reduction": 23.6,
+          "diversion_confidence_score": 62.4,
+          "before_diversion_score": 76.4,
+          "after_diversion_score": 58.4,
+          "rationale": [
+            "Selected because corridor risk is 15.7% lower than affected corridor.",
+            "Candidate hotspot density is 0.0% with a 0.0% historical closure rate.",
+            "Composite score 71.7 balances historical risk, zone density, hotspot density, closure resilience, and 11.1 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "Hennur Main Road",
               "average_tis": 43.1,
-              "count": 4
+              "count": 4,
+              "average_hotspot_density": 0.0,
+              "closure_rate": 0.0,
+              "latitude": 13.1102732,
+              "longitude": 77.6340292,
+              "diversion_score": 71.7,
+              "risk_reduction_percentage": 15.7,
+              "distance_km": 11.1
             },
             {
               "corridor": "Tumkur Road",
               "average_tis": 52.3,
-              "count": 32
+              "count": 32,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0312,
+              "latitude": 13.0425159,
+              "longitude": 77.5140631,
+              "diversion_score": 50.0,
+              "risk_reduction_percentage": -2.3,
+              "distance_km": 4.6
             },
             {
               "corridor": "Bellary Road 1",
               "average_tis": 53.4,
-              "count": 109
+              "count": 109,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0642,
+              "latitude": 13.0285921,
+              "longitude": 77.5867649,
+              "diversion_score": 49.2,
+              "risk_reduction_percentage": -4.5,
+              "distance_km": 3.9
             }
           ]
         }
@@ -3800,24 +4440,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via Hennur Main Road, with Bellary Road 2 as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "Hennur Main Road",
+          "secondary_diversion_corridor": "Bellary Road 2",
+          "estimated_congestion_reduction": 37.8,
+          "diversion_confidence_score": 63.8,
+          "before_diversion_score": 76.3,
+          "after_diversion_score": 47.4,
+          "rationale": [
+            "Selected because corridor risk is 43.5% lower than affected corridor.",
+            "Candidate hotspot density is 0.0% with a 0.0% historical closure rate.",
+            "Composite score 73.9 balances historical risk, zone density, hotspot density, closure resilience, and 5.7 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "Hennur Main Road",
               "average_tis": 43.1,
-              "count": 4
+              "count": 4,
+              "average_hotspot_density": 0.0,
+              "closure_rate": 0.0,
+              "latitude": 13.1102732,
+              "longitude": 77.6340292,
+              "diversion_score": 73.9,
+              "risk_reduction_percentage": 43.5,
+              "distance_km": 5.7
+            },
+            {
+              "corridor": "Bellary Road 2",
+              "average_tis": 56.3,
+              "count": 118,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0339,
+              "latitude": 13.1070355,
+              "longitude": 77.6029678,
+              "diversion_score": 49.2,
+              "risk_reduction_percentage": 26.2,
+              "distance_km": 2.3
             },
             {
               "corridor": "ORR North 2",
               "average_tis": 51.1,
-              "count": 63
-            },
-            {
-              "corridor": "Tumkur Road",
-              "average_tis": 52.3,
-              "count": 32
+              "count": 63,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0794,
+              "latitude": 13.042103,
+              "longitude": 77.55001,
+              "diversion_score": 48.4,
+              "risk_reduction_percentage": 33.0,
+              "distance_km": 7.4
             }
           ]
         }
@@ -3954,24 +4626,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "CBD 1",
+          "secondary_diversion_corridor": "Old Madras Road",
+          "estimated_congestion_reduction": 30.6,
+          "diversion_confidence_score": 48.3,
+          "before_diversion_score": 76.1,
+          "after_diversion_score": 52.8,
+          "rationale": [
+            "Selected because corridor risk is 36.4% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+            "Composite score 49.1 balances historical risk, zone density, hotspot density, closure resilience, and 3.8 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "CBD 1",
               "average_tis": 48.4,
-              "count": 7
-            },
-            {
-              "corridor": "Bannerghata Road",
-              "average_tis": 51.0,
-              "count": 4
+              "count": 7,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9809984,
+              "longitude": 77.6067277,
+              "diversion_score": 49.1,
+              "risk_reduction_percentage": 36.4,
+              "distance_km": 3.8
             },
             {
               "corridor": "Old Madras Road",
               "average_tis": 51.3,
-              "count": 18
+              "count": 18,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9751618,
+              "longitude": 77.6123312,
+              "diversion_score": 47.7,
+              "risk_reduction_percentage": 32.6,
+              "distance_km": 4.5
+            },
+            {
+              "corridor": "Bellary Road 1",
+              "average_tis": 54.6,
+              "count": 53,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0189,
+              "latitude": 12.9933494,
+              "longitude": 77.5856178,
+              "diversion_score": 47.1,
+              "risk_reduction_percentage": 28.3,
+              "distance_km": 1.7
             }
           ]
         }
@@ -4108,24 +4812,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "CBD 1",
+          "secondary_diversion_corridor": "Old Madras Road",
+          "estimated_congestion_reduction": 30.6,
+          "diversion_confidence_score": 48.3,
+          "before_diversion_score": 76.1,
+          "after_diversion_score": 52.8,
+          "rationale": [
+            "Selected because corridor risk is 36.4% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+            "Composite score 49.1 balances historical risk, zone density, hotspot density, closure resilience, and 3.8 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "CBD 1",
               "average_tis": 48.4,
-              "count": 7
-            },
-            {
-              "corridor": "Bannerghata Road",
-              "average_tis": 51.0,
-              "count": 4
+              "count": 7,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9809984,
+              "longitude": 77.6067277,
+              "diversion_score": 49.1,
+              "risk_reduction_percentage": 36.4,
+              "distance_km": 3.8
             },
             {
               "corridor": "Old Madras Road",
               "average_tis": 51.3,
-              "count": 18
+              "count": 18,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9751618,
+              "longitude": 77.6123312,
+              "diversion_score": 47.7,
+              "risk_reduction_percentage": 32.6,
+              "distance_km": 4.5
+            },
+            {
+              "corridor": "Bellary Road 1",
+              "average_tis": 54.6,
+              "count": 53,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0189,
+              "latitude": 12.9933494,
+              "longitude": 77.5856178,
+              "diversion_score": 47.1,
+              "risk_reduction_percentage": 28.3,
+              "distance_km": 1.7
             }
           ]
         }
@@ -4262,24 +4998,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via Airport New South Road, with Hennur Main Road as secondary relief.",
           "avoid_corridor": "Bellary Road 1",
+          "primary_diversion_corridor": "Airport New South Road",
+          "secondary_diversion_corridor": "Hennur Main Road",
+          "estimated_congestion_reduction": 17.8,
+          "diversion_confidence_score": 58.6,
+          "before_diversion_score": 75.8,
+          "after_diversion_score": 62.3,
+          "rationale": [
+            "Selected because corridor risk is 7.5% lower than affected corridor.",
+            "Candidate hotspot density is 81.9% with a 4.5% historical closure rate.",
+            "Composite score 60.3 balances historical risk, zone density, hotspot density, closure resilience, and 5.0 km proximity."
+          ],
           "candidate_corridors": [
             {
-              "corridor": "IRR(Thanisandra road)",
-              "average_tis": 43.8,
-              "count": 44
+              "corridor": "Airport New South Road",
+              "average_tis": 45.9,
+              "count": 22,
+              "average_hotspot_density": 0.8194,
+              "closure_rate": 0.0455,
+              "latitude": 13.0188624,
+              "longitude": 77.6283721,
+              "diversion_score": 60.3,
+              "risk_reduction_percentage": 7.5,
+              "distance_km": 5.0
             },
             {
-              "corridor": "Bannerghata Road",
-              "average_tis": 45.4,
-              "count": 117
+              "corridor": "Hennur Main Road",
+              "average_tis": 48.5,
+              "count": 62,
+              "average_hotspot_density": 0.8388,
+              "closure_rate": 0.0806,
+              "latitude": 13.0483749,
+              "longitude": 77.6263797,
+              "diversion_score": 58.0,
+              "risk_reduction_percentage": 2.2,
+              "distance_km": 5.4
             },
             {
-              "corridor": "West of Chord Road",
-              "average_tis": 45.4,
-              "count": 101
+              "corridor": "ORR North 2",
+              "average_tis": 48.4,
+              "count": 148,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.027,
+              "latitude": 13.0429179,
+              "longitude": 77.5630693,
+              "diversion_score": 56.9,
+              "risk_reduction_percentage": 2.4,
+              "distance_km": 2.9
             }
           ]
         }
@@ -4416,24 +5184,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "CBD 1",
+          "secondary_diversion_corridor": "Old Madras Road",
+          "estimated_congestion_reduction": 30.4,
+          "diversion_confidence_score": 48.4,
+          "before_diversion_score": 75.8,
+          "after_diversion_score": 52.7,
+          "rationale": [
+            "Selected because corridor risk is 36.1% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+            "Composite score 49.3 balances historical risk, zone density, hotspot density, closure resilience, and 3.3 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "CBD 1",
               "average_tis": 48.4,
-              "count": 7
-            },
-            {
-              "corridor": "Bannerghata Road",
-              "average_tis": 51.0,
-              "count": 4
+              "count": 7,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9809984,
+              "longitude": 77.6067277,
+              "diversion_score": 49.3,
+              "risk_reduction_percentage": 36.1,
+              "distance_km": 3.3
             },
             {
               "corridor": "Old Madras Road",
               "average_tis": 51.3,
-              "count": 18
+              "count": 18,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9751618,
+              "longitude": 77.6123312,
+              "diversion_score": 47.9,
+              "risk_reduction_percentage": 32.3,
+              "distance_km": 3.9
+            },
+            {
+              "corridor": "Bellary Road 1",
+              "average_tis": 54.6,
+              "count": 53,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0189,
+              "latitude": 12.9933494,
+              "longitude": 77.5856178,
+              "diversion_score": 47.2,
+              "risk_reduction_percentage": 28.0,
+              "distance_km": 1.5
             }
           ]
         }
@@ -4570,24 +5370,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "CBD 1",
+          "secondary_diversion_corridor": "Old Madras Road",
+          "estimated_congestion_reduction": 30.5,
+          "diversion_confidence_score": 48.6,
+          "before_diversion_score": 75.7,
+          "after_diversion_score": 52.6,
+          "rationale": [
+            "Selected because corridor risk is 36.1% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+            "Composite score 49.6 balances historical risk, zone density, hotspot density, closure resilience, and 2.7 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "CBD 1",
               "average_tis": 48.4,
-              "count": 7
-            },
-            {
-              "corridor": "Bannerghata Road",
-              "average_tis": 51.0,
-              "count": 4
+              "count": 7,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9809984,
+              "longitude": 77.6067277,
+              "diversion_score": 49.6,
+              "risk_reduction_percentage": 36.1,
+              "distance_km": 2.7
             },
             {
               "corridor": "Old Madras Road",
               "average_tis": 51.3,
-              "count": 18
+              "count": 18,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9751618,
+              "longitude": 77.6123312,
+              "diversion_score": 48.1,
+              "risk_reduction_percentage": 32.2,
+              "distance_km": 3.4
+            },
+            {
+              "corridor": "Bellary Road 1",
+              "average_tis": 54.6,
+              "count": 53,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0189,
+              "latitude": 12.9933494,
+              "longitude": 77.5856178,
+              "diversion_score": 47.4,
+              "risk_reduction_percentage": 27.9,
+              "distance_km": 1.1
             }
           ]
         }
@@ -4724,24 +5556,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via ORR West 1, with Magadi Road as secondary relief.",
           "avoid_corridor": "Mysore Road",
+          "primary_diversion_corridor": "ORR West 1",
+          "secondary_diversion_corridor": "Magadi Road",
+          "estimated_congestion_reduction": 15.1,
+          "diversion_confidence_score": 51.3,
+          "before_diversion_score": 75.7,
+          "after_diversion_score": 64.3,
+          "rationale": [
+            "Selected because corridor risk is 4.8% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+            "Composite score 51.2 balances historical risk, zone density, hotspot density, closure resilience, and 2.9 km proximity."
+          ],
           "candidate_corridors": [
-            {
-              "corridor": "West of Chord Road",
-              "average_tis": 50.2,
-              "count": 16
-            },
             {
               "corridor": "ORR West 1",
               "average_tis": 51.8,
-              "count": 15
+              "count": 15,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.93448,
+              "longitude": 77.538902,
+              "diversion_score": 51.2,
+              "risk_reduction_percentage": 4.8,
+              "distance_km": 2.9
+            },
+            {
+              "corridor": "Magadi Road",
+              "average_tis": 52.9,
+              "count": 54,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0741,
+              "latitude": 12.9881258,
+              "longitude": 77.509846,
+              "diversion_score": 48.1,
+              "risk_reduction_percentage": 2.8,
+              "distance_km": 5.8
             },
             {
               "corridor": "Tumkur Road",
               "average_tis": 52.8,
-              "count": 126
+              "count": 126,
+              "average_hotspot_density": 0.9921,
+              "closure_rate": 0.0079,
+              "latitude": 13.0329453,
+              "longitude": 77.5310219,
+              "diversion_score": 47.6,
+              "risk_reduction_percentage": 2.9,
+              "distance_km": 10.9
             }
           ]
         }
@@ -4878,24 +5742,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "CBD 1",
+          "secondary_diversion_corridor": "Old Madras Road",
+          "estimated_congestion_reduction": 30.2,
+          "diversion_confidence_score": 48.8,
+          "before_diversion_score": 74.9,
+          "after_diversion_score": 52.3,
+          "rationale": [
+            "Selected because corridor risk is 35.4% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+            "Composite score 49.8 balances historical risk, zone density, hotspot density, closure resilience, and 2.2 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "CBD 1",
               "average_tis": 48.4,
-              "count": 7
-            },
-            {
-              "corridor": "Bannerghata Road",
-              "average_tis": 51.0,
-              "count": 4
+              "count": 7,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9809984,
+              "longitude": 77.6067277,
+              "diversion_score": 49.8,
+              "risk_reduction_percentage": 35.4,
+              "distance_km": 2.2
             },
             {
               "corridor": "Old Madras Road",
               "average_tis": 51.3,
-              "count": 18
+              "count": 18,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9751618,
+              "longitude": 77.6123312,
+              "diversion_score": 48.4,
+              "risk_reduction_percentage": 31.5,
+              "distance_km": 2.7
+            },
+            {
+              "corridor": "Bannerghata Road",
+              "average_tis": 51.0,
+              "count": 4,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9307092,
+              "longitude": 77.6004631,
+              "diversion_score": 47.5,
+              "risk_reduction_percentage": 31.9,
+              "distance_km": 5.2
             }
           ]
         }
@@ -5032,24 +5928,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via Airport New South Road, with West of Chord Road as secondary relief.",
           "avoid_corridor": "Mysore Road",
+          "primary_diversion_corridor": "Airport New South Road",
+          "secondary_diversion_corridor": "West of Chord Road",
+          "estimated_congestion_reduction": 18.9,
+          "diversion_confidence_score": 57.6,
+          "before_diversion_score": 74.8,
+          "after_diversion_score": 60.6,
+          "rationale": [
+            "Selected because corridor risk is 10.2% lower than affected corridor.",
+            "Candidate hotspot density is 81.9% with a 4.5% historical closure rate.",
+            "Composite score 58.8 balances historical risk, zone density, hotspot density, closure resilience, and 8.8 km proximity."
+          ],
           "candidate_corridors": [
             {
-              "corridor": "IRR(Thanisandra road)",
-              "average_tis": 43.8,
-              "count": 44
-            },
-            {
-              "corridor": "Bannerghata Road",
-              "average_tis": 45.4,
-              "count": 117
+              "corridor": "Airport New South Road",
+              "average_tis": 45.9,
+              "count": 22,
+              "average_hotspot_density": 0.8194,
+              "closure_rate": 0.0455,
+              "latitude": 13.0188624,
+              "longitude": 77.6283721,
+              "diversion_score": 58.8,
+              "risk_reduction_percentage": 10.2,
+              "distance_km": 8.8
             },
             {
               "corridor": "West of Chord Road",
               "average_tis": 45.4,
-              "count": 101
+              "count": 101,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0594,
+              "latitude": 12.9832197,
+              "longitude": 77.5464347,
+              "diversion_score": 57.3,
+              "risk_reduction_percentage": 11.2,
+              "distance_km": 3.3
+            },
+            {
+              "corridor": "IRR(Thanisandra road)",
+              "average_tis": 43.8,
+              "count": 44,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0227,
+              "latitude": 12.9407772,
+              "longitude": 77.6291849,
+              "diversion_score": 57.2,
+              "risk_reduction_percentage": 14.3,
+              "distance_km": 6.9
             }
           ]
         }
@@ -5186,24 +6114,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via ORR West 1, with Tumkur Road as secondary relief.",
           "avoid_corridor": "Magadi Road",
+          "primary_diversion_corridor": "ORR West 1",
+          "secondary_diversion_corridor": "Tumkur Road",
+          "estimated_congestion_reduction": 13.6,
+          "diversion_confidence_score": 50.6,
+          "before_diversion_score": 74.8,
+          "after_diversion_score": 64.7,
+          "rationale": [
+            "Selected because corridor risk is 2.1% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+            "Composite score 50.1 balances historical risk, zone density, hotspot density, closure resilience, and 5.6 km proximity."
+          ],
           "candidate_corridors": [
-            {
-              "corridor": "West of Chord Road",
-              "average_tis": 50.2,
-              "count": 16
-            },
             {
               "corridor": "ORR West 1",
               "average_tis": 51.8,
-              "count": 15
+              "count": 15,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.93448,
+              "longitude": 77.538902,
+              "diversion_score": 50.1,
+              "risk_reduction_percentage": 2.1,
+              "distance_km": 5.6
             },
             {
               "corridor": "Tumkur Road",
               "average_tis": 52.8,
-              "count": 126
+              "count": 126,
+              "average_hotspot_density": 0.9921,
+              "closure_rate": 0.0079,
+              "latitude": 13.0329453,
+              "longitude": 77.5310219,
+              "diversion_score": 49.7,
+              "risk_reduction_percentage": 0.2,
+              "distance_km": 5.5
+            },
+            {
+              "corridor": "Mysore Road",
+              "average_tis": 54.4,
+              "count": 55,
+              "average_hotspot_density": 0.7821,
+              "closure_rate": 0.1818,
+              "latitude": 12.9316981,
+              "longitude": 77.5103993,
+              "diversion_score": 49.6,
+              "risk_reduction_percentage": -2.8,
+              "distance_km": 6.1
             }
           ]
         }
@@ -5340,24 +6300,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via Varthur Road, with Old Airport Road as secondary relief.",
           "avoid_corridor": "ORR East 1",
+          "primary_diversion_corridor": "Varthur Road",
+          "secondary_diversion_corridor": "Old Airport Road",
+          "estimated_congestion_reduction": 15.6,
+          "diversion_confidence_score": 59.2,
+          "before_diversion_score": 74.7,
+          "after_diversion_score": 63.0,
+          "rationale": [
+            "Selected because corridor risk is 4.4% lower than affected corridor.",
+            "Candidate hotspot density is 87.3% with a 7.7% historical closure rate.",
+            "Composite score 56.0 balances historical risk, zone density, hotspot density, closure resilience, and 2.4 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "Varthur Road",
               "average_tis": 50.0,
-              "count": 39
+              "count": 39,
+              "average_hotspot_density": 0.8733,
+              "closure_rate": 0.0769,
+              "latitude": 12.9564011,
+              "longitude": 77.7158242,
+              "diversion_score": 56.0,
+              "risk_reduction_percentage": 4.4,
+              "distance_km": 2.4
             },
             {
               "corridor": "Old Airport Road",
               "average_tis": 53.5,
-              "count": 6
+              "count": 6,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9561539,
+              "longitude": 77.6942356,
+              "diversion_score": 54.0,
+              "risk_reduction_percentage": -2.3,
+              "distance_km": 1.4
             },
             {
               "corridor": "ORR East 2",
               "average_tis": 56.6,
-              "count": 52
+              "count": 52,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9690635,
+              "longitude": 77.7006413,
+              "diversion_score": 52.2,
+              "risk_reduction_percentage": -8.2,
+              "distance_km": 2.8
             }
           ]
         }
@@ -5494,24 +6486,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via Hennur Main Road, with ORR North 2 as secondary relief.",
           "avoid_corridor": "Bellary Road 1",
+          "primary_diversion_corridor": "Hennur Main Road",
+          "secondary_diversion_corridor": "ORR North 2",
+          "estimated_congestion_reduction": 25.4,
+          "diversion_confidence_score": 62.2,
+          "before_diversion_score": 74.5,
+          "after_diversion_score": 55.6,
+          "rationale": [
+            "Selected because corridor risk is 19.3% lower than affected corridor.",
+            "Candidate hotspot density is 0.0% with a 0.0% historical closure rate.",
+            "Composite score 71.4 balances historical risk, zone density, hotspot density, closure resilience, and 11.9 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "Hennur Main Road",
               "average_tis": 43.1,
-              "count": 4
+              "count": 4,
+              "average_hotspot_density": 0.0,
+              "closure_rate": 0.0,
+              "latitude": 13.1102732,
+              "longitude": 77.6340292,
+              "diversion_score": 71.4,
+              "risk_reduction_percentage": 19.3,
+              "distance_km": 11.9
             },
             {
               "corridor": "ORR North 2",
               "average_tis": 51.1,
-              "count": 63
+              "count": 63,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0794,
+              "latitude": 13.042103,
+              "longitude": 77.55001,
+              "diversion_score": 49.4,
+              "risk_reduction_percentage": 4.3,
+              "distance_km": 4.8
             },
             {
               "corridor": "Tumkur Road",
               "average_tis": 52.3,
-              "count": 32
+              "count": 32,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0312,
+              "latitude": 13.0425159,
+              "longitude": 77.5140631,
+              "diversion_score": 48.6,
+              "risk_reduction_percentage": 2.1,
+              "distance_km": 8.2
             }
           ]
         }
@@ -5648,24 +6672,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via CBD 1, with Old Madras Road as secondary relief.",
           "avoid_corridor": "Mysore Road",
+          "primary_diversion_corridor": "CBD 1",
+          "secondary_diversion_corridor": "Old Madras Road",
+          "estimated_congestion_reduction": 20.3,
+          "diversion_confidence_score": 48.5,
+          "before_diversion_score": 74.5,
+          "after_diversion_score": 59.4,
+          "rationale": [
+            "Selected because corridor risk is 15.7% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 0.0% historical closure rate.",
+            "Composite score 49.4 balances historical risk, zone density, hotspot density, closure resilience, and 3.2 km proximity."
+          ],
           "candidate_corridors": [
             {
               "corridor": "CBD 1",
               "average_tis": 48.4,
-              "count": 7
-            },
-            {
-              "corridor": "Bannerghata Road",
-              "average_tis": 51.0,
-              "count": 4
+              "count": 7,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9809984,
+              "longitude": 77.6067277,
+              "diversion_score": 49.4,
+              "risk_reduction_percentage": 15.7,
+              "distance_km": 3.2
             },
             {
               "corridor": "Old Madras Road",
               "average_tis": 51.3,
-              "count": 18
+              "count": 18,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9751618,
+              "longitude": 77.6123312,
+              "diversion_score": 48.1,
+              "risk_reduction_percentage": 10.6,
+              "distance_km": 3.4
+            },
+            {
+              "corridor": "Bannerghata Road",
+              "average_tis": 51.0,
+              "count": 4,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0,
+              "latitude": 12.9307092,
+              "longitude": 77.6004631,
+              "diversion_score": 48.0,
+              "risk_reduction_percentage": 11.1,
+              "distance_km": 4.1
             }
           ]
         }
@@ -5802,24 +6858,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via Airport New South Road, with Hennur Main Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "Airport New South Road",
+          "secondary_diversion_corridor": "Hennur Main Road",
+          "estimated_congestion_reduction": 33.3,
+          "diversion_confidence_score": 59.2,
+          "before_diversion_score": 74.3,
+          "after_diversion_score": 49.6,
+          "rationale": [
+            "Selected because corridor risk is 38.2% lower than affected corridor.",
+            "Candidate hotspot density is 81.9% with a 4.5% historical closure rate.",
+            "Composite score 61.2 balances historical risk, zone density, hotspot density, closure resilience, and 2.8 km proximity."
+          ],
           "candidate_corridors": [
             {
-              "corridor": "IRR(Thanisandra road)",
-              "average_tis": 43.8,
-              "count": 44
+              "corridor": "Airport New South Road",
+              "average_tis": 45.9,
+              "count": 22,
+              "average_hotspot_density": 0.8194,
+              "closure_rate": 0.0455,
+              "latitude": 13.0188624,
+              "longitude": 77.6283721,
+              "diversion_score": 61.2,
+              "risk_reduction_percentage": 38.2,
+              "distance_km": 2.8
             },
             {
-              "corridor": "Bannerghata Road",
-              "average_tis": 45.4,
-              "count": 117
+              "corridor": "Hennur Main Road",
+              "average_tis": 48.5,
+              "count": 62,
+              "average_hotspot_density": 0.8388,
+              "closure_rate": 0.0806,
+              "latitude": 13.0483749,
+              "longitude": 77.6263797,
+              "diversion_score": 58.3,
+              "risk_reduction_percentage": 34.7,
+              "distance_km": 4.8
             },
             {
-              "corridor": "West of Chord Road",
-              "average_tis": 45.4,
-              "count": 101
+              "corridor": "ORR North 1",
+              "average_tis": 48.3,
+              "count": 148,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0608,
+              "latitude": 13.0235521,
+              "longitude": 77.6397679,
+              "diversion_score": 56.7,
+              "risk_reduction_percentage": 35.0,
+              "distance_km": 1.8
             }
           ]
         }
@@ -5956,24 +7044,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via Airport New South Road, with IRR(Thanisandra road) as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "Airport New South Road",
+          "secondary_diversion_corridor": "IRR(Thanisandra road)",
+          "estimated_congestion_reduction": 33.0,
+          "diversion_confidence_score": 58.0,
+          "before_diversion_score": 74.2,
+          "after_diversion_score": 49.7,
+          "rationale": [
+            "Selected because corridor risk is 38.1% lower than affected corridor.",
+            "Candidate hotspot density is 81.9% with a 4.5% historical closure rate.",
+            "Composite score 59.4 balances historical risk, zone density, hotspot density, closure resilience, and 7.3 km proximity."
+          ],
           "candidate_corridors": [
+            {
+              "corridor": "Airport New South Road",
+              "average_tis": 45.9,
+              "count": 22,
+              "average_hotspot_density": 0.8194,
+              "closure_rate": 0.0455,
+              "latitude": 13.0188624,
+              "longitude": 77.6283721,
+              "diversion_score": 59.4,
+              "risk_reduction_percentage": 38.1,
+              "distance_km": 7.3
+            },
             {
               "corridor": "IRR(Thanisandra road)",
               "average_tis": 43.8,
-              "count": 44
+              "count": 44,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0227,
+              "latitude": 12.9407772,
+              "longitude": 77.6291849,
+              "diversion_score": 58.6,
+              "risk_reduction_percentage": 41.0,
+              "distance_km": 3.6
             },
             {
               "corridor": "Bannerghata Road",
               "average_tis": 45.4,
-              "count": 117
-            },
-            {
-              "corridor": "West of Chord Road",
-              "average_tis": 45.4,
-              "count": 101
+              "count": 117,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0427,
+              "latitude": 12.9036015,
+              "longitude": 77.599273,
+              "diversion_score": 56.5,
+              "risk_reduction_percentage": 38.8,
+              "distance_km": 6.1
             }
           ]
         }
@@ -6110,24 +7230,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via Airport New South Road, with IRR(Thanisandra road) as secondary relief.",
           "avoid_corridor": "ORR East 2",
+          "primary_diversion_corridor": "Airport New South Road",
+          "secondary_diversion_corridor": "IRR(Thanisandra road)",
+          "estimated_congestion_reduction": 19.6,
+          "diversion_confidence_score": 57.4,
+          "before_diversion_score": 74.2,
+          "after_diversion_score": 59.7,
+          "rationale": [
+            "Selected because corridor risk is 11.6% lower than affected corridor.",
+            "Candidate hotspot density is 81.9% with a 4.5% historical closure rate.",
+            "Composite score 58.5 balances historical risk, zone density, hotspot density, closure resilience, and 9.6 km proximity."
+          ],
           "candidate_corridors": [
+            {
+              "corridor": "Airport New South Road",
+              "average_tis": 45.9,
+              "count": 22,
+              "average_hotspot_density": 0.8194,
+              "closure_rate": 0.0455,
+              "latitude": 13.0188624,
+              "longitude": 77.6283721,
+              "diversion_score": 58.5,
+              "risk_reduction_percentage": 11.6,
+              "distance_km": 9.6
+            },
             {
               "corridor": "IRR(Thanisandra road)",
               "average_tis": 43.8,
-              "count": 44
+              "count": 44,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0227,
+              "latitude": 12.9407772,
+              "longitude": 77.6291849,
+              "diversion_score": 56.7,
+              "risk_reduction_percentage": 15.6,
+              "distance_km": 8.4
             },
             {
-              "corridor": "Bannerghata Road",
-              "average_tis": 45.4,
-              "count": 117
-            },
-            {
-              "corridor": "West of Chord Road",
-              "average_tis": 45.4,
-              "count": 101
+              "corridor": "Varthur Road",
+              "average_tis": 49.7,
+              "count": 38,
+              "average_hotspot_density": 0.87,
+              "closure_rate": 0.1579,
+              "latitude": 12.9567094,
+              "longitude": 77.7160499,
+              "diversion_score": 56.7,
+              "risk_reduction_percentage": 4.2,
+              "distance_km": 2.2
             }
           ]
         }
@@ -6264,24 +7416,56 @@
           }
         ],
         "diversion_advisory": {
-          "type": "dataset_advisory",
-          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "type": "diversion_plan",
+          "message": "Route traffic primarily via Magadi Road, with Tumkur Road as secondary relief.",
           "avoid_corridor": "Non-corridor",
+          "primary_diversion_corridor": "Magadi Road",
+          "secondary_diversion_corridor": "Tumkur Road",
+          "estimated_congestion_reduction": 26.8,
+          "diversion_confidence_score": 57.9,
+          "before_diversion_score": 74.2,
+          "after_diversion_score": 54.3,
+          "rationale": [
+            "Selected because corridor risk is 28.7% lower than affected corridor.",
+            "Candidate hotspot density is 100.0% with a 7.4% historical closure rate.",
+            "Composite score 49.4 balances historical risk, zone density, hotspot density, closure resilience, and 2.4 km proximity."
+          ],
           "candidate_corridors": [
             {
-              "corridor": "West of Chord Road",
-              "average_tis": 50.2,
-              "count": 16
-            },
-            {
-              "corridor": "ORR West 1",
-              "average_tis": 51.8,
-              "count": 15
+              "corridor": "Magadi Road",
+              "average_tis": 52.9,
+              "count": 54,
+              "average_hotspot_density": 1.0,
+              "closure_rate": 0.0741,
+              "latitude": 12.9881258,
+              "longitude": 77.509846,
+              "diversion_score": 49.4,
+              "risk_reduction_percentage": 28.7,
+              "distance_km": 2.4
             },
             {
               "corridor": "Tumkur Road",
               "average_tis": 52.8,
-              "count": 126
+              "count": 126,
+              "average_hotspot_density": 0.9921,
+              "closure_rate": 0.0079,
+              "latitude": 13.0329453,
+              "longitude": 77.5310219,
+              "diversion_score": 49.3,
+              "risk_reduction_percentage": 28.8,
+              "distance_km": 6.7
+            },
+            {
+              "corridor": "Mysore Road",
+              "average_tis": 54.4,
+              "count": 55,
+              "average_hotspot_density": 0.7821,
+              "closure_rate": 0.1818,
+              "latitude": 12.9316981,
+              "longitude": 77.5103993,
+              "diversion_score": 49.2,
+              "risk_reduction_percentage": 26.7,
+              "distance_km": 7.0
             }
           ]
         }
