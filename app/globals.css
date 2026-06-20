@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
-  background: #070b12;
+  color-scheme: light;
+  background: #F8F9FB;
 }
 
 * {
@@ -18,13 +18,12 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background:
-    linear-gradient(180deg, rgba(7, 11, 18, 0.96), rgba(7, 11, 18, 1)),
-    radial-gradient(circle at 20% 0%, rgba(56, 189, 248, 0.12), transparent 34%),
-    #070b12;
-  color: #e7eef8;
-  font-family: Arial, Helvetica, sans-serif;
+  background: #F8F9FB;
+  color: #0F172A;
+  font-family: var(--font-inter), system-ui, sans-serif;
   letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button,
@@ -34,24 +33,62 @@ textarea {
   font: inherit;
 }
 
+/* Scrollbar — subtle on light theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* Mapbox popup — light theme */
 .mapboxgl-popup-content {
-  background: #0b1220;
-  border: 1px solid #263244;
-  border-radius: 8px;
-  color: #e7eef8;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  color: #0F172A;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  padding: 12px 14px;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .mapboxgl-popup-tip {
-  border-top-color: #0b1220 !important;
-  border-bottom-color: #0b1220 !important;
+  border-top-color: #FFFFFF !important;
+  border-bottom-color: #FFFFFF !important;
 }
 
+/* Mapbox controls — light theme */
 .mapboxgl-ctrl-group {
-  background: #0b1220 !important;
-  border: 1px solid #263244;
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 10px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
 }
 
-.mapboxgl-ctrl button {
-  filter: invert(1);
+.mapboxgl-ctrl-group button {
+  background-color: #FFFFFF !important;
+}
+
+.mapboxgl-ctrl-group button:hover {
+  background-color: #F3F4F6 !important;
+}
+
+.mapboxgl-ctrl button .mapboxgl-ctrl-icon {
+  filter: none;
+}
+
+/* Mapbox attribution */
+.mapboxgl-ctrl-attrib {
+  font-size: 10px;
+  color: #9CA3AF;
 }
