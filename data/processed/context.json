@@ -1,0 +1,1180 @@
+{
+  "weights": {
+    "event_cause": 0.15,
+    "road_closure": 0.15,
+    "priority": 0.12,
+    "duration": 0.1,
+    "corridor_density": 0.1,
+    "zone_density": 0.08,
+    "junction_density": 0.08,
+    "police_workload": 0.07,
+    "temporal_risk": 0.08,
+    "hotspot": 0.07
+  },
+  "cause_risk": {
+    "vehicle_breakdown": 0.78,
+    "construction": 0.93,
+    "accident": 0.88,
+    "water_logging": 0.76,
+    "tree_fall": 0.72,
+    "public_event": 0.9,
+    "procession": 0.92,
+    "vip_movement": 0.96,
+    "protest": 0.91,
+    "congestion": 0.8,
+    "pot_holes": 0.58,
+    "road_conditions": 0.62,
+    "debris": 0.64,
+    "others": 0.5
+  },
+  "corridor_density": {
+    "Tumkur Road": 0.14567430025445294,
+    "ORR East 1": 0.07760814249363868,
+    "Non-corridor": 1.0,
+    "CBD 2": 0.03307888040712468,
+    "ORR East 2": 0.05947837150127226,
+    "ORR West 1": 0.05343511450381679,
+    "ORR North 1": 0.08746819338422392,
+    "Old Madras Road": 0.08365139949109415,
+    "Bellary Road 2": 0.1205470737913486,
+    "Bellary Road 1": 0.1940203562340967,
+    "Hosur Road": 0.09478371501272265,
+    "Bannerghata Road": 0.06647582697201018,
+    "ORR North 2": 0.07474554707379134,
+    "Magadi Road": 0.07792620865139949,
+    "IRR(Thanisandra road)": 0.030216284987277353,
+    "Mysore Road": 0.236323155216285,
+    "West of Chord Road": 0.05534351145038168,
+    "CBD 1": 0.00826972010178117,
+    "Old Airport Road": 0.024173027989821884,
+    "Hennur Main Road": 0.030534351145038167,
+    "Airport New South Road": 0.021310432569974554,
+    "Varthur Road": 0.024491094147582698
+  },
+  "zone_density": {
+    "Unmapped Zone": 0.2,
+    "Central Zone 2": 1.0,
+    "North Zone 1": 0.5104333868378812,
+    "South Zone 1": 0.3739967897271268,
+    "West Zone 1": 0.695024077046549,
+    "South Zone 2": 0.5682182985553772,
+    "North Zone 2": 0.6629213483146067,
+    "Central Zone 1": 0.4317817014446228,
+    "West Zone 2": 0.5746388443017657,
+    "East Zone 2": 0.30497592295345105,
+    "East Zone 1": 0.406099518459069
+  },
+  "junction_density": {
+    "Unmapped Junction": 0.2,
+    "UrvashiJunction": 0.09375,
+    "LalbaghMainGateJunc": 0.09375,
+    "QueensStatueCircle": 0.140625,
+    "MysoreRd-RingRdJunc(Nayandanahallii)": 0.296875,
+    "HebbalFlyoverJunc": 0.4375,
+    "28thMainJayanagarJunc": 0.09375,
+    "Peenya14thCrossJunc": 0.015625,
+    "SilkBoardJunc": 0.515625,
+    "RingRoad-UllalJunction": 0.109375,
+    "BhadrappaLayout": 0.03125,
+    "IbblurJunction'": 0.203125,
+    "Sumanhalli": 0.25,
+    "BucheryJunction": 0.171875,
+    "PotteryCircle": 0.078125,
+    "VeerannapalyaJunction(BEL,HO)": 0.46875,
+    "JP Nagar 15th cross junction": 0.109375,
+    "TrinityCircle": 0.171875,
+    "CID-CarltonHouseJunc": 0.140625,
+    "CoffeeBoardJunc": 0.125,
+    "PoliceTimmaiahCircle(GPO)": 0.21875,
+    "Delmia-Jayanagar": 0.046875,
+    "SirsiCircle": 0.140625,
+    "K R Circle": 0.484375,
+    "CMP GateJunc": 0.3125,
+    "YelhankaCircle": 0.53125,
+    "SubedarChatramRd near SheshadripuramPS": 0.125,
+    "ModiBridgeJunction": 0.046875,
+    "KrishnaFlourMill": 0.296875,
+    "Richmond circle jn": 0.171875,
+    "WilsonGarden10thCrossJunc": 0.09375,
+    "MICO Bande": 0.09375,
+    "MekhriCircle": 1.0,
+    "Bamboobazar(Shivajinagar)": 0.03125,
+    "HainsJunc": 0.09375,
+    "BagalakunteCrossJunction": 0.03125,
+    "KatriguppeJunction": 0.1875,
+    "SindhiColonyJunction": 0.140625,
+    "SantheCircle": 0.390625,
+    "BangaloreBodyBuildersJunc": 0.296875,
+    "NavarangBarJunc-Dr RajkumarRd": 0.03125,
+    "LeprosyhospitalJunc": 0.328125,
+    "HulimaveRd-BanneraghattaRdJunc": 0.140625,
+    "ArakereGateJunc": 0.234375,
+    "Trilight Circle,Race course Road": 0.03125,
+    "SubbannaJunction": 0.140625,
+    "AyyappaTempleJunc": 0.765625,
+    "AnepalyaJunc": 0.09375,
+    "MintoJunction": 0.078125,
+    "VishweswaraiahJunctio(Uttamsagar)": 0.015625,
+    "NGV RearGateJunc": 0.03125,
+    "VeerasandraGateJunction": 0.171875,
+    "PriyadarshiniHotel,Jayamahal,RT Nagar": 0.09375,
+    "BigBazaar(Whitefield)Junc": 0.125,
+    "KR Road-14thCross Junc": 0.015625,
+    "PurnimaTheaterJunc": 0.125,
+    "IndianExpressJunction": 0.25,
+    "HennurRoad-ORR Junc": 0.265625,
+    "YeshwanthpuraCircle": 0.59375,
+    "KhodaysCircle(DV UrsCircle)": 0.359375,
+    "MahalaxmiLayoutEntranceJunc": 0.078125,
+    "JayadevaHospitalJunc": 0.125,
+    "GokuldasImagesJunc": 0.4375,
+    "BigBazaarJunction(OldMadrasRd)": 0.40625,
+    "KalyanNagar-ORR Junc": 0.09375,
+    "Minerva Circle": 0.03125,
+    "ModiHospital": 0.015625,
+    "Batrayanapura(Amrutahalli)Junction": 0.21875,
+    "Dr RajkumarRd-10thCrossRdJunc": 0.078125,
+    "D'SouzaCircle": 0.0625,
+    "BloodBankCircle": 0.234375,
+    "KoramangalaWaterTankJunc": 0.453125,
+    "TataInstituteCircle": 0.1875,
+    "TownhallJunction": 0.46875,
+    "BMTCJunction-K H Road": 0.15625,
+    "Shivashankara circle": 0.078125,
+    "PES-DevegowdaCircle": 0.0625,
+    "HesaraghattaJunction": 0.46875,
+    "toll gate mysore road": 0.515625,
+    "ISRO Junction-Airport rd": 0.140625,
+    "WilsonGarden12thCrossJunc": 0.125,
+    "SatteliteBusStandJunc": 0.671875,
+    "PeenyaPoliceStation": 0.1875,
+    "Chokasandra (Tumkur road)": 0.21875,
+    "27th Cross Jayanagar(Ganapathi Temple)": 0.015625,
+    "Malleswaram18thCrossRd-SampigeRdJunc": 0.078125,
+    "Arbindo Circle": 0.15625,
+    "NaganathapuraJunction": 0.1875,
+    "CommandoHospitalJunc": 0.09375,
+    "PoliceCornerJunc": 0.40625,
+    "FTI Junction(KanteeravaStudio)": 0.171875,
+    "WebbsCircle": 0.046875,
+    "BilekahalliJunc": 0.21875,
+    "Bommanahalli": 0.40625,
+    "Ashoknagar Junction(ShoolayCircle)": 0.09375,
+    "Srigandakaval": 0.21875,
+    "BanashankariBusStandJunc": 0.203125,
+    "MargosaRd-18thCrossJunc": 0.09375,
+    "UlsoorGateJunc": 0.1875,
+    "SRS Peenya Junc": 0.3125,
+    "BHEL Gate": 0.015625,
+    "Kammanahalli-RingRoadJunction": 0.0625,
+    "StateBankofMysoreJunc": 0.1875,
+    "MeenakshiMallJunc": 0.125,
+    "KanakapuraRd-RingRdJunction": 0.140625,
+    "JakkurCrossJunction": 0.28125,
+    "NandiCross(RaniCross)": 0.046875,
+    "PlatformRdJunction": 0.09375,
+    "Marigowda-TavarkereRdJunc": 0.203125,
+    "Devasandra(k r puram)": 0.46875,
+    "BagalurCrossJunc": 0.421875,
+    "OldMadrasRd-SuddaguntepalyaRdJunc": 0.046875,
+    "ShantalaJunction": 0.234375,
+    "OldMadrasRd-NGEF Junc": 0.125,
+    "Deverabeesanahalli-ORR Junc": 0.234375,
+    "JalahalliCross(SM Circle)": 0.5,
+    "SagarTheatreJunc": 0.09375,
+    "HunsemarammanahalliJunction": 0.109375,
+    "KundanahalliGateJunc": 0.171875,
+    "SiddalingaiahCircle": 0.171875,
+    "HopefarmJunction": 0.15625,
+    "RRR(Okalipuram)Junction": 0.09375,
+    "ElectronicCityGate-2Junc": 0.09375,
+    "Shivajinagar(BRV)Junction": 0.25,
+    "5thMainHSR": 0.046875,
+    "K H Road-SiddaiahRdJunc(BMTC-BigBazaar)": 0.09375,
+    "MaratahalliBridgeJunc": 0.25,
+    "GowdanapalyaJunction": 0.015625,
+    "TyagiHengalvarayaJunc(DickensonRd)": 0.078125,
+    "EliteJunc": 0.09375,
+    "Jaipuria-Adugodi": 0.0625,
+    "OldPoliceStation-Ashoknagar": 0.078125,
+    "Nagavara-ORR Junction": 0.5,
+    "MS RamaiahJunc(TollGate)": 0.171875,
+    "LinkRoadMalleswaramJunc": 0.046875,
+    "YelhankaBypass": 0.296875,
+    "TamarikannanJunc": 0.015625,
+    "Basveshwarnagar 8th main Junction": 0.015625,
+    "GarebhavipalyaJunc": 0.078125,
+    "A S CharStreet-MysoreRdJunc": 0.078125,
+    "Dr TCM RoyanRd near AmbedkarStatue": 0.1875,
+    "MC Circle": 0.09375,
+    "South end circle": 0.046875,
+    "HalliThindi": 0.046875,
+    "BinnyMillJunction": 0.109375,
+    "SandeepUnnikrishnan-Yelhanka": 0.125,
+    "29thMainRdBTM LayoutJunc": 0.078125,
+    "KogilluCrossJunc": 0.234375,
+    "DomlurWaterTank": 0.1875,
+    "ShivandaCircle": 0.1875,
+    "DoddaballapuraCrossJunc": 0.046875,
+    "KuvempuCircle": 0.046875,
+    "KamrajRdJunction": 0.078125,
+    "MayohallJunction": 0.078125,
+    "ShankarMuttCircle": 0.046875,
+    "KuvempuCircleJunc,HAL MainGate": 0.015625,
+    "RajeshwariJunc": 0.34375,
+    "OldMadrasRd-Indranagar100ftRdJunc": 0.1875,
+    "DevanahalliCrossJunc": 0.03125,
+    "BTM16thMain-ORR Junc": 0.09375,
+    "RajajinagarEntranceJunction": 0.078125,
+    "MillCornerRd-SampigeRdJunc": 0.140625,
+    "SarjapurRd-St JohnsRdJunc": 0.15625,
+    "HudsonCircle": 0.25,
+    "ChaudrayaCircle/UdayaTVCircle(CantonmentJunc)": 0.109375,
+    "Yemalur cross junc": 0.0625,
+    "MinskSquare(CTO Junction)": 0.125,
+    "Kadubeesanahalli-ORR Junc": 0.1875,
+    "KarnatakaBhavanJunction": 0.140625,
+    "SadashivnagarJunc": 0.203125,
+    "HoramavuJunction": 0.1875,
+    "Bellandur Junction, Outer ring road": 0.046875,
+    "KensingtonOvalJunc": 0.015625,
+    "LowerAgaram(IndiaGarage)Junc": 0.046875,
+    "ShivajiTalkiesJunc": 0.109375,
+    "LRDE Junction": 0.140625,
+    "BEL Circle": 0.390625,
+    "OldMadrasRd-DoubleRdJunc": 0.046875,
+    "ChandraLayoutJunc-nearWaterTank": 0.03125,
+    "Nagarbhavi": 0.140625,
+    "Indiranasgar13thMainJunc": 0.03125,
+    "AshirwadamCircle": 0.078125,
+    "Kudlu Gate Junc": 0.09375,
+    "KIMCO Junction": 0.484375,
+    "N R SquareJunc": 0.15625,
+    "GoruguntepalyaJunc": 0.3125,
+    "UCO Bank(Forum)": 0.03125,
+    "JohnsonMarket": 0.046875,
+    "DhobiGhatJunc": 0.109375,
+    "AnilKumbleCircle": 0.125,
+    "RamamurthyNagarJunction": 0.140625,
+    "AttiguppeCircleJunction": 0.015625,
+    "NIMHANS Junction": 0.09375,
+    "VetenaryHospitalJunc-Shivajinagar": 0.0625,
+    "MotherTeressaCircle": 0.171875,
+    "TumkurRdMarappanapalyaJunc": 0.21875,
+    "Ring road-Near Kengunte Junction": 0.109375,
+    "AgaraJunction": 0.09375,
+    "OldMadrasRd-80FeetRdJunc": 0.125,
+    "Srinivagilu(Ejipura)Junc": 0.0625,
+    "AdugodiJunc": 0.03125,
+    "BEML GateJunc(SuranjandasRd)": 0.03125,
+    "GorappanapalyaJunction": 0.015625,
+    "NavarangTheatreJunction": 0.0625,
+    "UttarahalliJunction": 0.234375,
+    "SadahalliGateJunc(AirportRd)": 0.109375,
+    "HSR14thMainJunc": 0.046875,
+    "Fire Force Junction": 0.03125,
+    "KodigehalliCross": 0.171875,
+    "ItmaduJunction": 0.09375,
+    "BegumMahalJunc": 0.0625,
+    "HoodiJunction": 0.09375,
+    "ShivanahalliJunctionWOC": 0.046875,
+    "NCERT Junction": 0.015625,
+    "KadirenahalliJunction": 0.125,
+    "Krupanidhi College": 0.078125,
+    "PrasannaJunction": 0.09375,
+    "TC Palya-OM RoadJunc": 0.0625,
+    "TVS CrossJunction": 0.015625,
+    "NTTF JunctionPeenya": 0.03125,
+    "Peenya2ndStageBusStand": 0.03125,
+    "Narayanapura cross, Hegde nagar": 0.046875,
+    "Jayanagar 4th main,36th cross": 0.03125,
+    "OperaHouseJunc": 0.09375,
+    "UniversityJunc(Janabharti)": 0.171875,
+    "JaiMuniRaoCircle": 0.078125,
+    "RamaiahCircle-UlsoorPoliceStation": 0.140625,
+    "SonyworldJunction": 0.046875,
+    "SwagathMainRd-EastEndRdJunc": 0.03125,
+    "BhashyamCircle-SadashivNagar": 0.0625,
+    "CashPharmacyJunction": 0.046875,
+    "BiryandCircle": 0.078125,
+    "Rajajinagagr1stBlockJunction": 0.03125,
+    "ASC Junction": 0.046875,
+    "DevegowdaPetrolBunkJunc": 0.03125,
+    "GopalGowdaJUnc": 0.046875,
+    "GovindapuraCross": 0.015625,
+    "MysoreRd--MadhuPetrolBunkJunction": 0.0625,
+    "DairyCircle": 0.078125,
+    "Rajajinagar19thMainJunc": 0.09375,
+    "HennurRd-DavisRdJunction": 0.078125,
+    "SiddapuraJunction": 0.078125,
+    "K R MarketJunction": 0.109375,
+    "KonanakunteJunction(KanakapurarRd)": 0.09375,
+    "RoyanCircle-Chamrajpete": 0.015625,
+    "AnjaneyaTempleJunc": 0.046875,
+    "BasavamantapaJunc-Dr RajkumarRd": 0.03125,
+    "Basappa Circle Junction": 0.046875,
+    "ChandrikaJunction": 0.03125,
+    "BM ShriJunc(CMH-100FtRd)Junc": 0.046875,
+    "ManipalCentreJunc": 0.03125,
+    "Arts&CraftsCircle": 0.03125,
+    "DevangaHostelJunction": 0.078125,
+    "17th Mn 1st Crs Aishwarya Stores Jn": 0.015625,
+    "BDA Junctio-Koramangala": 0.09375,
+    "WiproJunc-Koramangala": 0.015625,
+    "GangammagudiJunc": 0.09375,
+    "BasaweshwaraCircle": 0.078125,
+    "MarenahalliRd-18thMainRdJunc": 0.03125,
+    "CholurpalyaJunction(MagadiRd)": 0.03125,
+    "KCG HospitalJunction": 0.03125,
+    "DickensonRd-AdigasJunc": 0.015625,
+    "AnandRaoJunction": 0.109375,
+    "SagarHospitalJunc": 0.078125,
+    "VijayanagarBusStandJunction": 0.09375,
+    "BhashyamCircle": 0.046875,
+    "PuttammaChoultryNagarbhavi": 0.03125,
+    "OldMadrasRd-BMTC DepotJunc": 0.015625,
+    "ColesParkJunc": 0.015625,
+    "LalbaghWestGate": 0.015625,
+    "KamakyaJunction": 0.015625,
+    "CMH Rd-AdarshTheaterJunc": 0.078125,
+    "Devanahalli new bus stand": 0.015625,
+    "RajarajeshwariKalyanaMantapaJunc": 0.015625,
+    "CIL CrossJunction-JayamahalRd": 0.0625,
+    "NationalCollege": 0.015625,
+    "DMRoadJunc(Basavangudi)": 0.015625,
+    "YediyurMeternityHospital": 0.015625,
+    "J D MaraJunc": 0.046875,
+    "5thMainRPC Layout-Vijayanagar": 0.046875,
+    "JP Nagar 9th cross-24th main jn": 0.078125,
+    "Geethanjali jn": 0.03125,
+    "ISRO Junction-NewBEL Rd": 0.015625,
+    "MaharajaJunction": 0.03125,
+    "UpparpetJunction": 0.03125,
+    "HosmatJunction": 0.046875,
+    "ESI(k r puram)": 0.015625,
+    "KHB Junction": 0.015625,
+    "MSRamaiahHospitalJunc": 0.015625,
+    "ThomasCafe-New": 0.015625,
+    "K G Junction": 0.015625,
+    "Geeta Circle": 0.015625,
+    "BrigadeMillenium": 0.015625,
+    "NagaTheaterJunc-Ulsoor": 0.015625,
+    "SafinaPlazaJunc": 0.015625
+  },
+  "police_density": {
+    "Peenya": 0.47214854111405835,
+    "HSR Layout": 0.3076923076923077,
+    "Wilson Garden": 0.27851458885941643,
+    "Sadashivanagar": 0.8010610079575596,
+    "Hebbala": 0.35809018567639256,
+    "Kengeri": 0.11671087533156499,
+    "Cubbon Park": 0.5623342175066313,
+    "Hennuru": 0.7320954907161804,
+    "K.R. Pura": 0.6047745358090185,
+    "Byatarayanapura": 0.7877984084880637,
+    "Mahadevapura": 0.3183023872679045,
+    "Halasur": 0.3129973474801061,
+    "Kodigehalli": 0.7214854111405835,
+    "Jayanagara": 0.47214854111405835,
+    "Madiwala": 0.4880636604774536,
+    "Jeevanbheemanagar": 0.33687002652519893,
+    "Whitefield": 0.48010610079575594,
+    "Shivajinagar": 0.246684350132626,
+    "Mico Layout": 0.3076923076923077,
+    "HAL Old Airport": 0.9575596816976127,
+    "J.P. Nagar": 0.32891246684350134,
+    "Magadi Road": 0.376657824933687,
+    "Electronic City": 0.32891246684350134,
+    "High ground": 0.4907161803713528,
+    "Chikkabanavara": 0.3129973474801061,
+    "K.G. Halli": 0.1962864721485411,
+    "Yeshwanthpura": 0.7427055702917772,
+    "Bellandur": 0.259946949602122,
+    "Malleshwaram": 0.21220159151193635,
+    "Devanahalli Airport": 0.09814323607427056,
+    "Jnanabharathi": 0.35543766578249336,
+    "Vijayanagara": 0.15384615384615385,
+    "Chamarajpet": 0.5092838196286472,
+    "Kamakshipalya": 0.5941644562334217,
+    "V.V.Puram (C.Pet)": 0.09814323607427056,
+    "Rajajinagar": 0.27586206896551724,
+    "No Police Station": 0.5809018567639257,
+    "Pulikeshinagar(F.Town)": 0.1962864721485411,
+    "Adugodi": 0.3183023872679045,
+    "Ashok Nagar": 0.4535809018567639,
+    "Banaswadi": 0.649867374005305,
+    "Halasuru Gate": 0.7877984084880637,
+    "R.T. Nagar": 0.33687002652519893,
+    "Banashankari": 0.27055702917771884,
+    "City Market": 0.07161803713527852,
+    "Basavanagudi": 0.1246684350132626,
+    "Yelahanka": 1.0,
+    "K.S. Layout": 0.23607427055702918,
+    "Chikkajala": 0.1962864721485411,
+    "Sheshadripuram": 0.32625994694960214,
+    "Hulimavu": 0.3103448275862069,
+    "Jalahalli": 0.5225464190981433,
+    "Thalagattapura": 0.13262599469496023,
+    "Upparpet": 0.16710875331564987
+  },
+  "hour_risk": {
+    "17": 0.05018359853121175,
+    "4": 0.6854345165238678,
+    "6": 0.8102815177478581,
+    "3": 0.45777233782129745,
+    "7": 0.5899632802937577,
+    "2": 0.4834761321909425,
+    "5": 0.8090575275397797,
+    "18": 0.2864137086903305,
+    "19": 0.7148102815177478,
+    "22": 0.7209302325581395,
+    "8": 0.4039167686658507,
+    "20": 0.8384332925336597,
+    "15": 0.011015911872705019,
+    "11": 0.08445532435740515,
+    "21": 1.0,
+    "23": 0.616891064871481,
+    "1": 0.4700122399020808,
+    "0": 0.5152998776009792,
+    "16": 0.011015911872705019,
+    "9": 0.19706242350061198,
+    "13": 0.04039167686658507,
+    "14": 0.01835985312117503,
+    "10": 0.0832313341493268,
+    "12": 0.10526315789473684
+  },
+  "day_risk": {
+    "Thursday": 1.0,
+    "Tuesday": 0.9212656364974245,
+    "Saturday": 0.9146431199411332,
+    "Monday": 0.6769683590875644,
+    "Friday": 0.9256806475349522,
+    "Wednesday": 0.8638704930095659,
+    "Sunday": 0.7115526122148639
+  },
+  "priority_risk": {
+    "high": 1.0,
+    "medium": 0.62,
+    "low": 0.35
+  },
+  "scoring_version": "tis-v1-standard-library",
+  "risk_thresholds": {
+    "Critical": 80,
+    "High": 65,
+    "Medium": 45,
+    "Low": 0
+  },
+  "zone_corridor_advisories": {
+    "Unmapped Zone": [
+      {
+        "corridor": "IRR(Thanisandra road)",
+        "average_tis": 43.8,
+        "count": 44
+      },
+      {
+        "corridor": "Bannerghata Road",
+        "average_tis": 45.4,
+        "count": 117
+      },
+      {
+        "corridor": "West of Chord Road",
+        "average_tis": 45.4,
+        "count": 101
+      },
+      {
+        "corridor": "Airport New South Road",
+        "average_tis": 45.9,
+        "count": 22
+      },
+      {
+        "corridor": "CBD 1",
+        "average_tis": 46.1,
+        "count": 19
+      },
+      {
+        "corridor": "ORR West 1",
+        "average_tis": 46.1,
+        "count": 99
+      },
+      {
+        "corridor": "Hosur Road",
+        "average_tis": 46.8,
+        "count": 140
+      },
+      {
+        "corridor": "Old Madras Road",
+        "average_tis": 46.9,
+        "count": 148
+      },
+      {
+        "corridor": "Magadi Road",
+        "average_tis": 47.0,
+        "count": 147
+      },
+      {
+        "corridor": "Old Airport Road",
+        "average_tis": 47.2,
+        "count": 48
+      },
+      {
+        "corridor": "CBD 2",
+        "average_tis": 47.9,
+        "count": 57
+      },
+      {
+        "corridor": "ORR East 1",
+        "average_tis": 47.9,
+        "count": 144
+      },
+      {
+        "corridor": "Tumkur Road",
+        "average_tis": 48.3,
+        "count": 252
+      },
+      {
+        "corridor": "ORR North 1",
+        "average_tis": 48.3,
+        "count": 148
+      },
+      {
+        "corridor": "ORR North 2",
+        "average_tis": 48.4,
+        "count": 148
+      },
+      {
+        "corridor": "Hennur Main Road",
+        "average_tis": 48.5,
+        "count": 62
+      },
+      {
+        "corridor": "Bellary Road 2",
+        "average_tis": 48.7,
+        "count": 214
+      },
+      {
+        "corridor": "Bellary Road 1",
+        "average_tis": 49.6,
+        "count": 321
+      },
+      {
+        "corridor": "Varthur Road",
+        "average_tis": 49.7,
+        "count": 38
+      },
+      {
+        "corridor": "Mysore Road",
+        "average_tis": 51.1,
+        "count": 401
+      },
+      {
+        "corridor": "ORR East 2",
+        "average_tis": 51.9,
+        "count": 119
+      }
+    ],
+    "North Zone 1": [
+      {
+        "corridor": "Hennur Main Road",
+        "average_tis": 49.8,
+        "count": 30
+      },
+      {
+        "corridor": "Airport New South Road",
+        "average_tis": 50.0,
+        "count": 40
+      },
+      {
+        "corridor": "ORR North 2",
+        "average_tis": 51.7,
+        "count": 17
+      },
+      {
+        "corridor": "Bellary Road 1",
+        "average_tis": 52.0,
+        "count": 39
+      },
+      {
+        "corridor": "ORR North 1",
+        "average_tis": 53.0,
+        "count": 81
+      },
+      {
+        "corridor": "Bellary Road 2",
+        "average_tis": 53.9,
+        "count": 46
+      }
+    ],
+    "South Zone 2": [
+      {
+        "corridor": "IRR(Thanisandra road)",
+        "average_tis": 47.9,
+        "count": 42
+      },
+      {
+        "corridor": "Bannerghata Road",
+        "average_tis": 49.0,
+        "count": 50
+      },
+      {
+        "corridor": "Hosur Road",
+        "average_tis": 49.5,
+        "count": 134
+      },
+      {
+        "corridor": "ORR East 1",
+        "average_tis": 52.0,
+        "count": 36
+      }
+    ],
+    "North Zone 2": [
+      {
+        "corridor": "Hennur Main Road",
+        "average_tis": 43.1,
+        "count": 4
+      },
+      {
+        "corridor": "ORR North 2",
+        "average_tis": 51.1,
+        "count": 63
+      },
+      {
+        "corridor": "Tumkur Road",
+        "average_tis": 52.3,
+        "count": 32
+      },
+      {
+        "corridor": "Bellary Road 1",
+        "average_tis": 53.4,
+        "count": 109
+      },
+      {
+        "corridor": "Bellary Road 2",
+        "average_tis": 56.3,
+        "count": 118
+      }
+    ],
+    "Central Zone 1": [
+      {
+        "corridor": "Old Airport Road",
+        "average_tis": 48.0,
+        "count": 17
+      },
+      {
+        "corridor": "Old Madras Road",
+        "average_tis": 48.7,
+        "count": 97
+      },
+      {
+        "corridor": "ORR East 1",
+        "average_tis": 49.9,
+        "count": 8
+      },
+      {
+        "corridor": "IRR(Thanisandra road)",
+        "average_tis": 51.2,
+        "count": 9
+      },
+      {
+        "corridor": "ORR North 1",
+        "average_tis": 51.4,
+        "count": 10
+      },
+      {
+        "corridor": "Mysore Road",
+        "average_tis": 52.6,
+        "count": 41
+      },
+      {
+        "corridor": "Hosur Road",
+        "average_tis": 53.9,
+        "count": 22
+      }
+    ],
+    "Central Zone 2": [
+      {
+        "corridor": "CBD 1",
+        "average_tis": 48.4,
+        "count": 7
+      },
+      {
+        "corridor": "Bannerghata Road",
+        "average_tis": 51.0,
+        "count": 4
+      },
+      {
+        "corridor": "Old Madras Road",
+        "average_tis": 51.3,
+        "count": 18
+      },
+      {
+        "corridor": "CBD 2",
+        "average_tis": 53.3,
+        "count": 44
+      },
+      {
+        "corridor": "Bellary Road 1",
+        "average_tis": 54.6,
+        "count": 53
+      },
+      {
+        "corridor": "Magadi Road",
+        "average_tis": 55.3,
+        "count": 20
+      },
+      {
+        "corridor": "Mysore Road",
+        "average_tis": 57.4,
+        "count": 190
+      }
+    ],
+    "South Zone 1": [
+      {
+        "corridor": "Bannerghata Road",
+        "average_tis": 43.9,
+        "count": 38
+      },
+      {
+        "corridor": "ORR West 1",
+        "average_tis": 46.7,
+        "count": 28
+      }
+    ],
+    "West Zone 1": [
+      {
+        "corridor": "West of Chord Road",
+        "average_tis": 50.2,
+        "count": 16
+      },
+      {
+        "corridor": "ORR West 1",
+        "average_tis": 51.8,
+        "count": 15
+      },
+      {
+        "corridor": "Tumkur Road",
+        "average_tis": 52.8,
+        "count": 126
+      },
+      {
+        "corridor": "Magadi Road",
+        "average_tis": 52.9,
+        "count": 54
+      },
+      {
+        "corridor": "Mysore Road",
+        "average_tis": 54.4,
+        "count": 55
+      },
+      {
+        "corridor": "ORR North 2",
+        "average_tis": 54.4,
+        "count": 6
+      }
+    ],
+    "West Zone 2": [
+      {
+        "corridor": "ORR West 1",
+        "average_tis": 48.8,
+        "count": 23
+      },
+      {
+        "corridor": "Magadi Road",
+        "average_tis": 49.2,
+        "count": 24
+      },
+      {
+        "corridor": "West of Chord Road",
+        "average_tis": 49.2,
+        "count": 57
+      },
+      {
+        "corridor": "Tumkur Road",
+        "average_tis": 53.3,
+        "count": 48
+      },
+      {
+        "corridor": "Bellary Road 1",
+        "average_tis": 55.8,
+        "count": 88
+      },
+      {
+        "corridor": "Mysore Road",
+        "average_tis": 55.8,
+        "count": 55
+      }
+    ],
+    "East Zone 1": [
+      {
+        "corridor": "Varthur Road",
+        "average_tis": 50.0,
+        "count": 39
+      },
+      {
+        "corridor": "ORR East 1",
+        "average_tis": 52.3,
+        "count": 56
+      },
+      {
+        "corridor": "Old Airport Road",
+        "average_tis": 53.5,
+        "count": 6
+      },
+      {
+        "corridor": "ORR East 2",
+        "average_tis": 56.6,
+        "count": 52
+      }
+    ],
+    "East Zone 2": [
+      {
+        "corridor": "ORR East 2",
+        "average_tis": 46.9,
+        "count": 16
+      },
+      {
+        "corridor": "Airport New South Road",
+        "average_tis": 48.1,
+        "count": 5
+      },
+      {
+        "corridor": "ORR North 1",
+        "average_tis": 48.7,
+        "count": 35
+      },
+      {
+        "corridor": "Old Airport Road",
+        "average_tis": 51.4,
+        "count": 5
+      }
+    ]
+  },
+  "feature_importance": [
+    {
+      "feature": "Event cause risk",
+      "average_contribution": 11.32,
+      "weight": 15.0
+    },
+    {
+      "feature": "Priority level",
+      "average_contribution": 9.0,
+      "weight": 12.0
+    },
+    {
+      "feature": "DBSCAN hotspot membership",
+      "average_contribution": 6.28,
+      "weight": 7.0
+    },
+    {
+      "feature": "Time pattern risk",
+      "average_contribution": 6.09,
+      "weight": 8.0
+    },
+    {
+      "feature": "Corridor frequency",
+      "average_contribution": 4.57,
+      "weight": 10.0
+    },
+    {
+      "feature": "Police station workload",
+      "average_contribution": 3.69,
+      "weight": 7.0
+    },
+    {
+      "feature": "Zone frequency",
+      "average_contribution": 3.01,
+      "weight": 8.0
+    },
+    {
+      "feature": "Duration risk",
+      "average_contribution": 2.88,
+      "weight": 10.0
+    },
+    {
+      "feature": "Junction frequency",
+      "average_contribution": 1.79,
+      "weight": 8.0
+    },
+    {
+      "feature": "Road closure requirement",
+      "average_contribution": 1.24,
+      "weight": 15.0
+    }
+  ],
+  "hotspot_clusters": [
+    {
+      "id": 0,
+      "latitude": 12.9864159,
+      "longitude": 77.5895884,
+      "count": 7332,
+      "average_tis": 50.7,
+      "risk_category": "Medium",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "HAL Old Airport"
+    },
+    {
+      "id": 6,
+      "latitude": 13.0454958,
+      "longitude": 77.6437621,
+      "count": 67,
+      "average_tis": 49.4,
+      "risk_category": "Medium",
+      "top_cause": "construction",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Hennuru"
+    },
+    {
+      "id": 9,
+      "latitude": 13.0827443,
+      "longitude": 77.5499446,
+      "count": 15,
+      "average_tis": 47.7,
+      "risk_category": "Medium",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Yelahanka"
+    },
+    {
+      "id": 23,
+      "latitude": 13.09745,
+      "longitude": 77.566138,
+      "count": 8,
+      "average_tis": 47.5,
+      "risk_category": "Medium",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Yelahanka"
+    },
+    {
+      "id": 24,
+      "latitude": 13.0461569,
+      "longitude": 77.7506383,
+      "count": 8,
+      "average_tis": 47.3,
+      "risk_category": "Medium",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "K.R. Pura"
+    },
+    {
+      "id": 5,
+      "latitude": 13.0224113,
+      "longitude": 77.6020593,
+      "count": 11,
+      "average_tis": 46.8,
+      "risk_category": "Medium",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "R.T. Nagar"
+    },
+    {
+      "id": 19,
+      "latitude": 13.0673588,
+      "longitude": 77.6451406,
+      "count": 23,
+      "average_tis": 46.3,
+      "risk_category": "Medium",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Hennuru"
+    },
+    {
+      "id": 3,
+      "latitude": 13.0116065,
+      "longitude": 77.5064202,
+      "count": 9,
+      "average_tis": 46.2,
+      "risk_category": "Medium",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Peenya"
+    },
+    {
+      "id": 18,
+      "latitude": 12.9038649,
+      "longitude": 77.4703149,
+      "count": 13,
+      "average_tis": 46.0,
+      "risk_category": "Medium",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Mysore Road",
+      "top_police_station": "Kengeri"
+    },
+    {
+      "id": 20,
+      "latitude": 12.9116988,
+      "longitude": 77.4838187,
+      "count": 10,
+      "average_tis": 43.9,
+      "risk_category": "Low",
+      "top_cause": "others",
+      "top_corridor": "Mysore Road",
+      "top_police_station": "Kengeri"
+    },
+    {
+      "id": 22,
+      "latitude": 13.0578502,
+      "longitude": 77.6326397,
+      "count": 12,
+      "average_tis": 43.7,
+      "risk_category": "Low",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Hennur Main Road",
+      "top_police_station": "Hennuru"
+    },
+    {
+      "id": 8,
+      "latitude": 12.9949289,
+      "longitude": 77.7156814,
+      "count": 21,
+      "average_tis": 43.2,
+      "risk_category": "Low",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Mahadevapura"
+    },
+    {
+      "id": 11,
+      "latitude": 12.94073,
+      "longitude": 77.7470725,
+      "count": 72,
+      "average_tis": 42.2,
+      "risk_category": "Low",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Whitefield"
+    },
+    {
+      "id": 1,
+      "latitude": 12.9876152,
+      "longitude": 77.7345105,
+      "count": 20,
+      "average_tis": 42.1,
+      "risk_category": "Low",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Mahadevapura"
+    },
+    {
+      "id": 14,
+      "latitude": 13.0379933,
+      "longitude": 77.738715,
+      "count": 9,
+      "average_tis": 42.0,
+      "risk_category": "Low",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "K.R. Pura"
+    },
+    {
+      "id": 2,
+      "latitude": 12.9813548,
+      "longitude": 77.7523714,
+      "count": 89,
+      "average_tis": 41.3,
+      "risk_category": "Low",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Whitefield"
+    },
+    {
+      "id": 10,
+      "latitude": 12.8204194,
+      "longitude": 77.6875172,
+      "count": 16,
+      "average_tis": 41.2,
+      "risk_category": "Low",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Electronic City"
+    },
+    {
+      "id": 4,
+      "latitude": 12.9420467,
+      "longitude": 77.5591366,
+      "count": 11,
+      "average_tis": 40.7,
+      "risk_category": "Low",
+      "top_cause": "pot_holes",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Basavanagudi"
+    },
+    {
+      "id": 12,
+      "latitude": 12.8408132,
+      "longitude": 77.6494865,
+      "count": 11,
+      "average_tis": 40.7,
+      "risk_category": "Low",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Electronic City"
+    },
+    {
+      "id": 13,
+      "latitude": 12.8828803,
+      "longitude": 77.7540182,
+      "count": 19,
+      "average_tis": 40.3,
+      "risk_category": "Low",
+      "top_cause": "accident",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "No Police Station"
+    },
+    {
+      "id": 17,
+      "latitude": 12.8776254,
+      "longitude": 77.5430815,
+      "count": 15,
+      "average_tis": 40.0,
+      "risk_category": "Low",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Thalagattapura"
+    },
+    {
+      "id": 15,
+      "latitude": 13.1854999,
+      "longitude": 77.6425319,
+      "count": 26,
+      "average_tis": 38.9,
+      "risk_category": "Low",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Bellary Road 2",
+      "top_police_station": "Chikkajala"
+    },
+    {
+      "id": 16,
+      "latitude": 12.8900501,
+      "longitude": 77.5640079,
+      "count": 11,
+      "average_tis": 38.6,
+      "risk_category": "Low",
+      "top_cause": "vehicle_breakdown",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "K.S. Layout"
+    },
+    {
+      "id": 21,
+      "latitude": 12.8778311,
+      "longitude": 77.6120531,
+      "count": 24,
+      "average_tis": 37.0,
+      "risk_category": "Low",
+      "top_cause": "pot_holes",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Hulimavu"
+    },
+    {
+      "id": 7,
+      "latitude": 12.8744203,
+      "longitude": 77.6249878,
+      "count": 17,
+      "average_tis": 35.5,
+      "risk_category": "Low",
+      "top_cause": "pot_holes",
+      "top_corridor": "Non-corridor",
+      "top_police_station": "Hulimavu"
+    }
+  ]
+}

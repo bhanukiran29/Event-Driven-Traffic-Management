@@ -1,0 +1,62 @@
+[
+  {
+    "feature": "requires_road_closure",
+    "importance": 40.9985
+  },
+  {
+    "feature": "event_duration_hours_capped",
+    "importance": 13.0733
+  },
+  {
+    "feature": "cluster_risk",
+    "importance": 10.866
+  },
+  {
+    "feature": "zone",
+    "importance": 10.7938
+  },
+  {
+    "feature": "police_station",
+    "importance": 9.4714
+  },
+  {
+    "feature": "event_cause",
+    "importance": 5.4908
+  },
+  {
+    "feature": "start_hour",
+    "importance": 2.7923
+  },
+  {
+    "feature": "junction",
+    "importance": 1.9699
+  },
+  {
+    "feature": "status",
+    "importance": 1.9016
+  },
+  {
+    "feature": "corridor",
+    "importance": 0.8965
+  },
+  {
+    "feature": "start_day",
+    "importance": 0.675
+  },
+  {
+    "feature": "start_month",
+    "importance": 0.4619
+  },
+  {
+    "feature": "spatial_cluster_id",
+    "importance": 0.3127
+  },
+  {
+    "feature": "event_type",
+    "importance": 0.2153
+  },
+  {
+    "feature": "priority",
+    "importance": 0.0809
+  }
+]

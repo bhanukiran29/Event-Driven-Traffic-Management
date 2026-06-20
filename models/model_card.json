@@ -1,0 +1,19 @@
+{
+  "name": "GridSense AI TIS Surrogate Model",
+  "purpose": "Learn the proprietary Traffic Impact Score from ASTraM event features for fast ranking, benchmarking, and explainability.",
+  "not_for": "This model is not a measured congestion, vehicle-count, travel-time, or delay-duration predictor.",
+  "data_boundary": "No external training data was used.",
+  "target": "traffic_impact_score",
+  "best_model": "CatBoostRegressor",
+  "metrics": {
+    "r2": 0.9921,
+    "mae": 0.3726,
+    "rmse": 0.5958
+  },
+  "trained_at": "2026-06-19T08:17:40.111691+00:00",
+  "limitations": [
+    "Target is generated from the transparent TIS formula because the dataset has no true congestion label.",
+    "Predictions should be presented as operational risk estimates.",
+    "Mapbox is used only for visualization, not training."
+  ]
+}

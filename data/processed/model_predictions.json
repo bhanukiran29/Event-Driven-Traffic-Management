@@ -1,0 +1,2502 @@
+[
+  {
+    "id": "FKID006893",
+    "actual_tis": 80.2,
+    "predicted_tis": 74.0,
+    "absolute_error": 6.2,
+    "risk_category": "Critical",
+    "event_cause": "construction",
+    "corridor": "Bellary Road 2",
+    "zone": "North Zone 2"
+  },
+  {
+    "id": "FKID007754",
+    "actual_tis": 41.3,
+    "predicted_tis": 46.63,
+    "absolute_error": 5.33,
+    "risk_category": "Low",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID005208",
+    "actual_tis": 69.2,
+    "predicted_tis": 64.25,
+    "absolute_error": 4.95,
+    "risk_category": "High",
+    "event_cause": "others",
+    "corridor": "Magadi Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID007189",
+    "actual_tis": 76.3,
+    "predicted_tis": 72.0,
+    "absolute_error": 4.3,
+    "risk_category": "High",
+    "event_cause": "tree_fall",
+    "corridor": "Non-corridor",
+    "zone": "North Zone 2"
+  },
+  {
+    "id": "FKID007851",
+    "actual_tis": 49.5,
+    "predicted_tis": 53.33,
+    "absolute_error": 3.83,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID008048",
+    "actual_tis": 53.5,
+    "predicted_tis": 50.09,
+    "absolute_error": 3.41,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Bellary Road 1",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID000532",
+    "actual_tis": 61.6,
+    "predicted_tis": 58.64,
+    "absolute_error": 2.96,
+    "risk_category": "Medium",
+    "event_cause": "pot_holes",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007573",
+    "actual_tis": 72.9,
+    "predicted_tis": 70.39,
+    "absolute_error": 2.51,
+    "risk_category": "High",
+    "event_cause": "construction",
+    "corridor": "Bellary Road 2",
+    "zone": "North Zone 2"
+  },
+  {
+    "id": "FKID006645",
+    "actual_tis": 68.4,
+    "predicted_tis": 70.84,
+    "absolute_error": 2.44,
+    "risk_category": "High",
+    "event_cause": "construction",
+    "corridor": "Airport New South Road",
+    "zone": "North Zone 1"
+  },
+  {
+    "id": "FKID004632",
+    "actual_tis": 62.3,
+    "predicted_tis": 59.88,
+    "absolute_error": 2.42,
+    "risk_category": "Medium",
+    "event_cause": "public_event",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006579",
+    "actual_tis": 65.6,
+    "predicted_tis": 63.2,
+    "absolute_error": 2.4,
+    "risk_category": "High",
+    "event_cause": "construction",
+    "corridor": "Bellary Road 1",
+    "zone": "North Zone 2"
+  },
+  {
+    "id": "FKID004490",
+    "actual_tis": 41.1,
+    "predicted_tis": 43.44,
+    "absolute_error": 2.34,
+    "risk_category": "Low",
+    "event_cause": "road_conditions",
+    "corridor": "Airport New South Road",
+    "zone": "East Zone 2"
+  },
+  {
+    "id": "FKID007894",
+    "actual_tis": 57.6,
+    "predicted_tis": 55.31,
+    "absolute_error": 2.29,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Bellary Road 1",
+    "zone": "North Zone 2"
+  },
+  {
+    "id": "FKID005453",
+    "actual_tis": 39.0,
+    "predicted_tis": 41.27,
+    "absolute_error": 2.27,
+    "risk_category": "Low",
+    "event_cause": "pot_holes",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID005634",
+    "actual_tis": 57.5,
+    "predicted_tis": 55.28,
+    "absolute_error": 2.22,
+    "risk_category": "Medium",
+    "event_cause": "public_event",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID007537",
+    "actual_tis": 66.4,
+    "predicted_tis": 64.22,
+    "absolute_error": 2.18,
+    "risk_category": "High",
+    "event_cause": "others",
+    "corridor": "Hosur Road",
+    "zone": "Central Zone 1"
+  },
+  {
+    "id": "FKID005054",
+    "actual_tis": 44.6,
+    "predicted_tis": 46.66,
+    "absolute_error": 2.06,
+    "risk_category": "Low",
+    "event_cause": "road_conditions",
+    "corridor": "ORR East 2",
+    "zone": "East Zone 2"
+  },
+  {
+    "id": "FKID003646",
+    "actual_tis": 38.8,
+    "predicted_tis": 40.82,
+    "absolute_error": 2.02,
+    "risk_category": "Low",
+    "event_cause": "tree_fall",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID005191",
+    "actual_tis": 36.7,
+    "predicted_tis": 38.71,
+    "absolute_error": 2.01,
+    "risk_category": "Low",
+    "event_cause": "pot_holes",
+    "corridor": "Varthur Road",
+    "zone": "East Zone 1"
+  },
+  {
+    "id": "FKID006174",
+    "actual_tis": 43.3,
+    "predicted_tis": 45.31,
+    "absolute_error": 2.01,
+    "risk_category": "Low",
+    "event_cause": "road_conditions",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID006038",
+    "actual_tis": 48.4,
+    "predicted_tis": 50.4,
+    "absolute_error": 2.0,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Bellary Road 1",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID007660",
+    "actual_tis": 77.0,
+    "predicted_tis": 75.07,
+    "absolute_error": 1.93,
+    "risk_category": "High",
+    "event_cause": "construction",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID007939",
+    "actual_tis": 52.9,
+    "predicted_tis": 51.09,
+    "absolute_error": 1.81,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Bellary Road 1",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007731",
+    "actual_tis": 67.4,
+    "predicted_tis": 69.15,
+    "absolute_error": 1.75,
+    "risk_category": "High",
+    "event_cause": "construction",
+    "corridor": "ORR West 1",
+    "zone": "South Zone 1"
+  },
+  {
+    "id": "FKID007520",
+    "actual_tis": 47.0,
+    "predicted_tis": 48.75,
+    "absolute_error": 1.75,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Airport New South Road",
+    "zone": "North Zone 1"
+  },
+  {
+    "id": "FKID005595",
+    "actual_tis": 35.6,
+    "predicted_tis": 37.35,
+    "absolute_error": 1.75,
+    "risk_category": "Low",
+    "event_cause": "pot_holes",
+    "corridor": "Varthur Road",
+    "zone": "East Zone 1"
+  },
+  {
+    "id": "FKID006648",
+    "actual_tis": 77.2,
+    "predicted_tis": 75.46,
+    "absolute_error": 1.74,
+    "risk_category": "High",
+    "event_cause": "construction",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID005472",
+    "actual_tis": 52.6,
+    "predicted_tis": 50.87,
+    "absolute_error": 1.73,
+    "risk_category": "Medium",
+    "event_cause": "construction",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 1"
+  },
+  {
+    "id": "FKID007834",
+    "actual_tis": 51.1,
+    "predicted_tis": 52.76,
+    "absolute_error": 1.66,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID006899",
+    "actual_tis": 50.5,
+    "predicted_tis": 48.85,
+    "absolute_error": 1.65,
+    "risk_category": "Medium",
+    "event_cause": "pot_holes",
+    "corridor": "Non-corridor",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID004310",
+    "actual_tis": 58.0,
+    "predicted_tis": 56.39,
+    "absolute_error": 1.61,
+    "risk_category": "Medium",
+    "event_cause": "accident",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID006874",
+    "actual_tis": 41.3,
+    "predicted_tis": 42.9,
+    "absolute_error": 1.6,
+    "risk_category": "Low",
+    "event_cause": "pot_holes",
+    "corridor": "IRR(Thanisandra road)",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID005870",
+    "actual_tis": 59.7,
+    "predicted_tis": 58.14,
+    "absolute_error": 1.56,
+    "risk_category": "Medium",
+    "event_cause": "construction",
+    "corridor": "ORR North 1",
+    "zone": "North Zone 1"
+  },
+  {
+    "id": "FKID005982",
+    "actual_tis": 50.1,
+    "predicted_tis": 48.54,
+    "absolute_error": 1.56,
+    "risk_category": "Medium",
+    "event_cause": "water_logging",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID007966",
+    "actual_tis": 51.4,
+    "predicted_tis": 49.89,
+    "absolute_error": 1.51,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007626",
+    "actual_tis": 52.4,
+    "predicted_tis": 53.9,
+    "absolute_error": 1.5,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID004873",
+    "actual_tis": 64.2,
+    "predicted_tis": 62.71,
+    "absolute_error": 1.49,
+    "risk_category": "Medium",
+    "event_cause": "pot_holes",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID001357",
+    "actual_tis": 59.3,
+    "predicted_tis": 57.82,
+    "absolute_error": 1.48,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007929",
+    "actual_tis": 51.7,
+    "predicted_tis": 53.16,
+    "absolute_error": 1.46,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006439",
+    "actual_tis": 48.0,
+    "predicted_tis": 49.46,
+    "absolute_error": 1.46,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "CBD 2",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID007806",
+    "actual_tis": 45.3,
+    "predicted_tis": 46.76,
+    "absolute_error": 1.46,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID004248",
+    "actual_tis": 60.8,
+    "predicted_tis": 59.35,
+    "absolute_error": 1.45,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID006265",
+    "actual_tis": 50.5,
+    "predicted_tis": 51.95,
+    "absolute_error": 1.45,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Old Madras Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID007363",
+    "actual_tis": 51.3,
+    "predicted_tis": 52.75,
+    "absolute_error": 1.45,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID006872",
+    "actual_tis": 41.5,
+    "predicted_tis": 42.94,
+    "absolute_error": 1.44,
+    "risk_category": "Low",
+    "event_cause": "pot_holes",
+    "corridor": "IRR(Thanisandra road)",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID007996",
+    "actual_tis": 52.5,
+    "predicted_tis": 51.08,
+    "absolute_error": 1.42,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007744",
+    "actual_tis": 68.5,
+    "predicted_tis": 67.09,
+    "absolute_error": 1.41,
+    "risk_category": "High",
+    "event_cause": "construction",
+    "corridor": "Varthur Road",
+    "zone": "East Zone 1"
+  },
+  {
+    "id": "FKID002018",
+    "actual_tis": 71.0,
+    "predicted_tis": 72.41,
+    "absolute_error": 1.41,
+    "risk_category": "High",
+    "event_cause": "construction",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID005374",
+    "actual_tis": 46.5,
+    "predicted_tis": 47.9,
+    "absolute_error": 1.4,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Magadi Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID000820",
+    "actual_tis": 50.9,
+    "predicted_tis": 52.3,
+    "absolute_error": 1.4,
+    "risk_category": "Medium",
+    "event_cause": "water_logging",
+    "corridor": "Varthur Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006068",
+    "actual_tis": 50.5,
+    "predicted_tis": 51.89,
+    "absolute_error": 1.39,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007927",
+    "actual_tis": 50.0,
+    "predicted_tis": 51.38,
+    "absolute_error": 1.38,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007518",
+    "actual_tis": 45.4,
+    "predicted_tis": 46.77,
+    "absolute_error": 1.37,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Mysore Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID006118",
+    "actual_tis": 66.3,
+    "predicted_tis": 64.93,
+    "absolute_error": 1.37,
+    "risk_category": "High",
+    "event_cause": "construction",
+    "corridor": "ORR East 1",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID000439",
+    "actual_tis": 50.7,
+    "predicted_tis": 52.05,
+    "absolute_error": 1.35,
+    "risk_category": "Medium",
+    "event_cause": "public_event",
+    "corridor": "CBD 2",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006156",
+    "actual_tis": 48.0,
+    "predicted_tis": 49.33,
+    "absolute_error": 1.33,
+    "risk_category": "Medium",
+    "event_cause": "accident",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID006528",
+    "actual_tis": 42.6,
+    "predicted_tis": 43.92,
+    "absolute_error": 1.32,
+    "risk_category": "Low",
+    "event_cause": "others",
+    "corridor": "Magadi Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID004030",
+    "actual_tis": 50.0,
+    "predicted_tis": 51.32,
+    "absolute_error": 1.32,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Mysore Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID001313",
+    "actual_tis": 34.0,
+    "predicted_tis": 35.3,
+    "absolute_error": 1.3,
+    "risk_category": "Low",
+    "event_cause": "others",
+    "corridor": "Mysore Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID000361",
+    "actual_tis": 52.9,
+    "predicted_tis": 51.62,
+    "absolute_error": 1.28,
+    "risk_category": "Medium",
+    "event_cause": "procession",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006935",
+    "actual_tis": 59.0,
+    "predicted_tis": 57.72,
+    "absolute_error": 1.28,
+    "risk_category": "Medium",
+    "event_cause": "construction",
+    "corridor": "Bellary Road 1",
+    "zone": "North Zone 1"
+  },
+  {
+    "id": "FKID007574",
+    "actual_tis": 50.3,
+    "predicted_tis": 51.58,
+    "absolute_error": 1.28,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "West of Chord Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID006649",
+    "actual_tis": 60.2,
+    "predicted_tis": 58.93,
+    "absolute_error": 1.27,
+    "risk_category": "Medium",
+    "event_cause": "accident",
+    "corridor": "Mysore Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID006291",
+    "actual_tis": 54.0,
+    "predicted_tis": 52.73,
+    "absolute_error": 1.27,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID007973",
+    "actual_tis": 47.2,
+    "predicted_tis": 45.93,
+    "absolute_error": 1.27,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007425",
+    "actual_tis": 53.4,
+    "predicted_tis": 54.65,
+    "absolute_error": 1.25,
+    "risk_category": "Medium",
+    "event_cause": "construction",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID001358",
+    "actual_tis": 47.9,
+    "predicted_tis": 49.15,
+    "absolute_error": 1.25,
+    "risk_category": "Medium",
+    "event_cause": "road_conditions",
+    "corridor": "Magadi Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006887",
+    "actual_tis": 43.5,
+    "predicted_tis": 44.75,
+    "absolute_error": 1.25,
+    "risk_category": "Low",
+    "event_cause": "pot_holes",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID006890",
+    "actual_tis": 43.5,
+    "predicted_tis": 44.75,
+    "absolute_error": 1.25,
+    "risk_category": "Low",
+    "event_cause": "pot_holes",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID005604",
+    "actual_tis": 45.0,
+    "predicted_tis": 46.24,
+    "absolute_error": 1.24,
+    "risk_category": "Medium",
+    "event_cause": "construction",
+    "corridor": "Non-corridor",
+    "zone": "South Zone 1"
+  },
+  {
+    "id": "FKID007678",
+    "actual_tis": 53.9,
+    "predicted_tis": 55.13,
+    "absolute_error": 1.23,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID000952",
+    "actual_tis": 47.2,
+    "predicted_tis": 45.98,
+    "absolute_error": 1.22,
+    "risk_category": "Medium",
+    "event_cause": "procession",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007970",
+    "actual_tis": 54.7,
+    "predicted_tis": 53.48,
+    "absolute_error": 1.22,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006877",
+    "actual_tis": 43.6,
+    "predicted_tis": 44.82,
+    "absolute_error": 1.22,
+    "risk_category": "Low",
+    "event_cause": "pot_holes",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID000949",
+    "actual_tis": 47.3,
+    "predicted_tis": 46.08,
+    "absolute_error": 1.22,
+    "risk_category": "Medium",
+    "event_cause": "procession",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID008138",
+    "actual_tis": 47.5,
+    "predicted_tis": 46.3,
+    "absolute_error": 1.2,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Hosur Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007941",
+    "actual_tis": 40.3,
+    "predicted_tis": 41.49,
+    "absolute_error": 1.19,
+    "risk_category": "Low",
+    "event_cause": "others",
+    "corridor": "Old Madras Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006290",
+    "actual_tis": 55.2,
+    "predicted_tis": 56.38,
+    "absolute_error": 1.18,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID006728",
+    "actual_tis": 48.2,
+    "predicted_tis": 49.38,
+    "absolute_error": 1.18,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "IRR(Thanisandra road)",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID006036",
+    "actual_tis": 49.6,
+    "predicted_tis": 50.78,
+    "absolute_error": 1.18,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007971",
+    "actual_tis": 52.6,
+    "predicted_tis": 51.44,
+    "absolute_error": 1.16,
+    "risk_category": "Medium",
+    "event_cause": "construction",
+    "corridor": "Bellary Road 2",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID004691",
+    "actual_tis": 35.4,
+    "predicted_tis": 36.56,
+    "absolute_error": 1.16,
+    "risk_category": "Low",
+    "event_cause": "others",
+    "corridor": "Airport New South Road",
+    "zone": "East Zone 2"
+  },
+  {
+    "id": "FKID007721",
+    "actual_tis": 51.1,
+    "predicted_tis": 52.26,
+    "absolute_error": 1.16,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID000898",
+    "actual_tis": 76.1,
+    "predicted_tis": 74.95,
+    "absolute_error": 1.15,
+    "risk_category": "High",
+    "event_cause": "construction",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID007981",
+    "actual_tis": 46.0,
+    "predicted_tis": 47.14,
+    "absolute_error": 1.14,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Magadi Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006127",
+    "actual_tis": 49.0,
+    "predicted_tis": 50.14,
+    "absolute_error": 1.14,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "West of Chord Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007086",
+    "actual_tis": 47.5,
+    "predicted_tis": 48.63,
+    "absolute_error": 1.13,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "IRR(Thanisandra road)",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID006268",
+    "actual_tis": 46.8,
+    "predicted_tis": 47.93,
+    "absolute_error": 1.13,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Varthur Road",
+    "zone": "East Zone 1"
+  },
+  {
+    "id": "FKID007709",
+    "actual_tis": 60.2,
+    "predicted_tis": 59.07,
+    "absolute_error": 1.13,
+    "risk_category": "Medium",
+    "event_cause": "construction",
+    "corridor": "IRR(Thanisandra road)",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID006336",
+    "actual_tis": 50.7,
+    "predicted_tis": 51.82,
+    "absolute_error": 1.12,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID006752",
+    "actual_tis": 47.6,
+    "predicted_tis": 48.72,
+    "absolute_error": 1.12,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID005279",
+    "actual_tis": 39.8,
+    "predicted_tis": 40.9,
+    "absolute_error": 1.1,
+    "risk_category": "Low",
+    "event_cause": "road_conditions",
+    "corridor": "Non-corridor",
+    "zone": "East Zone 1"
+  },
+  {
+    "id": "FKID004862",
+    "actual_tis": 41.8,
+    "predicted_tis": 42.9,
+    "absolute_error": 1.1,
+    "risk_category": "Low",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Bellary Road 2",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006830",
+    "actual_tis": 49.7,
+    "predicted_tis": 50.8,
+    "absolute_error": 1.1,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "Central Zone 1"
+  },
+  {
+    "id": "FKID008113",
+    "actual_tis": 52.5,
+    "predicted_tis": 51.4,
+    "absolute_error": 1.1,
+    "risk_category": "Medium",
+    "event_cause": "water_logging",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006789",
+    "actual_tis": 51.6,
+    "predicted_tis": 52.7,
+    "absolute_error": 1.1,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007512",
+    "actual_tis": 52.9,
+    "predicted_tis": 53.99,
+    "absolute_error": 1.09,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Bellary Road 1",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID006985",
+    "actual_tis": 48.0,
+    "predicted_tis": 49.09,
+    "absolute_error": 1.09,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID008128",
+    "actual_tis": 50.0,
+    "predicted_tis": 48.91,
+    "absolute_error": 1.09,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Hosur Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID000754",
+    "actual_tis": 36.7,
+    "predicted_tis": 37.78,
+    "absolute_error": 1.08,
+    "risk_category": "Low",
+    "event_cause": "road_conditions",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID008002",
+    "actual_tis": 48.7,
+    "predicted_tis": 47.62,
+    "absolute_error": 1.08,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "ORR East 1",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID005846",
+    "actual_tis": 72.8,
+    "predicted_tis": 71.74,
+    "absolute_error": 1.06,
+    "risk_category": "High",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007895",
+    "actual_tis": 51.7,
+    "predicted_tis": 52.75,
+    "absolute_error": 1.05,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID006404",
+    "actual_tis": 54.5,
+    "predicted_tis": 55.55,
+    "absolute_error": 1.05,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID001499",
+    "actual_tis": 64.9,
+    "predicted_tis": 63.86,
+    "absolute_error": 1.04,
+    "risk_category": "Medium",
+    "event_cause": "construction",
+    "corridor": "ORR East 1",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007914",
+    "actual_tis": 46.8,
+    "predicted_tis": 47.83,
+    "absolute_error": 1.03,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Varthur Road",
+    "zone": "East Zone 1"
+  },
+  {
+    "id": "FKID003060",
+    "actual_tis": 59.0,
+    "predicted_tis": 60.02,
+    "absolute_error": 1.02,
+    "risk_category": "Medium",
+    "event_cause": "road_conditions",
+    "corridor": "Hennur Main Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID002666",
+    "actual_tis": 58.2,
+    "predicted_tis": 59.22,
+    "absolute_error": 1.02,
+    "risk_category": "Medium",
+    "event_cause": "road_conditions",
+    "corridor": "Magadi Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007057",
+    "actual_tis": 67.2,
+    "predicted_tis": 68.22,
+    "absolute_error": 1.02,
+    "risk_category": "High",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007356",
+    "actual_tis": 58.0,
+    "predicted_tis": 56.98,
+    "absolute_error": 1.02,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007335",
+    "actual_tis": 45.9,
+    "predicted_tis": 46.91,
+    "absolute_error": 1.01,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Varthur Road",
+    "zone": "East Zone 1"
+  },
+  {
+    "id": "FKID007180",
+    "actual_tis": 73.3,
+    "predicted_tis": 72.29,
+    "absolute_error": 1.01,
+    "risk_category": "High",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID006353",
+    "actual_tis": 51.3,
+    "predicted_tis": 52.31,
+    "absolute_error": 1.01,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "North Zone 2"
+  },
+  {
+    "id": "FKID005342",
+    "actual_tis": 49.3,
+    "predicted_tis": 48.29,
+    "absolute_error": 1.01,
+    "risk_category": "Medium",
+    "event_cause": "accident",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID004970",
+    "actual_tis": 42.4,
+    "predicted_tis": 43.4,
+    "absolute_error": 1.0,
+    "risk_category": "Low",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007377",
+    "actual_tis": 57.0,
+    "predicted_tis": 56.01,
+    "absolute_error": 0.99,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007281",
+    "actual_tis": 50.0,
+    "predicted_tis": 50.99,
+    "absolute_error": 0.99,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "North Zone 2"
+  },
+  {
+    "id": "FKID006122",
+    "actual_tis": 42.4,
+    "predicted_tis": 43.39,
+    "absolute_error": 0.99,
+    "risk_category": "Low",
+    "event_cause": "others",
+    "corridor": "ORR North 1",
+    "zone": "East Zone 2"
+  },
+  {
+    "id": "FKID007633",
+    "actual_tis": 67.3,
+    "predicted_tis": 66.32,
+    "absolute_error": 0.98,
+    "risk_category": "High",
+    "event_cause": "construction",
+    "corridor": "ORR North 1",
+    "zone": "North Zone 1"
+  },
+  {
+    "id": "FKID007984",
+    "actual_tis": 42.6,
+    "predicted_tis": 43.58,
+    "absolute_error": 0.98,
+    "risk_category": "Low",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "IRR(Thanisandra road)",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006587",
+    "actual_tis": 60.7,
+    "predicted_tis": 59.72,
+    "absolute_error": 0.98,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Mysore Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID006839",
+    "actual_tis": 52.1,
+    "predicted_tis": 53.08,
+    "absolute_error": 0.98,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID006922",
+    "actual_tis": 46.5,
+    "predicted_tis": 45.52,
+    "absolute_error": 0.98,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Non-corridor",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID005979",
+    "actual_tis": 47.8,
+    "predicted_tis": 48.78,
+    "absolute_error": 0.98,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Old Airport Road",
+    "zone": "East Zone 2"
+  },
+  {
+    "id": "FKID005355",
+    "actual_tis": 46.9,
+    "predicted_tis": 45.93,
+    "absolute_error": 0.97,
+    "risk_category": "Medium",
+    "event_cause": "accident",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 1"
+  },
+  {
+    "id": "FKID007166",
+    "actual_tis": 45.9,
+    "predicted_tis": 46.86,
+    "absolute_error": 0.96,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Old Madras Road",
+    "zone": "Central Zone 1"
+  },
+  {
+    "id": "FKID007734",
+    "actual_tis": 51.4,
+    "predicted_tis": 50.44,
+    "absolute_error": 0.96,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID006492",
+    "actual_tis": 45.2,
+    "predicted_tis": 46.16,
+    "absolute_error": 0.96,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Old Madras Road",
+    "zone": "Central Zone 1"
+  },
+  {
+    "id": "FKID005893",
+    "actual_tis": 48.3,
+    "predicted_tis": 49.26,
+    "absolute_error": 0.96,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID006002",
+    "actual_tis": 57.1,
+    "predicted_tis": 56.14,
+    "absolute_error": 0.96,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID008001",
+    "actual_tis": 39.8,
+    "predicted_tis": 40.75,
+    "absolute_error": 0.95,
+    "risk_category": "Low",
+    "event_cause": "others",
+    "corridor": "Old Madras Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006142",
+    "actual_tis": 51.6,
+    "predicted_tis": 52.55,
+    "absolute_error": 0.95,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID002602",
+    "actual_tis": 45.5,
+    "predicted_tis": 44.55,
+    "absolute_error": 0.95,
+    "risk_category": "Medium",
+    "event_cause": "procession",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007441",
+    "actual_tis": 47.2,
+    "predicted_tis": 48.15,
+    "absolute_error": 0.95,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Old Madras Road",
+    "zone": "Central Zone 1"
+  },
+  {
+    "id": "FKID006148",
+    "actual_tis": 49.6,
+    "predicted_tis": 48.65,
+    "absolute_error": 0.95,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Bannerghata Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID001400",
+    "actual_tis": 41.4,
+    "predicted_tis": 42.35,
+    "absolute_error": 0.95,
+    "risk_category": "Low",
+    "event_cause": "road_conditions",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID003294",
+    "actual_tis": 38.4,
+    "predicted_tis": 39.35,
+    "absolute_error": 0.95,
+    "risk_category": "Low",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006161",
+    "actual_tis": 50.9,
+    "predicted_tis": 51.85,
+    "absolute_error": 0.95,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID002005",
+    "actual_tis": 57.3,
+    "predicted_tis": 56.36,
+    "absolute_error": 0.94,
+    "risk_category": "Medium",
+    "event_cause": "protest",
+    "corridor": "Tumkur Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007989",
+    "actual_tis": 38.6,
+    "predicted_tis": 39.54,
+    "absolute_error": 0.94,
+    "risk_category": "Low",
+    "event_cause": "road_conditions",
+    "corridor": "Old Madras Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006818",
+    "actual_tis": 46.7,
+    "predicted_tis": 47.64,
+    "absolute_error": 0.94,
+    "risk_category": "Medium",
+    "event_cause": "road_conditions",
+    "corridor": "Non-corridor",
+    "zone": "East Zone 1"
+  },
+  {
+    "id": "FKID007127",
+    "actual_tis": 47.1,
+    "predicted_tis": 48.04,
+    "absolute_error": 0.94,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "West of Chord Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007975",
+    "actual_tis": 42.4,
+    "predicted_tis": 43.34,
+    "absolute_error": 0.94,
+    "risk_category": "Low",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Magadi Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007155",
+    "actual_tis": 52.5,
+    "predicted_tis": 53.43,
+    "absolute_error": 0.93,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID005425",
+    "actual_tis": 43.0,
+    "predicted_tis": 43.93,
+    "absolute_error": 0.93,
+    "risk_category": "Low",
+    "event_cause": "tree_fall",
+    "corridor": "Hennur Main Road",
+    "zone": "North Zone 2"
+  },
+  {
+    "id": "FKID007399",
+    "actual_tis": 55.8,
+    "predicted_tis": 54.87,
+    "absolute_error": 0.93,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007854",
+    "actual_tis": 46.7,
+    "predicted_tis": 47.63,
+    "absolute_error": 0.93,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "South Zone 1"
+  },
+  {
+    "id": "FKID003478",
+    "actual_tis": 39.4,
+    "predicted_tis": 40.33,
+    "absolute_error": 0.93,
+    "risk_category": "Low",
+    "event_cause": "road_conditions",
+    "corridor": "IRR(Thanisandra road)",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007358",
+    "actual_tis": 54.9,
+    "predicted_tis": 55.82,
+    "absolute_error": 0.92,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID005276",
+    "actual_tis": 59.0,
+    "predicted_tis": 59.92,
+    "absolute_error": 0.92,
+    "risk_category": "Medium",
+    "event_cause": "road_conditions",
+    "corridor": "Bellary Road 1",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007450",
+    "actual_tis": 48.9,
+    "predicted_tis": 47.98,
+    "absolute_error": 0.92,
+    "risk_category": "Medium",
+    "event_cause": "protest",
+    "corridor": "Mysore Road",
+    "zone": "Central Zone 1"
+  },
+  {
+    "id": "FKID007868",
+    "actual_tis": 51.5,
+    "predicted_tis": 52.41,
+    "absolute_error": 0.91,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Old Madras Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID007759",
+    "actual_tis": 41.5,
+    "predicted_tis": 42.41,
+    "absolute_error": 0.91,
+    "risk_category": "Low",
+    "event_cause": "pot_holes",
+    "corridor": "West of Chord Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID000569",
+    "actual_tis": 42.5,
+    "predicted_tis": 43.41,
+    "absolute_error": 0.91,
+    "risk_category": "Low",
+    "event_cause": "road_conditions",
+    "corridor": "Bannerghata Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007859",
+    "actual_tis": 52.9,
+    "predicted_tis": 51.99,
+    "absolute_error": 0.91,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID004161",
+    "actual_tis": 46.3,
+    "predicted_tis": 47.2,
+    "absolute_error": 0.9,
+    "risk_category": "Medium",
+    "event_cause": "protest",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007126",
+    "actual_tis": 53.6,
+    "predicted_tis": 54.5,
+    "absolute_error": 0.9,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID003930",
+    "actual_tis": 44.4,
+    "predicted_tis": 43.5,
+    "absolute_error": 0.9,
+    "risk_category": "Low",
+    "event_cause": "water_logging",
+    "corridor": "Bannerghata Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006184",
+    "actual_tis": 50.3,
+    "predicted_tis": 51.19,
+    "absolute_error": 0.89,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID006537",
+    "actual_tis": 58.3,
+    "predicted_tis": 57.41,
+    "absolute_error": 0.89,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID006329",
+    "actual_tis": 52.4,
+    "predicted_tis": 53.29,
+    "absolute_error": 0.89,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID008109",
+    "actual_tis": 46.0,
+    "predicted_tis": 45.11,
+    "absolute_error": 0.89,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007196",
+    "actual_tis": 46.8,
+    "predicted_tis": 47.69,
+    "absolute_error": 0.89,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID006257",
+    "actual_tis": 53.7,
+    "predicted_tis": 54.59,
+    "absolute_error": 0.89,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID007993",
+    "actual_tis": 36.6,
+    "predicted_tis": 37.49,
+    "absolute_error": 0.89,
+    "risk_category": "Low",
+    "event_cause": "others",
+    "corridor": "Old Madras Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007501",
+    "actual_tis": 57.8,
+    "predicted_tis": 56.91,
+    "absolute_error": 0.89,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "North Zone 2"
+  },
+  {
+    "id": "FKID007311",
+    "actual_tis": 52.1,
+    "predicted_tis": 52.99,
+    "absolute_error": 0.89,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID005271",
+    "actual_tis": 56.9,
+    "predicted_tis": 56.02,
+    "absolute_error": 0.88,
+    "risk_category": "Medium",
+    "event_cause": "procession",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID005925",
+    "actual_tis": 59.0,
+    "predicted_tis": 59.88,
+    "absolute_error": 0.88,
+    "risk_category": "Medium",
+    "event_cause": "pot_holes",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID006534",
+    "actual_tis": 56.0,
+    "predicted_tis": 56.86,
+    "absolute_error": 0.86,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID007486",
+    "actual_tis": 54.3,
+    "predicted_tis": 53.45,
+    "absolute_error": 0.85,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "East Zone 2"
+  },
+  {
+    "id": "FKID000024",
+    "actual_tis": 39.4,
+    "predicted_tis": 38.55,
+    "absolute_error": 0.85,
+    "risk_category": "Low",
+    "event_cause": "water_logging",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006020",
+    "actual_tis": 45.6,
+    "predicted_tis": 44.76,
+    "absolute_error": 0.84,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Non-corridor",
+    "zone": "North Zone 2"
+  },
+  {
+    "id": "FKID005767",
+    "actual_tis": 51.3,
+    "predicted_tis": 52.13,
+    "absolute_error": 0.83,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID006670",
+    "actual_tis": 50.3,
+    "predicted_tis": 49.47,
+    "absolute_error": 0.83,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID000129",
+    "actual_tis": 52.1,
+    "predicted_tis": 52.93,
+    "absolute_error": 0.83,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID004276",
+    "actual_tis": 40.1,
+    "predicted_tis": 40.92,
+    "absolute_error": 0.82,
+    "risk_category": "Low",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "East Zone 2"
+  },
+  {
+    "id": "FKID001286",
+    "actual_tis": 58.7,
+    "predicted_tis": 57.88,
+    "absolute_error": 0.82,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Bellary Road 1",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007796",
+    "actual_tis": 51.4,
+    "predicted_tis": 50.58,
+    "absolute_error": 0.82,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID007822",
+    "actual_tis": 56.7,
+    "predicted_tis": 57.52,
+    "absolute_error": 0.82,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID006623",
+    "actual_tis": 45.6,
+    "predicted_tis": 46.42,
+    "absolute_error": 0.82,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "Bellary Road 2",
+    "zone": "North Zone 1"
+  },
+  {
+    "id": "FKID004710",
+    "actual_tis": 40.1,
+    "predicted_tis": 40.91,
+    "absolute_error": 0.81,
+    "risk_category": "Low",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "East Zone 2"
+  },
+  {
+    "id": "FKID006060",
+    "actual_tis": 47.6,
+    "predicted_tis": 48.41,
+    "absolute_error": 0.81,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Varthur Road",
+    "zone": "East Zone 1"
+  },
+  {
+    "id": "FKID006006",
+    "actual_tis": 49.2,
+    "predicted_tis": 50.01,
+    "absolute_error": 0.81,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID005449",
+    "actual_tis": 42.7,
+    "predicted_tis": 43.51,
+    "absolute_error": 0.81,
+    "risk_category": "Low",
+    "event_cause": "others",
+    "corridor": "West of Chord Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID006963",
+    "actual_tis": 55.5,
+    "predicted_tis": 54.7,
+    "absolute_error": 0.8,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007172",
+    "actual_tis": 52.2,
+    "predicted_tis": 51.4,
+    "absolute_error": 0.8,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "East Zone 2"
+  },
+  {
+    "id": "FKID006430",
+    "actual_tis": 46.5,
+    "predicted_tis": 47.3,
+    "absolute_error": 0.8,
+    "risk_category": "Medium",
+    "event_cause": "water_logging",
+    "corridor": "West of Chord Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID003736",
+    "actual_tis": 46.4,
+    "predicted_tis": 47.2,
+    "absolute_error": 0.8,
+    "risk_category": "Medium",
+    "event_cause": "road_conditions",
+    "corridor": "ORR East 1",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006707",
+    "actual_tis": 50.3,
+    "predicted_tis": 51.1,
+    "absolute_error": 0.8,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Old Madras Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID006010",
+    "actual_tis": 54.2,
+    "predicted_tis": 55.0,
+    "absolute_error": 0.8,
+    "risk_category": "Medium",
+    "event_cause": "accident",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID001167",
+    "actual_tis": 70.6,
+    "predicted_tis": 69.8,
+    "absolute_error": 0.8,
+    "risk_category": "High",
+    "event_cause": "procession",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007715",
+    "actual_tis": 52.6,
+    "predicted_tis": 53.39,
+    "absolute_error": 0.79,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID003317",
+    "actual_tis": 55.6,
+    "predicted_tis": 54.82,
+    "absolute_error": 0.78,
+    "risk_category": "Medium",
+    "event_cause": "tree_fall",
+    "corridor": "Mysore Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID008162",
+    "actual_tis": 44.2,
+    "predicted_tis": 44.98,
+    "absolute_error": 0.78,
+    "risk_category": "Low",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "West of Chord Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007763",
+    "actual_tis": 51.0,
+    "predicted_tis": 51.78,
+    "absolute_error": 0.78,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Bellary Road 1",
+    "zone": "North Zone 1"
+  },
+  {
+    "id": "FKID005662",
+    "actual_tis": 45.4,
+    "predicted_tis": 44.63,
+    "absolute_error": 0.77,
+    "risk_category": "Medium",
+    "event_cause": "accident",
+    "corridor": "Hennur Main Road",
+    "zone": "North Zone 1"
+  },
+  {
+    "id": "FKID008030",
+    "actual_tis": 42.3,
+    "predicted_tis": 43.07,
+    "absolute_error": 0.77,
+    "risk_category": "Low",
+    "event_cause": "road_conditions",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID000201",
+    "actual_tis": 52.7,
+    "predicted_tis": 53.47,
+    "absolute_error": 0.77,
+    "risk_category": "Medium",
+    "event_cause": "road_conditions",
+    "corridor": "CBD 2",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006842",
+    "actual_tis": 43.0,
+    "predicted_tis": 43.77,
+    "absolute_error": 0.77,
+    "risk_category": "Low",
+    "event_cause": "pot_holes",
+    "corridor": "Bannerghata Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID004577",
+    "actual_tis": 35.6,
+    "predicted_tis": 36.36,
+    "absolute_error": 0.76,
+    "risk_category": "Low",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006982",
+    "actual_tis": 55.8,
+    "predicted_tis": 55.04,
+    "absolute_error": 0.76,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Bellary Road 2",
+    "zone": "North Zone 2"
+  },
+  {
+    "id": "FKID008027",
+    "actual_tis": 45.7,
+    "predicted_tis": 46.46,
+    "absolute_error": 0.76,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID002816",
+    "actual_tis": 63.5,
+    "predicted_tis": 62.74,
+    "absolute_error": 0.76,
+    "risk_category": "Medium",
+    "event_cause": "tree_fall",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006295",
+    "actual_tis": 57.5,
+    "predicted_tis": 58.26,
+    "absolute_error": 0.76,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Bellary Road 1",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID000994",
+    "actual_tis": 68.3,
+    "predicted_tis": 67.54,
+    "absolute_error": 0.76,
+    "risk_category": "High",
+    "event_cause": "public_event",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID003761",
+    "actual_tis": 48.7,
+    "predicted_tis": 47.94,
+    "absolute_error": 0.76,
+    "risk_category": "Medium",
+    "event_cause": "tree_fall",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006849",
+    "actual_tis": 45.4,
+    "predicted_tis": 44.65,
+    "absolute_error": 0.75,
+    "risk_category": "Medium",
+    "event_cause": "pot_holes",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID005917",
+    "actual_tis": 58.0,
+    "predicted_tis": 58.75,
+    "absolute_error": 0.75,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID006440",
+    "actual_tis": 51.3,
+    "predicted_tis": 52.05,
+    "absolute_error": 0.75,
+    "risk_category": "Medium",
+    "event_cause": "construction",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID000241",
+    "actual_tis": 52.5,
+    "predicted_tis": 51.75,
+    "absolute_error": 0.75,
+    "risk_category": "Medium",
+    "event_cause": "vip_movement",
+    "corridor": "Mysore Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID001932",
+    "actual_tis": 69.4,
+    "predicted_tis": 70.15,
+    "absolute_error": 0.75,
+    "risk_category": "High",
+    "event_cause": "construction",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006953",
+    "actual_tis": 50.0,
+    "predicted_tis": 49.26,
+    "absolute_error": 0.74,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "ORR East 1",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID006206",
+    "actual_tis": 52.4,
+    "predicted_tis": 53.14,
+    "absolute_error": 0.74,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID006392",
+    "actual_tis": 57.8,
+    "predicted_tis": 58.54,
+    "absolute_error": 0.74,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID005800",
+    "actual_tis": 53.7,
+    "predicted_tis": 52.96,
+    "absolute_error": 0.74,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID006764",
+    "actual_tis": 55.2,
+    "predicted_tis": 55.94,
+    "absolute_error": 0.74,
+    "risk_category": "Medium",
+    "event_cause": "pot_holes",
+    "corridor": "Hosur Road",
+    "zone": "Central Zone 1"
+  },
+  {
+    "id": "FKID007101",
+    "actual_tis": 57.8,
+    "predicted_tis": 57.06,
+    "absolute_error": 0.74,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007612",
+    "actual_tis": 53.1,
+    "predicted_tis": 53.83,
+    "absolute_error": 0.73,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID007940",
+    "actual_tis": 45.9,
+    "predicted_tis": 46.63,
+    "absolute_error": 0.73,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Old Madras Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID005663",
+    "actual_tis": 50.1,
+    "predicted_tis": 49.37,
+    "absolute_error": 0.73,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 1"
+  },
+  {
+    "id": "FKID006442",
+    "actual_tis": 54.1,
+    "predicted_tis": 53.37,
+    "absolute_error": 0.73,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID004349",
+    "actual_tis": 50.4,
+    "predicted_tis": 49.67,
+    "absolute_error": 0.73,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID006337",
+    "actual_tis": 45.6,
+    "predicted_tis": 46.33,
+    "absolute_error": 0.73,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "ORR West 1",
+    "zone": "South Zone 1"
+  },
+  {
+    "id": "FKID006457",
+    "actual_tis": 49.1,
+    "predicted_tis": 48.38,
+    "absolute_error": 0.72,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "ORR East 1",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID007878",
+    "actual_tis": 52.3,
+    "predicted_tis": 51.58,
+    "absolute_error": 0.72,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID003764",
+    "actual_tis": 48.5,
+    "predicted_tis": 47.78,
+    "absolute_error": 0.72,
+    "risk_category": "Medium",
+    "event_cause": "accident",
+    "corridor": "Hosur Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID004711",
+    "actual_tis": 76.7,
+    "predicted_tis": 75.98,
+    "absolute_error": 0.72,
+    "risk_category": "High",
+    "event_cause": "public_event",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID007026",
+    "actual_tis": 48.0,
+    "predicted_tis": 48.72,
+    "absolute_error": 0.72,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID007204",
+    "actual_tis": 42.9,
+    "predicted_tis": 43.61,
+    "absolute_error": 0.71,
+    "risk_category": "Low",
+    "event_cause": "others",
+    "corridor": "West of Chord Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID005136",
+    "actual_tis": 71.2,
+    "predicted_tis": 70.49,
+    "absolute_error": 0.71,
+    "risk_category": "High",
+    "event_cause": "public_event",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007634",
+    "actual_tis": 49.1,
+    "predicted_tis": 48.39,
+    "absolute_error": 0.71,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Bannerghata Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID006980",
+    "actual_tis": 55.2,
+    "predicted_tis": 54.49,
+    "absolute_error": 0.71,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID005794",
+    "actual_tis": 45.0,
+    "predicted_tis": 45.71,
+    "absolute_error": 0.71,
+    "risk_category": "Medium",
+    "event_cause": "pot_holes",
+    "corridor": "ORR North 1",
+    "zone": "North Zone 1"
+  },
+  {
+    "id": "FKID005860",
+    "actual_tis": 49.2,
+    "predicted_tis": 49.91,
+    "absolute_error": 0.71,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID000437",
+    "actual_tis": 60.1,
+    "predicted_tis": 59.39,
+    "absolute_error": 0.71,
+    "risk_category": "Medium",
+    "event_cause": "public_event",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID007505",
+    "actual_tis": 52.5,
+    "predicted_tis": 53.2,
+    "absolute_error": 0.7,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID006568",
+    "actual_tis": 50.8,
+    "predicted_tis": 50.1,
+    "absolute_error": 0.7,
+    "risk_category": "Medium",
+    "event_cause": "accident",
+    "corridor": "Bannerghata Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID008121",
+    "actual_tis": 50.6,
+    "predicted_tis": 49.9,
+    "absolute_error": 0.7,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID004736",
+    "actual_tis": 37.3,
+    "predicted_tis": 38.0,
+    "absolute_error": 0.7,
+    "risk_category": "Low",
+    "event_cause": "accident",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID001481",
+    "actual_tis": 69.4,
+    "predicted_tis": 68.7,
+    "absolute_error": 0.7,
+    "risk_category": "High",
+    "event_cause": "public_event",
+    "corridor": "Non-corridor",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID006241",
+    "actual_tis": 56.0,
+    "predicted_tis": 55.31,
+    "absolute_error": 0.69,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID001176",
+    "actual_tis": 40.5,
+    "predicted_tis": 41.19,
+    "absolute_error": 0.69,
+    "risk_category": "Low",
+    "event_cause": "road_conditions",
+    "corridor": "Hosur Road",
+    "zone": "Unmapped Zone"
+  },
+  {
+    "id": "FKID000548",
+    "actual_tis": 56.1,
+    "predicted_tis": 56.79,
+    "absolute_error": 0.69,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "CBD 2",
+    "zone": "Central Zone 2"
+  },
+  {
+    "id": "FKID007901",
+    "actual_tis": 53.4,
+    "predicted_tis": 52.71,
+    "absolute_error": 0.69,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Hosur Road",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID007162",
+    "actual_tis": 53.4,
+    "predicted_tis": 52.72,
+    "absolute_error": 0.68,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Tumkur Road",
+    "zone": "West Zone 1"
+  },
+  {
+    "id": "FKID006186",
+    "actual_tis": 54.4,
+    "predicted_tis": 53.72,
+    "absolute_error": 0.68,
+    "risk_category": "Medium",
+    "event_cause": "others",
+    "corridor": "ORR North 2",
+    "zone": "North Zone 2"
+  },
+  {
+    "id": "FKID006437",
+    "actual_tis": 49.0,
+    "predicted_tis": 49.68,
+    "absolute_error": 0.68,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Non-corridor",
+    "zone": "South Zone 2"
+  },
+  {
+    "id": "FKID006189",
+    "actual_tis": 57.5,
+    "predicted_tis": 56.82,
+    "absolute_error": 0.68,
+    "risk_category": "Medium",
+    "event_cause": "vehicle_breakdown",
+    "corridor": "Mysore Road",
+    "zone": "West Zone 2"
+  },
+  {
+    "id": "FKID005536",
+    "actual_tis": 63.2,
+    "predicted_tis": 62.53,
+    "absolute_error": 0.67,
+    "risk_category": "Medium",
+    "event_cause": "water_logging",
+    "corridor": "Bellary Road 2",
+    "zone": "North Zone 2"
+  }
+]

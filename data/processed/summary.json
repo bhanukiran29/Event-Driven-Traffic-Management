@@ -1,0 +1,2317 @@
+{
+  "generated_at": "2026-06-18T12:43:23.162500+00:00",
+  "data_source": "ASTraM instructor-provided anonymized event dataset only",
+  "honesty_notice": "The dataset does not contain measured congestion, vehicle counts, travel time, or delay duration. Scores represent operational traffic impact risk.",
+  "data_quality": {
+    "raw_rows": 8173,
+    "processed_rows": 8173,
+    "dropped_columns_over_95_missing": [
+      "age_of_truck",
+      "assigned_to_police_id",
+      "cargo_material",
+      "citizen_accident_id",
+      "comment",
+      "direction",
+      "map_file",
+      "meta_data",
+      "reason_breakdown",
+      "resolved_at_address",
+      "resolved_at_latitude",
+      "resolved_at_longitude",
+      "resolved_by_id",
+      "resolved_datetime",
+      "route_path"
+    ],
+    "duration_source_counts": {
+      "modified_datetime": 4570,
+      "resolved_datetime": 68,
+      "closed_datetime": 3103,
+      "end_datetime": 429,
+      "missing": 3
+    },
+    "date_range": {
+      "start": "2023-11-09T19:24:48.154000+00:00",
+      "end": "2024-04-08T17:11:42.780000+00:00"
+    }
+  },
+  "metrics": {
+    "total_events": 8173,
+    "road_closures": 676,
+    "high_risk_events": 295,
+    "critical_events": 1,
+    "active_events": 1007,
+    "average_tis": 49.9,
+    "planned_events": 467,
+    "unplanned_events": 7706
+  },
+  "risk_bands": [
+    {
+      "name": "Critical",
+      "count": 1,
+      "percentage": 0.0
+    },
+    {
+      "name": "High",
+      "count": 294,
+      "percentage": 3.6
+    },
+    {
+      "name": "Medium",
+      "count": 6288,
+      "percentage": 76.9
+    },
+    {
+      "name": "Low",
+      "count": 1590,
+      "percentage": 19.5
+    }
+  ],
+  "top_causes": [
+    {
+      "name": "vehicle_breakdown",
+      "count": 4896
+    },
+    {
+      "name": "others",
+      "count": 638
+    },
+    {
+      "name": "pot_holes",
+      "count": 537
+    },
+    {
+      "name": "construction",
+      "count": 480
+    },
+    {
+      "name": "water_logging",
+      "count": 458
+    },
+    {
+      "name": "accident",
+      "count": 365
+    },
+    {
+      "name": "tree_fall",
+      "count": 284
+    },
+    {
+      "name": "road_conditions",
+      "count": 170
+    },
+    {
+      "name": "congestion",
+      "count": 136
+    },
+    {
+      "name": "public_event",
+      "count": 84
+    },
+    {
+      "name": "procession",
+      "count": 72
+    },
+    {
+      "name": "vip_movement",
+      "count": 20
+    }
+  ],
+  "top_corridors": [
+    {
+      "name": "Non-corridor",
+      "count": 3144
+    },
+    {
+      "name": "Mysore Road",
+      "count": 743
+    },
+    {
+      "name": "Bellary Road 1",
+      "count": 610
+    },
+    {
+      "name": "Tumkur Road",
+      "count": 458
+    },
+    {
+      "name": "Bellary Road 2",
+      "count": 379
+    },
+    {
+      "name": "Hosur Road",
+      "count": 298
+    },
+    {
+      "name": "ORR North 1",
+      "count": 275
+    },
+    {
+      "name": "Old Madras Road",
+      "count": 263
+    },
+    {
+      "name": "Magadi Road",
+      "count": 245
+    },
+    {
+      "name": "ORR East 1",
+      "count": 244
+    },
+    {
+      "name": "ORR North 2",
+      "count": 235
+    },
+    {
+      "name": "Bannerghata Road",
+      "count": 209
+    }
+  ],
+  "top_zones": [
+    {
+      "name": "Central Zone 2",
+      "count": 623,
+      "average_tis": 55.7
+    },
+    {
+      "name": "North Zone 2",
+      "count": 413,
+      "average_tis": 53.7
+    },
+    {
+      "name": "West Zone 2",
+      "count": 358,
+      "average_tis": 52.9
+    },
+    {
+      "name": "West Zone 1",
+      "count": 433,
+      "average_tis": 52.5
+    },
+    {
+      "name": "North Zone 1",
+      "count": 318,
+      "average_tis": 52.1
+    },
+    {
+      "name": "Central Zone 1",
+      "count": 269,
+      "average_tis": 50.9
+    },
+    {
+      "name": "East Zone 2",
+      "count": 190,
+      "average_tis": 50.1
+    },
+    {
+      "name": "East Zone 1",
+      "count": 253,
+      "average_tis": 49.8
+    },
+    {
+      "name": "South Zone 2",
+      "count": 354,
+      "average_tis": 49.4
+    },
+    {
+      "name": "Unmapped Zone",
+      "count": 4729,
+      "average_tis": 48.3
+    }
+  ],
+  "top_police_stations": [
+    {
+      "name": "Halasuru Gate",
+      "count": 297,
+      "average_tis": 56.2
+    },
+    {
+      "name": "Chamarajpet",
+      "count": 192,
+      "average_tis": 53.6
+    },
+    {
+      "name": "Yelahanka",
+      "count": 377,
+      "average_tis": 53.6
+    },
+    {
+      "name": "Sadashivanagar",
+      "count": 302,
+      "average_tis": 53.2
+    },
+    {
+      "name": "HAL Old Airport",
+      "count": 361,
+      "average_tis": 53.0
+    },
+    {
+      "name": "Byatarayanapura",
+      "count": 297,
+      "average_tis": 52.9
+    },
+    {
+      "name": "K.G. Halli",
+      "count": 74,
+      "average_tis": 52.3
+    },
+    {
+      "name": "High ground",
+      "count": 185,
+      "average_tis": 52.0
+    },
+    {
+      "name": "Sheshadripuram",
+      "count": 123,
+      "average_tis": 51.8
+    },
+    {
+      "name": "Yeshwanthpura",
+      "count": 280,
+      "average_tis": 51.7
+    }
+  ],
+  "monthly_trend": [
+    {
+      "month": "2023-11",
+      "events": 984,
+      "closures": 61,
+      "average_tis": 51.6
+    },
+    {
+      "month": "2023-12",
+      "events": 1774,
+      "closures": 132,
+      "average_tis": 51.3
+    },
+    {
+      "month": "2024-01",
+      "events": 1468,
+      "closures": 121,
+      "average_tis": 50.7
+    },
+    {
+      "month": "2024-02",
+      "events": 1361,
+      "closures": 104,
+      "average_tis": 48.5
+    },
+    {
+      "month": "2024-03",
+      "events": 1958,
+      "closures": 199,
+      "average_tis": 48.7
+    },
+    {
+      "month": "2024-04",
+      "events": 628,
+      "closures": 59,
+      "average_tis": 47.9
+    }
+  ],
+  "hourly_risk": [
+    {
+      "hour": 0,
+      "events": 421,
+      "average_tis": 49.0
+    },
+    {
+      "hour": 1,
+      "events": 384,
+      "average_tis": 48.2
+    },
+    {
+      "hour": 2,
+      "events": 395,
+      "average_tis": 49.4
+    },
+    {
+      "hour": 3,
+      "events": 374,
+      "average_tis": 48.6
+    },
+    {
+      "hour": 4,
+      "events": 560,
+      "average_tis": 49.6
+    },
+    {
+      "hour": 5,
+      "events": 661,
+      "average_tis": 50.0
+    },
+    {
+      "hour": 6,
+      "events": 662,
+      "average_tis": 50.9
+    },
+    {
+      "hour": 7,
+      "events": 482,
+      "average_tis": 49.3
+    },
+    {
+      "hour": 8,
+      "events": 330,
+      "average_tis": 48.4
+    },
+    {
+      "hour": 9,
+      "events": 161,
+      "average_tis": 48.1
+    },
+    {
+      "hour": 10,
+      "events": 68,
+      "average_tis": 48.4
+    },
+    {
+      "hour": 11,
+      "events": 69,
+      "average_tis": 49.8
+    },
+    {
+      "hour": 12,
+      "events": 86,
+      "average_tis": 55.8
+    },
+    {
+      "hour": 13,
+      "events": 33,
+      "average_tis": 50.4
+    },
+    {
+      "hour": 14,
+      "events": 15,
+      "average_tis": 47.2
+    },
+    {
+      "hour": 15,
+      "events": 9,
+      "average_tis": 50.5
+    },
+    {
+      "hour": 16,
+      "events": 9,
+      "average_tis": 54.5
+    },
+    {
+      "hour": 17,
+      "events": 41,
+      "average_tis": 53.2
+    },
+    {
+      "hour": 18,
+      "events": 234,
+      "average_tis": 49.3
+    },
+    {
+      "hour": 19,
+      "events": 584,
+      "average_tis": 50.1
+    },
+    {
+      "hour": 20,
+      "events": 685,
+      "average_tis": 50.9
+    },
+    {
+      "hour": 21,
+      "events": 817,
+      "average_tis": 51.0
+    },
+    {
+      "hour": 22,
+      "events": 589,
+      "average_tis": 49.6
+    },
+    {
+      "hour": 23,
+      "events": 504,
+      "average_tis": 50.0
+    }
+  ],
+  "day_risk": [
+    {
+      "day": "Monday",
+      "events": 920,
+      "average_tis": 49.1
+    },
+    {
+      "day": "Tuesday",
+      "events": 1252,
+      "average_tis": 50.4
+    },
+    {
+      "day": "Wednesday",
+      "events": 1174,
+      "average_tis": 49.8
+    },
+    {
+      "day": "Thursday",
+      "events": 1359,
+      "average_tis": 50.8
+    },
+    {
+      "day": "Friday",
+      "events": 1258,
+      "average_tis": 49.7
+    },
+    {
+      "day": "Saturday",
+      "events": 1243,
+      "average_tis": 49.6
+    },
+    {
+      "day": "Sunday",
+      "events": 967,
+      "average_tis": 49.3
+    }
+  ],
+  "score_weights": [
+    {
+      "name": "Event Cause",
+      "weight": 15.0
+    },
+    {
+      "name": "Road Closure",
+      "weight": 15.0
+    },
+    {
+      "name": "Priority",
+      "weight": 12.0
+    },
+    {
+      "name": "Duration",
+      "weight": 10.0
+    },
+    {
+      "name": "Corridor Density",
+      "weight": 10.0
+    },
+    {
+      "name": "Zone Density",
+      "weight": 8.0
+    },
+    {
+      "name": "Junction Density",
+      "weight": 8.0
+    },
+    {
+      "name": "Police Workload",
+      "weight": 7.0
+    },
+    {
+      "name": "Temporal Risk",
+      "weight": 8.0
+    },
+    {
+      "name": "Hotspot",
+      "weight": 7.0
+    }
+  ],
+  "feature_importance": [
+    {
+      "feature": "Event cause risk",
+      "average_contribution": 11.32,
+      "weight": 15.0
+    },
+    {
+      "feature": "Priority level",
+      "average_contribution": 9.0,
+      "weight": 12.0
+    },
+    {
+      "feature": "DBSCAN hotspot membership",
+      "average_contribution": 6.28,
+      "weight": 7.0
+    },
+    {
+      "feature": "Time pattern risk",
+      "average_contribution": 6.09,
+      "weight": 8.0
+    },
+    {
+      "feature": "Corridor frequency",
+      "average_contribution": 4.57,
+      "weight": 10.0
+    },
+    {
+      "feature": "Police station workload",
+      "average_contribution": 3.69,
+      "weight": 7.0
+    },
+    {
+      "feature": "Zone frequency",
+      "average_contribution": 3.01,
+      "weight": 8.0
+    },
+    {
+      "feature": "Duration risk",
+      "average_contribution": 2.88,
+      "weight": 10.0
+    },
+    {
+      "feature": "Junction frequency",
+      "average_contribution": 1.79,
+      "weight": 8.0
+    },
+    {
+      "feature": "Road closure requirement",
+      "average_contribution": 1.24,
+      "weight": 15.0
+    }
+  ],
+  "model_comparison": [
+    {
+      "model": "Traffic Impact Score formula",
+      "role": "Authoritative operational risk layer",
+      "fit_status": "Computed directly from provided dataset features",
+      "r2": 1.0,
+      "mae": 0.0
+    },
+    {
+      "model": "CatBoost surrogate",
+      "role": "Optional learner for the TIS target",
+      "fit_status": "Ready when optional ML dependencies are installed",
+      "r2": null,
+      "mae": null
+    },
+    {
+      "model": "Random Forest / XGBoost / LightGBM",
+      "role": "Optional benchmark family",
+      "fit_status": "Configured as install-time benchmark candidates",
+      "r2": null,
+      "mae": null
+    }
+  ],
+  "top_risk_events": [
+    {
+      "row_index": 6893,
+      "id": "FKID006893",
+      "event_type": "unplanned",
+      "latitude": 13.0991084,
+      "longitude": 77.5971696,
+      "end_latitude": 13.09878,
+      "end_longitude": 77.5978606,
+      "address": "Hospital Road, Nehru Nagar Extension, Nehru Nagar, Bengaluru, Karnataka. Pin-560064 (India)",
+      "end_address": "Raithara Santhe Road, Nehru Nagar Extension, Nehru Nagar, Bengaluru, Karnataka. Pin-560064 (India)",
+      "event_cause": "construction",
+      "requires_road_closure": true,
+      "start_datetime": "2023-12-16T02:54:34.221000+00:00",
+      "start_date": "2023-12-16",
+      "start_hour": 2,
+      "start_day": "Saturday",
+      "start_month": "2023-12",
+      "status": "closed",
+      "authenticated": "yes",
+      "description": "Cabel working",
+      "veh_type": "Unknown vehicle",
+      "veh_no": "Masked",
+      "corridor": "Bellary Road 2",
+      "priority": "High",
+      "police_station": "Yelahanka",
+      "kgid": "FKKG000599",
+      "zone": "North Zone 2",
+      "junction": "SantheCircle",
+      "event_duration_hours": 208.45,
+      "duration_source": "closed_datetime",
+      "spatial_cluster_id": 0,
+      "cluster_risk": 1.0,
+      "traffic_impact_score": 80.2,
+      "risk_category": "Critical",
+      "score_components": [
+        {
+          "name": "Road closure requirement",
+          "value": 1.0,
+          "weight": 15.0,
+          "contribution": 15.0
+        },
+        {
+          "name": "Event cause risk",
+          "value": 0.93,
+          "weight": 15.0,
+          "contribution": 13.95
+        },
+        {
+          "name": "Priority level",
+          "value": 1.0,
+          "weight": 12.0,
+          "contribution": 12.0
+        },
+        {
+          "name": "Duration risk",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Police station workload",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "DBSCAN hotspot membership",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "Time pattern risk",
+          "value": 0.6991,
+          "weight": 8.0,
+          "contribution": 5.59
+        },
+        {
+          "name": "Zone frequency",
+          "value": 0.6629,
+          "weight": 8.0,
+          "contribution": 5.3
+        },
+        {
+          "name": "Junction frequency",
+          "value": 0.3906,
+          "weight": 8.0,
+          "contribution": 3.12
+        },
+        {
+          "name": "Corridor frequency",
+          "value": 0.1205,
+          "weight": 10.0,
+          "contribution": 1.21
+        }
+      ],
+      "explanation": [
+        "Road closure requirement materially increases operational disruption risk.",
+        "The event cause has high historical disruption potential.",
+        "High priority classification indicates elevated operational attention.",
+        "Longer estimated event duration raises deployment and barricading needs."
+      ],
+      "recommendation": {
+        "officers": 12,
+        "barricades": 6,
+        "patrol_units": 3,
+        "response_priority": "Immediate intervention",
+        "risk_category": "Critical",
+        "barricade_points": [
+          {
+            "label": "Primary incident point",
+            "latitude": 13.0991084,
+            "longitude": 77.5971696
+          },
+          {
+            "label": "Terminal road-closure point",
+            "latitude": 13.09878,
+            "longitude": 77.5978606
+          }
+        ],
+        "diversion_advisory": {
+          "type": "dataset_advisory",
+          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "avoid_corridor": "Bellary Road 2",
+          "candidate_corridors": [
+            {
+              "corridor": "Hennur Main Road",
+              "average_tis": 43.1,
+              "count": 4
+            },
+            {
+              "corridor": "ORR North 2",
+              "average_tis": 51.1,
+              "count": 63
+            },
+            {
+              "corridor": "Tumkur Road",
+              "average_tis": 52.3,
+              "count": 32
+            }
+          ]
+        }
+      }
+    },
+    {
+      "row_index": 6647,
+      "id": "FKID006647",
+      "event_type": "planned",
+      "latitude": 12.9887246,
+      "longitude": 77.5741049,
+      "end_latitude": 12.9875849,
+      "end_longitude": 77.5723072,
+      "address": "Subedar Chatram Road, Nehru Nagar, Gandhinagar, Nehru Nagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560009, India",
+      "end_address": "ಗೋವಿಂದ ವಿಟ್ಟಲ ಭಾವೆ ರಸ್ತೆ, Nehru Nagar, Gandhinagar, Nehru Nagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560009, India",
+      "event_cause": "construction",
+      "requires_road_closure": true,
+      "start_datetime": "2023-12-09T00:05:46+00:00",
+      "start_date": "2023-12-09",
+      "start_hour": 0,
+      "start_day": "Saturday",
+      "start_month": "2023-12",
+      "status": "active",
+      "authenticated": "yes",
+      "description": "Permanent right turn is restricted from swastik junction to Sheshadripuram PS Junction.",
+      "veh_type": "Unknown vehicle",
+      "veh_no": "Masked",
+      "corridor": "Non-corridor",
+      "priority": "Low",
+      "police_station": "Sheshadripuram",
+      "kgid": "Unknown",
+      "zone": "Central Zone 2",
+      "junction": "SubedarChatramRd near SheshadripuramPS",
+      "event_duration_hours": 25595.5,
+      "duration_source": "end_datetime",
+      "spatial_cluster_id": 0,
+      "cluster_risk": 1.0,
+      "traffic_impact_score": 77.2,
+      "risk_category": "High",
+      "score_components": [
+        {
+          "name": "Road closure requirement",
+          "value": 1.0,
+          "weight": 15.0,
+          "contribution": 15.0
+        },
+        {
+          "name": "Event cause risk",
+          "value": 0.93,
+          "weight": 15.0,
+          "contribution": 13.95
+        },
+        {
+          "name": "Duration risk",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Corridor frequency",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Zone frequency",
+          "value": 1.0,
+          "weight": 8.0,
+          "contribution": 8.0
+        },
+        {
+          "name": "DBSCAN hotspot membership",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "Time pattern risk",
+          "value": 0.715,
+          "weight": 8.0,
+          "contribution": 5.72
+        },
+        {
+          "name": "Priority level",
+          "value": 0.35,
+          "weight": 12.0,
+          "contribution": 4.2
+        },
+        {
+          "name": "Police station workload",
+          "value": 0.3263,
+          "weight": 7.0,
+          "contribution": 2.28
+        },
+        {
+          "name": "Junction frequency",
+          "value": 0.125,
+          "weight": 8.0,
+          "contribution": 1.0
+        }
+      ],
+      "explanation": [
+        "Road closure requirement materially increases operational disruption risk.",
+        "The event cause has high historical disruption potential.",
+        "Longer estimated event duration raises deployment and barricading needs.",
+        "The corridor has repeated historical disruption records in the ASTraM dataset."
+      ],
+      "recommendation": {
+        "officers": 9,
+        "barricades": 5,
+        "patrol_units": 2,
+        "response_priority": "Priority intervention",
+        "risk_category": "High",
+        "barricade_points": [
+          {
+            "label": "Primary incident point",
+            "latitude": 12.9887246,
+            "longitude": 77.5741049
+          },
+          {
+            "label": "Terminal road-closure point",
+            "latitude": 12.9875849,
+            "longitude": 77.5723072
+          }
+        ],
+        "diversion_advisory": {
+          "type": "dataset_advisory",
+          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "avoid_corridor": "Non-corridor",
+          "candidate_corridors": [
+            {
+              "corridor": "CBD 1",
+              "average_tis": 48.4,
+              "count": 7
+            },
+            {
+              "corridor": "Bannerghata Road",
+              "average_tis": 51.0,
+              "count": 4
+            },
+            {
+              "corridor": "Old Madras Road",
+              "average_tis": 51.3,
+              "count": 18
+            }
+          ]
+        }
+      }
+    },
+    {
+      "row_index": 6648,
+      "id": "FKID006648",
+      "event_type": "planned",
+      "latitude": 12.9887246,
+      "longitude": 77.5741049,
+      "end_latitude": 12.9875849,
+      "end_longitude": 77.5723072,
+      "address": "Subedar Chatram Road, Nehru Nagar, Gandhinagar, Nehru Nagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560009, India",
+      "end_address": "ಗೋವಿಂದ ವಿಟ್ಟಲ ಭಾವೆ ರಸ್ತೆ, Nehru Nagar, Gandhinagar, Nehru Nagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560009, India",
+      "event_cause": "construction",
+      "requires_road_closure": true,
+      "start_datetime": "2023-12-09T00:05:46+00:00",
+      "start_date": "2023-12-09",
+      "start_hour": 0,
+      "start_day": "Saturday",
+      "start_month": "2023-12",
+      "status": "active",
+      "authenticated": "yes",
+      "description": "Permanent right turn is restricted from swastik junction to Sheshadripuram PS Junction.",
+      "veh_type": "Unknown vehicle",
+      "veh_no": "Masked",
+      "corridor": "Non-corridor",
+      "priority": "Low",
+      "police_station": "Sheshadripuram",
+      "kgid": "Unknown",
+      "zone": "Central Zone 2",
+      "junction": "SubedarChatramRd near SheshadripuramPS",
+      "event_duration_hours": 25595.5,
+      "duration_source": "end_datetime",
+      "spatial_cluster_id": 0,
+      "cluster_risk": 1.0,
+      "traffic_impact_score": 77.2,
+      "risk_category": "High",
+      "score_components": [
+        {
+          "name": "Road closure requirement",
+          "value": 1.0,
+          "weight": 15.0,
+          "contribution": 15.0
+        },
+        {
+          "name": "Event cause risk",
+          "value": 0.93,
+          "weight": 15.0,
+          "contribution": 13.95
+        },
+        {
+          "name": "Duration risk",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Corridor frequency",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Zone frequency",
+          "value": 1.0,
+          "weight": 8.0,
+          "contribution": 8.0
+        },
+        {
+          "name": "DBSCAN hotspot membership",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "Time pattern risk",
+          "value": 0.715,
+          "weight": 8.0,
+          "contribution": 5.72
+        },
+        {
+          "name": "Priority level",
+          "value": 0.35,
+          "weight": 12.0,
+          "contribution": 4.2
+        },
+        {
+          "name": "Police station workload",
+          "value": 0.3263,
+          "weight": 7.0,
+          "contribution": 2.28
+        },
+        {
+          "name": "Junction frequency",
+          "value": 0.125,
+          "weight": 8.0,
+          "contribution": 1.0
+        }
+      ],
+      "explanation": [
+        "Road closure requirement materially increases operational disruption risk.",
+        "The event cause has high historical disruption potential.",
+        "Longer estimated event duration raises deployment and barricading needs.",
+        "The corridor has repeated historical disruption records in the ASTraM dataset."
+      ],
+      "recommendation": {
+        "officers": 9,
+        "barricades": 5,
+        "patrol_units": 2,
+        "response_priority": "Priority intervention",
+        "risk_category": "High",
+        "barricade_points": [
+          {
+            "label": "Primary incident point",
+            "latitude": 12.9887246,
+            "longitude": 77.5741049
+          },
+          {
+            "label": "Terminal road-closure point",
+            "latitude": 12.9875849,
+            "longitude": 77.5723072
+          }
+        ],
+        "diversion_advisory": {
+          "type": "dataset_advisory",
+          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "avoid_corridor": "Non-corridor",
+          "candidate_corridors": [
+            {
+              "corridor": "CBD 1",
+              "average_tis": 48.4,
+              "count": 7
+            },
+            {
+              "corridor": "Bannerghata Road",
+              "average_tis": 51.0,
+              "count": 4
+            },
+            {
+              "corridor": "Old Madras Road",
+              "average_tis": 51.3,
+              "count": 18
+            }
+          ]
+        }
+      }
+    },
+    {
+      "row_index": 1670,
+      "id": "FKID001670",
+      "event_type": "unplanned",
+      "latitude": 13.0977085,
+      "longitude": 77.5984317,
+      "end_latitude": 13.0980233,
+      "end_longitude": 77.5986736,
+      "address": "Bellary Road, Raitarasanthe, Nehru Nagar, Bengaluru, Karnataka. Pin-560064 (India)",
+      "end_address": "Raithara Santhe Road, Raitarasanthe, Nehru Nagar, Bengaluru, Karnataka. Pin-560064 (India)",
+      "event_cause": "construction",
+      "requires_road_closure": true,
+      "start_datetime": "2024-01-24T04:03:46.143000+00:00",
+      "start_date": "2024-01-24",
+      "start_hour": 4,
+      "start_day": "Wednesday",
+      "start_month": "2024-01",
+      "status": "closed",
+      "authenticated": "yes",
+      "description": "No field note available",
+      "veh_type": "Unknown vehicle",
+      "veh_no": "Masked",
+      "corridor": "Bellary Road 2",
+      "priority": "High",
+      "police_station": "Yelahanka",
+      "kgid": "FKKG000599",
+      "zone": "Unmapped Zone",
+      "junction": "SantheCircle",
+      "event_duration_hours": 668.41,
+      "duration_source": "closed_datetime",
+      "spatial_cluster_id": 0,
+      "cluster_risk": 1.0,
+      "traffic_impact_score": 77.1,
+      "risk_category": "High",
+      "score_components": [
+        {
+          "name": "Road closure requirement",
+          "value": 1.0,
+          "weight": 15.0,
+          "contribution": 15.0
+        },
+        {
+          "name": "Event cause risk",
+          "value": 0.93,
+          "weight": 15.0,
+          "contribution": 13.95
+        },
+        {
+          "name": "Priority level",
+          "value": 1.0,
+          "weight": 12.0,
+          "contribution": 12.0
+        },
+        {
+          "name": "Duration risk",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Police station workload",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "DBSCAN hotspot membership",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "Time pattern risk",
+          "value": 0.7747,
+          "weight": 8.0,
+          "contribution": 6.2
+        },
+        {
+          "name": "Junction frequency",
+          "value": 0.3906,
+          "weight": 8.0,
+          "contribution": 3.12
+        },
+        {
+          "name": "Zone frequency",
+          "value": 0.2,
+          "weight": 8.0,
+          "contribution": 1.6
+        },
+        {
+          "name": "Corridor frequency",
+          "value": 0.1205,
+          "weight": 10.0,
+          "contribution": 1.21
+        }
+      ],
+      "explanation": [
+        "Road closure requirement materially increases operational disruption risk.",
+        "The event cause has high historical disruption potential.",
+        "High priority classification indicates elevated operational attention.",
+        "Longer estimated event duration raises deployment and barricading needs."
+      ],
+      "recommendation": {
+        "officers": 9,
+        "barricades": 5,
+        "patrol_units": 2,
+        "response_priority": "Priority intervention",
+        "risk_category": "High",
+        "barricade_points": [
+          {
+            "label": "Primary incident point",
+            "latitude": 13.0977085,
+            "longitude": 77.5984317
+          },
+          {
+            "label": "Terminal road-closure point",
+            "latitude": 13.0980233,
+            "longitude": 77.5986736
+          }
+        ],
+        "diversion_advisory": {
+          "type": "dataset_advisory",
+          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "avoid_corridor": "Bellary Road 2",
+          "candidate_corridors": [
+            {
+              "corridor": "IRR(Thanisandra road)",
+              "average_tis": 43.8,
+              "count": 44
+            },
+            {
+              "corridor": "Bannerghata Road",
+              "average_tis": 45.4,
+              "count": 117
+            },
+            {
+              "corridor": "West of Chord Road",
+              "average_tis": 45.4,
+              "count": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "row_index": 7660,
+      "id": "FKID007660",
+      "event_type": "planned",
+      "latitude": 12.9743854,
+      "longitude": 77.5747985,
+      "end_latitude": 12.9746882,
+      "end_longitude": 77.5705844,
+      "address": "Dharmambudi Kere Road, Upparpet Junction, Gandhi Nagar, Bengaluru, Karnataka. Pin-560009 (India)",
+      "end_address": "Bhashyam Road, Cottonpet Circle, Cottonpete, Bengaluru, Karnataka. Pin-560053 (India)",
+      "event_cause": "construction",
+      "requires_road_closure": true,
+      "start_datetime": "2024-01-10T21:20:49.556000+00:00",
+      "start_date": "2024-01-10",
+      "start_hour": 21,
+      "start_day": "Wednesday",
+      "start_month": "2024-01",
+      "status": "closed",
+      "authenticated": "yes",
+      "description": "White taping work in  progress From LTP road  L and O station  to Shanthala junction",
+      "veh_type": "Unknown vehicle",
+      "veh_no": "Masked",
+      "corridor": "Non-corridor",
+      "priority": "Low",
+      "police_station": "Upparpet",
+      "kgid": "FKKG001065",
+      "zone": "Central Zone 2",
+      "junction": "UpparpetJunction",
+      "event_duration_hours": 336.0,
+      "duration_source": "end_datetime",
+      "spatial_cluster_id": 0,
+      "cluster_risk": 1.0,
+      "traffic_impact_score": 77.0,
+      "risk_category": "High",
+      "score_components": [
+        {
+          "name": "Road closure requirement",
+          "value": 1.0,
+          "weight": 15.0,
+          "contribution": 15.0
+        },
+        {
+          "name": "Event cause risk",
+          "value": 0.93,
+          "weight": 15.0,
+          "contribution": 13.95
+        },
+        {
+          "name": "Duration risk",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Corridor frequency",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Zone frequency",
+          "value": 1.0,
+          "weight": 8.0,
+          "contribution": 8.0
+        },
+        {
+          "name": "Time pattern risk",
+          "value": 0.9319,
+          "weight": 8.0,
+          "contribution": 7.46
+        },
+        {
+          "name": "DBSCAN hotspot membership",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "Priority level",
+          "value": 0.35,
+          "weight": 12.0,
+          "contribution": 4.2
+        },
+        {
+          "name": "Police station workload",
+          "value": 0.1671,
+          "weight": 7.0,
+          "contribution": 1.17
+        },
+        {
+          "name": "Junction frequency",
+          "value": 0.0312,
+          "weight": 8.0,
+          "contribution": 0.25
+        }
+      ],
+      "explanation": [
+        "Road closure requirement materially increases operational disruption risk.",
+        "The event cause has high historical disruption potential.",
+        "Longer estimated event duration raises deployment and barricading needs.",
+        "The corridor has repeated historical disruption records in the ASTraM dataset."
+      ],
+      "recommendation": {
+        "officers": 9,
+        "barricades": 5,
+        "patrol_units": 2,
+        "response_priority": "Priority intervention",
+        "risk_category": "High",
+        "barricade_points": [
+          {
+            "label": "Primary incident point",
+            "latitude": 12.9743854,
+            "longitude": 77.5747985
+          },
+          {
+            "label": "Terminal road-closure point",
+            "latitude": 12.9746882,
+            "longitude": 77.5705844
+          }
+        ],
+        "diversion_advisory": {
+          "type": "dataset_advisory",
+          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "avoid_corridor": "Non-corridor",
+          "candidate_corridors": [
+            {
+              "corridor": "CBD 1",
+              "average_tis": 48.4,
+              "count": 7
+            },
+            {
+              "corridor": "Bannerghata Road",
+              "average_tis": 51.0,
+              "count": 4
+            },
+            {
+              "corridor": "Old Madras Road",
+              "average_tis": 51.3,
+              "count": 18
+            }
+          ]
+        }
+      }
+    },
+    {
+      "row_index": 2486,
+      "id": "FKID002486",
+      "event_type": "planned",
+      "latitude": 12.9832468,
+      "longitude": 77.5771577,
+      "end_latitude": 12.9810302,
+      "end_longitude": 77.577104,
+      "address": "Bangalore Race Course, Race Course Road, Fair Field Layout, High Grounds, Sampangirama Nagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560001, India",
+      "end_address": "Race Course Road, Madhav Nagar, High Grounds, Sampangirama Nagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560001, India",
+      "event_cause": "construction",
+      "requires_road_closure": true,
+      "start_datetime": "2024-01-19T12:05:46+00:00",
+      "start_date": "2024-01-19",
+      "start_hour": 12,
+      "start_day": "Friday",
+      "start_month": "2024-01",
+      "status": "closed",
+      "authenticated": "yes",
+      "description": "White Topping Phase 2 at [LOCATION]",
+      "veh_type": "Unknown vehicle",
+      "veh_no": "Masked",
+      "corridor": "Non-corridor",
+      "priority": "Low",
+      "police_station": "High ground",
+      "kgid": "Unknown",
+      "zone": "Central Zone 2",
+      "junction": "SubbannaJunction",
+      "event_duration_hours": 1487.5,
+      "duration_source": "end_datetime",
+      "spatial_cluster_id": 0,
+      "cluster_risk": 1.0,
+      "traffic_impact_score": 76.8,
+      "risk_category": "High",
+      "score_components": [
+        {
+          "name": "Road closure requirement",
+          "value": 1.0,
+          "weight": 15.0,
+          "contribution": 15.0
+        },
+        {
+          "name": "Event cause risk",
+          "value": 0.93,
+          "weight": 15.0,
+          "contribution": 13.95
+        },
+        {
+          "name": "Duration risk",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Corridor frequency",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Zone frequency",
+          "value": 1.0,
+          "weight": 8.0,
+          "contribution": 8.0
+        },
+        {
+          "name": "DBSCAN hotspot membership",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "Priority level",
+          "value": 0.35,
+          "weight": 12.0,
+          "contribution": 4.2
+        },
+        {
+          "name": "Time pattern risk",
+          "value": 0.5155,
+          "weight": 8.0,
+          "contribution": 4.12
+        },
+        {
+          "name": "Police station workload",
+          "value": 0.4907,
+          "weight": 7.0,
+          "contribution": 3.44
+        },
+        {
+          "name": "Junction frequency",
+          "value": 0.1406,
+          "weight": 8.0,
+          "contribution": 1.12
+        }
+      ],
+      "explanation": [
+        "Road closure requirement materially increases operational disruption risk.",
+        "The event cause has high historical disruption potential.",
+        "Longer estimated event duration raises deployment and barricading needs.",
+        "The corridor has repeated historical disruption records in the ASTraM dataset."
+      ],
+      "recommendation": {
+        "officers": 9,
+        "barricades": 5,
+        "patrol_units": 2,
+        "response_priority": "Priority intervention",
+        "risk_category": "High",
+        "barricade_points": [
+          {
+            "label": "Primary incident point",
+            "latitude": 12.9832468,
+            "longitude": 77.5771577
+          },
+          {
+            "label": "Terminal road-closure point",
+            "latitude": 12.9810302,
+            "longitude": 77.577104
+          }
+        ],
+        "diversion_advisory": {
+          "type": "dataset_advisory",
+          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "avoid_corridor": "Non-corridor",
+          "candidate_corridors": [
+            {
+              "corridor": "CBD 1",
+              "average_tis": 48.4,
+              "count": 7
+            },
+            {
+              "corridor": "Bannerghata Road",
+              "average_tis": 51.0,
+              "count": 4
+            },
+            {
+              "corridor": "Old Madras Road",
+              "average_tis": 51.3,
+              "count": 18
+            }
+          ]
+        }
+      }
+    },
+    {
+      "row_index": 4711,
+      "id": "FKID004711",
+      "event_type": "planned",
+      "latitude": 12.990028,
+      "longitude": 77.4871935,
+      "end_latitude": 12.989977,
+      "end_longitude": 77.4871919,
+      "address": "4th A Cross Road, Tunga Nagar South, Herohalli, Bengaluru, Karnataka. Pin-560091 (India)",
+      "end_address": "4th A Cross Road, Tunga Nagar South, Herohalli, Bengaluru, Karnataka. Pin-560091 (India)",
+      "event_cause": "public_event",
+      "requires_road_closure": true,
+      "start_datetime": "2023-12-10T05:03:35.839000+00:00",
+      "start_date": "2023-12-10",
+      "start_hour": 5,
+      "start_day": "Sunday",
+      "start_month": "2023-12",
+      "status": "closed",
+      "authenticated": "yes",
+      "description": "ಅಂಜನೇಯ ಸ್ವಾಮಿಯ ಬ್ರಹ್ಮರಥೋತ್ಸವ",
+      "veh_type": "Unknown vehicle",
+      "veh_no": "Masked",
+      "corridor": "Non-corridor",
+      "priority": "Low",
+      "police_station": "Kamakshipalya",
+      "kgid": "FKKG000453",
+      "zone": "West Zone 1",
+      "junction": "Unmapped Junction",
+      "event_duration_hours": 61.04,
+      "duration_source": "end_datetime",
+      "spatial_cluster_id": 0,
+      "cluster_risk": 1.0,
+      "traffic_impact_score": 76.7,
+      "risk_category": "High",
+      "score_components": [
+        {
+          "name": "Road closure requirement",
+          "value": 1.0,
+          "weight": 15.0,
+          "contribution": 15.0
+        },
+        {
+          "name": "Event cause risk",
+          "value": 0.9,
+          "weight": 15.0,
+          "contribution": 13.5
+        },
+        {
+          "name": "Corridor frequency",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Duration risk",
+          "value": 0.9621,
+          "weight": 10.0,
+          "contribution": 9.62
+        },
+        {
+          "name": "DBSCAN hotspot membership",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "Time pattern risk",
+          "value": 0.7603,
+          "weight": 8.0,
+          "contribution": 6.08
+        },
+        {
+          "name": "Zone frequency",
+          "value": 0.695,
+          "weight": 8.0,
+          "contribution": 5.56
+        },
+        {
+          "name": "Priority level",
+          "value": 0.35,
+          "weight": 12.0,
+          "contribution": 4.2
+        },
+        {
+          "name": "Police station workload",
+          "value": 0.5942,
+          "weight": 7.0,
+          "contribution": 4.16
+        },
+        {
+          "name": "Junction frequency",
+          "value": 0.2,
+          "weight": 8.0,
+          "contribution": 1.6
+        }
+      ],
+      "explanation": [
+        "Road closure requirement materially increases operational disruption risk.",
+        "The event cause has high historical disruption potential.",
+        "The corridor has repeated historical disruption records in the ASTraM dataset.",
+        "Longer estimated event duration raises deployment and barricading needs."
+      ],
+      "recommendation": {
+        "officers": 9,
+        "barricades": 5,
+        "patrol_units": 2,
+        "response_priority": "Priority intervention",
+        "risk_category": "High",
+        "barricade_points": [
+          {
+            "label": "Primary incident point",
+            "latitude": 12.990028,
+            "longitude": 77.4871935
+          },
+          {
+            "label": "Terminal road-closure point",
+            "latitude": 12.989977,
+            "longitude": 77.4871919
+          }
+        ],
+        "diversion_advisory": {
+          "type": "dataset_advisory",
+          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "avoid_corridor": "Non-corridor",
+          "candidate_corridors": [
+            {
+              "corridor": "West of Chord Road",
+              "average_tis": 50.2,
+              "count": 16
+            },
+            {
+              "corridor": "ORR West 1",
+              "average_tis": 51.8,
+              "count": 15
+            },
+            {
+              "corridor": "Tumkur Road",
+              "average_tis": 52.8,
+              "count": 126
+            }
+          ]
+        }
+      }
+    },
+    {
+      "row_index": 7729,
+      "id": "FKID007729",
+      "event_type": "unplanned",
+      "latitude": 13.0460503,
+      "longitude": 77.5560309,
+      "end_latitude": 13.0457144,
+      "end_longitude": 77.5563891,
+      "address": "Rajatha Bhavana Road, Dr GP Rajarathnam Circle, Jalahalli, Bengaluru, Karnataka. Pin-560013 (India)",
+      "end_address": "Rajatha Bhavana Road, Dr GP Rajarathnam Circle, Jalahalli, Bengaluru, Karnataka. Pin-560013 (India)",
+      "event_cause": "construction",
+      "requires_road_closure": true,
+      "start_datetime": "2024-01-13T02:38:27.631000+00:00",
+      "start_date": "2024-01-13",
+      "start_hour": 2,
+      "start_day": "Saturday",
+      "start_month": "2024-01",
+      "status": "closed",
+      "authenticated": "yes",
+      "description": "White tapping road work progress",
+      "veh_type": "Unknown vehicle",
+      "veh_no": "Masked",
+      "corridor": "ORR North 2",
+      "priority": "High",
+      "police_station": "Jalahalli",
+      "kgid": "FKKG000895",
+      "zone": "North Zone 2",
+      "junction": "BEL Circle",
+      "event_duration_hours": 236.98,
+      "duration_source": "closed_datetime",
+      "spatial_cluster_id": 0,
+      "cluster_risk": 1.0,
+      "traffic_impact_score": 76.4,
+      "risk_category": "High",
+      "score_components": [
+        {
+          "name": "Road closure requirement",
+          "value": 1.0,
+          "weight": 15.0,
+          "contribution": 15.0
+        },
+        {
+          "name": "Event cause risk",
+          "value": 0.93,
+          "weight": 15.0,
+          "contribution": 13.95
+        },
+        {
+          "name": "Priority level",
+          "value": 1.0,
+          "weight": 12.0,
+          "contribution": 12.0
+        },
+        {
+          "name": "Duration risk",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "DBSCAN hotspot membership",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "Time pattern risk",
+          "value": 0.6991,
+          "weight": 8.0,
+          "contribution": 5.59
+        },
+        {
+          "name": "Zone frequency",
+          "value": 0.6629,
+          "weight": 8.0,
+          "contribution": 5.3
+        },
+        {
+          "name": "Police station workload",
+          "value": 0.5225,
+          "weight": 7.0,
+          "contribution": 3.66
+        },
+        {
+          "name": "Junction frequency",
+          "value": 0.3906,
+          "weight": 8.0,
+          "contribution": 3.12
+        },
+        {
+          "name": "Corridor frequency",
+          "value": 0.0747,
+          "weight": 10.0,
+          "contribution": 0.75
+        }
+      ],
+      "explanation": [
+        "Road closure requirement materially increases operational disruption risk.",
+        "The event cause has high historical disruption potential.",
+        "High priority classification indicates elevated operational attention.",
+        "Longer estimated event duration raises deployment and barricading needs."
+      ],
+      "recommendation": {
+        "officers": 9,
+        "barricades": 5,
+        "patrol_units": 2,
+        "response_priority": "Priority intervention",
+        "risk_category": "High",
+        "barricade_points": [
+          {
+            "label": "Primary incident point",
+            "latitude": 13.0460503,
+            "longitude": 77.5560309
+          },
+          {
+            "label": "Terminal road-closure point",
+            "latitude": 13.0457144,
+            "longitude": 77.5563891
+          }
+        ],
+        "diversion_advisory": {
+          "type": "dataset_advisory",
+          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "avoid_corridor": "ORR North 2",
+          "candidate_corridors": [
+            {
+              "corridor": "Hennur Main Road",
+              "average_tis": 43.1,
+              "count": 4
+            },
+            {
+              "corridor": "Tumkur Road",
+              "average_tis": 52.3,
+              "count": 32
+            },
+            {
+              "corridor": "Bellary Road 1",
+              "average_tis": 53.4,
+              "count": 109
+            }
+          ]
+        }
+      }
+    },
+    {
+      "row_index": 7189,
+      "id": "FKID007189",
+      "event_type": "unplanned",
+      "latitude": 13.1008567,
+      "longitude": 77.582507,
+      "end_latitude": 13.1007663,
+      "end_longitude": 77.5825277,
+      "address": "Yelahanka New Town Main Road, Sector B, Yelahanka New Town, Bengaluru, Karnataka. Pin-560064 (India)",
+      "end_address": "Yelahanka New Town Main Road, Sector B, Yelahanka New Town, Bengaluru, Karnataka. Pin-560064 (India)",
+      "event_cause": "tree_fall",
+      "requires_road_closure": true,
+      "start_datetime": "2023-12-25T06:06:06.450000+00:00",
+      "start_date": "2023-12-25",
+      "start_hour": 6,
+      "start_day": "Monday",
+      "start_month": "2023-12",
+      "status": "closed",
+      "authenticated": "yes",
+      "description": "ಮೇಜರ್ ಸಂದೀಪ್ ಉನ್ನಿಕೃಷ್ಣನ್ ರೋಡ್ ಓಂ ಅಗರವಾಲ್ ಭವನ್ ಮುಂಬಾಗ ಮರದ ಕೊಂಬೆ ಕಾರ್ ಮೇಲ್ ಬಿದ್ದಿದ್ದು ಕಾರ್ ಜಕಮಗೊಂಡಿರುತ್ತದೆ ಹಾಗೂ ರೋಡ್ ಕ್ಲೋಸ್ ಆಗಿರುತ್ತದೆ",
+      "veh_type": "Unknown vehicle",
+      "veh_no": "Masked",
+      "corridor": "Non-corridor",
+      "priority": "Low",
+      "police_station": "Yelahanka",
+      "kgid": "FKKG000566",
+      "zone": "North Zone 2",
+      "junction": "SandeepUnnikrishnan-Yelhanka",
+      "event_duration_hours": 86.63,
+      "duration_source": "closed_datetime",
+      "spatial_cluster_id": 0,
+      "cluster_risk": 1.0,
+      "traffic_impact_score": 76.3,
+      "risk_category": "High",
+      "score_components": [
+        {
+          "name": "Road closure requirement",
+          "value": 1.0,
+          "weight": 15.0,
+          "contribution": 15.0
+        },
+        {
+          "name": "Event cause risk",
+          "value": 0.72,
+          "weight": 15.0,
+          "contribution": 10.8
+        },
+        {
+          "name": "Duration risk",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Corridor frequency",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Police station workload",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "DBSCAN hotspot membership",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "Time pattern risk",
+          "value": 0.7436,
+          "weight": 8.0,
+          "contribution": 5.95
+        },
+        {
+          "name": "Zone frequency",
+          "value": 0.6629,
+          "weight": 8.0,
+          "contribution": 5.3
+        },
+        {
+          "name": "Priority level",
+          "value": 0.35,
+          "weight": 12.0,
+          "contribution": 4.2
+        },
+        {
+          "name": "Junction frequency",
+          "value": 0.125,
+          "weight": 8.0,
+          "contribution": 1.0
+        }
+      ],
+      "explanation": [
+        "Road closure requirement materially increases operational disruption risk.",
+        "The event cause has high historical disruption potential.",
+        "Longer estimated event duration raises deployment and barricading needs.",
+        "The corridor has repeated historical disruption records in the ASTraM dataset."
+      ],
+      "recommendation": {
+        "officers": 9,
+        "barricades": 5,
+        "patrol_units": 2,
+        "response_priority": "Priority intervention",
+        "risk_category": "High",
+        "barricade_points": [
+          {
+            "label": "Primary incident point",
+            "latitude": 13.1008567,
+            "longitude": 77.582507
+          },
+          {
+            "label": "Terminal road-closure point",
+            "latitude": 13.1007663,
+            "longitude": 77.5825277
+          }
+        ],
+        "diversion_advisory": {
+          "type": "dataset_advisory",
+          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "avoid_corridor": "Non-corridor",
+          "candidate_corridors": [
+            {
+              "corridor": "Hennur Main Road",
+              "average_tis": 43.1,
+              "count": 4
+            },
+            {
+              "corridor": "ORR North 2",
+              "average_tis": 51.1,
+              "count": 63
+            },
+            {
+              "corridor": "Tumkur Road",
+              "average_tis": 52.3,
+              "count": 32
+            }
+          ]
+        }
+      }
+    },
+    {
+      "row_index": 894,
+      "id": "FKID000894",
+      "event_type": "planned",
+      "latitude": 12.985061,
+      "longitude": 77.5721347,
+      "end_latitude": 12.9895606,
+      "end_longitude": 77.5718933,
+      "address": "ಧನವಂತ್ರಿ ರಸ್ತೆ, ಸ್ವತಂತ್ರ ಪಾಳ್ಯ ವಾರ್ಡ್, ಬೆಂಗಳೂರು ಮಧ್ಯ ನಗರ ನಿಗಮ, Bengaluru, ಬೆಂಗಳೂರು ಉತ್ತರ, ಬೆಂಗಳೂರು ನಗರ, Karnataka, 560009, India",
+      "end_address": "ಪ್ಲಾಟ್ಫಾರ್ಮ್ ರಸ್ತೆ, ಸ್ವತಂತ್ರ ಪಾಳ್ಯ ವಾರ್ಡ್, ಬೆಂಗಳೂರು ಮಧ್ಯ ನಗರ ನಿಗಮ, Bengaluru, ಬೆಂಗಳೂರು ಉತ್ತರ, ಬೆಂಗಳೂರು ನಗರ, Karnataka, 560021, India",
+      "event_cause": "construction",
+      "requires_road_closure": true,
+      "start_datetime": "2023-11-12T12:05:46+00:00",
+      "start_date": "2023-11-12",
+      "start_hour": 12,
+      "start_day": "Sunday",
+      "start_month": "2023-11",
+      "status": "closed",
+      "authenticated": "yes",
+      "description": "BWSSB Road Cwork at [LOCATION] junction.(12.985016993498627, 77.57213578357488)",
+      "veh_type": "Unknown vehicle",
+      "veh_no": "Masked",
+      "corridor": "Non-corridor",
+      "priority": "Low",
+      "police_station": "Sheshadripuram",
+      "kgid": "Unknown",
+      "zone": "Central Zone 2",
+      "junction": "KrishnaFlourMill",
+      "event_duration_hours": 2160.0,
+      "duration_source": "end_datetime",
+      "spatial_cluster_id": 0,
+      "cluster_risk": 1.0,
+      "traffic_impact_score": 76.1,
+      "risk_category": "High",
+      "score_components": [
+        {
+          "name": "Road closure requirement",
+          "value": 1.0,
+          "weight": 15.0,
+          "contribution": 15.0
+        },
+        {
+          "name": "Event cause risk",
+          "value": 0.93,
+          "weight": 15.0,
+          "contribution": 13.95
+        },
+        {
+          "name": "Duration risk",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Corridor frequency",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Zone frequency",
+          "value": 1.0,
+          "weight": 8.0,
+          "contribution": 8.0
+        },
+        {
+          "name": "DBSCAN hotspot membership",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "Priority level",
+          "value": 0.35,
+          "weight": 12.0,
+          "contribution": 4.2
+        },
+        {
+          "name": "Time pattern risk",
+          "value": 0.4084,
+          "weight": 8.0,
+          "contribution": 3.27
+        },
+        {
+          "name": "Junction frequency",
+          "value": 0.2969,
+          "weight": 8.0,
+          "contribution": 2.38
+        },
+        {
+          "name": "Police station workload",
+          "value": 0.3263,
+          "weight": 7.0,
+          "contribution": 2.28
+        }
+      ],
+      "explanation": [
+        "Road closure requirement materially increases operational disruption risk.",
+        "The event cause has high historical disruption potential.",
+        "Longer estimated event duration raises deployment and barricading needs.",
+        "The corridor has repeated historical disruption records in the ASTraM dataset."
+      ],
+      "recommendation": {
+        "officers": 9,
+        "barricades": 5,
+        "patrol_units": 2,
+        "response_priority": "Priority intervention",
+        "risk_category": "High",
+        "barricade_points": [
+          {
+            "label": "Primary incident point",
+            "latitude": 12.985061,
+            "longitude": 77.5721347
+          },
+          {
+            "label": "Terminal road-closure point",
+            "latitude": 12.9895606,
+            "longitude": 77.5718933
+          }
+        ],
+        "diversion_advisory": {
+          "type": "dataset_advisory",
+          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "avoid_corridor": "Non-corridor",
+          "candidate_corridors": [
+            {
+              "corridor": "CBD 1",
+              "average_tis": 48.4,
+              "count": 7
+            },
+            {
+              "corridor": "Bannerghata Road",
+              "average_tis": 51.0,
+              "count": 4
+            },
+            {
+              "corridor": "Old Madras Road",
+              "average_tis": 51.3,
+              "count": 18
+            }
+          ]
+        }
+      }
+    },
+    {
+      "row_index": 898,
+      "id": "FKID000898",
+      "event_type": "planned",
+      "latitude": 12.985061,
+      "longitude": 77.5721347,
+      "end_latitude": 12.9895606,
+      "end_longitude": 77.5718933,
+      "address": "ಧನವಂತ್ರಿ ರಸ್ತೆ, ಸ್ವತಂತ್ರ ಪಾಳ್ಯ ವಾರ್ಡ್, ಬೆಂಗಳೂರು ಮಧ್ಯ ನಗರ ನಿಗಮ, Bengaluru, ಬೆಂಗಳೂರು ಉತ್ತರ, ಬೆಂಗಳೂರು ನಗರ, Karnataka, 560009, India",
+      "end_address": "ಪ್ಲಾಟ್ಫಾರ್ಮ್ ರಸ್ತೆ, ಸ್ವತಂತ್ರ ಪಾಳ್ಯ ವಾರ್ಡ್, ಬೆಂಗಳೂರು ಮಧ್ಯ ನಗರ ನಿಗಮ, Bengaluru, ಬೆಂಗಳೂರು ಉತ್ತರ, ಬೆಂಗಳೂರು ನಗರ, Karnataka, 560021, India",
+      "event_cause": "construction",
+      "requires_road_closure": true,
+      "start_datetime": "2023-11-12T12:05:46+00:00",
+      "start_date": "2023-11-12",
+      "start_hour": 12,
+      "start_day": "Sunday",
+      "start_month": "2023-11",
+      "status": "closed",
+      "authenticated": "yes",
+      "description": "BWSSB Road Cwork at [LOCATION] junction.(12.985016993498627, 77.57213578357488)",
+      "veh_type": "Unknown vehicle",
+      "veh_no": "Masked",
+      "corridor": "Non-corridor",
+      "priority": "Low",
+      "police_station": "Sheshadripuram",
+      "kgid": "Unknown",
+      "zone": "Central Zone 2",
+      "junction": "KrishnaFlourMill",
+      "event_duration_hours": 2160.0,
+      "duration_source": "end_datetime",
+      "spatial_cluster_id": 0,
+      "cluster_risk": 1.0,
+      "traffic_impact_score": 76.1,
+      "risk_category": "High",
+      "score_components": [
+        {
+          "name": "Road closure requirement",
+          "value": 1.0,
+          "weight": 15.0,
+          "contribution": 15.0
+        },
+        {
+          "name": "Event cause risk",
+          "value": 0.93,
+          "weight": 15.0,
+          "contribution": 13.95
+        },
+        {
+          "name": "Duration risk",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Corridor frequency",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Zone frequency",
+          "value": 1.0,
+          "weight": 8.0,
+          "contribution": 8.0
+        },
+        {
+          "name": "DBSCAN hotspot membership",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "Priority level",
+          "value": 0.35,
+          "weight": 12.0,
+          "contribution": 4.2
+        },
+        {
+          "name": "Time pattern risk",
+          "value": 0.4084,
+          "weight": 8.0,
+          "contribution": 3.27
+        },
+        {
+          "name": "Junction frequency",
+          "value": 0.2969,
+          "weight": 8.0,
+          "contribution": 2.38
+        },
+        {
+          "name": "Police station workload",
+          "value": 0.3263,
+          "weight": 7.0,
+          "contribution": 2.28
+        }
+      ],
+      "explanation": [
+        "Road closure requirement materially increases operational disruption risk.",
+        "The event cause has high historical disruption potential.",
+        "Longer estimated event duration raises deployment and barricading needs.",
+        "The corridor has repeated historical disruption records in the ASTraM dataset."
+      ],
+      "recommendation": {
+        "officers": 9,
+        "barricades": 5,
+        "patrol_units": 2,
+        "response_priority": "Priority intervention",
+        "risk_category": "High",
+        "barricade_points": [
+          {
+            "label": "Primary incident point",
+            "latitude": 12.985061,
+            "longitude": 77.5721347
+          },
+          {
+            "label": "Terminal road-closure point",
+            "latitude": 12.9895606,
+            "longitude": 77.5718933
+          }
+        ],
+        "diversion_advisory": {
+          "type": "dataset_advisory",
+          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "avoid_corridor": "Non-corridor",
+          "candidate_corridors": [
+            {
+              "corridor": "CBD 1",
+              "average_tis": 48.4,
+              "count": 7
+            },
+            {
+              "corridor": "Bannerghata Road",
+              "average_tis": 51.0,
+              "count": 4
+            },
+            {
+              "corridor": "Old Madras Road",
+              "average_tis": 51.3,
+              "count": 18
+            }
+          ]
+        }
+      }
+    },
+    {
+      "row_index": 2312,
+      "id": "FKID002312",
+      "event_type": "unplanned",
+      "latitude": 13.0248346,
+      "longitude": 77.5824579,
+      "end_latitude": 13.0248346,
+      "end_longitude": 77.5824579,
+      "address": "1st Main Road, Training Quarters, Armane Nagar, Bengaluru, Karnataka. Pin-560094 (India)",
+      "end_address": "1st Main Road, Training Quarters, Armane Nagar, Bengaluru, Karnataka. Pin-560094 (India)",
+      "event_cause": "construction",
+      "requires_road_closure": true,
+      "start_datetime": "2024-03-01T21:36:14.931000+00:00",
+      "start_date": "2024-03-01",
+      "start_hour": 21,
+      "start_day": "Friday",
+      "start_month": "2024-03",
+      "status": "closed",
+      "authenticated": "yes",
+      "description": "sanjainagar traffic station",
+      "veh_type": "Unknown vehicle",
+      "veh_no": "Masked",
+      "corridor": "Bellary Road 1",
+      "priority": "High",
+      "police_station": "Kodigehalli",
+      "kgid": "FKKG000724",
+      "zone": "Unmapped Zone",
+      "junction": "Unmapped Junction",
+      "event_duration_hours": 295.32,
+      "duration_source": "closed_datetime",
+      "spatial_cluster_id": 0,
+      "cluster_risk": 1.0,
+      "traffic_impact_score": 75.8,
+      "risk_category": "High",
+      "score_components": [
+        {
+          "name": "Road closure requirement",
+          "value": 1.0,
+          "weight": 15.0,
+          "contribution": 15.0
+        },
+        {
+          "name": "Event cause risk",
+          "value": 0.93,
+          "weight": 15.0,
+          "contribution": 13.95
+        },
+        {
+          "name": "Priority level",
+          "value": 1.0,
+          "weight": 12.0,
+          "contribution": 12.0
+        },
+        {
+          "name": "Duration risk",
+          "value": 1.0,
+          "weight": 10.0,
+          "contribution": 10.0
+        },
+        {
+          "name": "Time pattern risk",
+          "value": 0.9628,
+          "weight": 8.0,
+          "contribution": 7.7
+        },
+        {
+          "name": "DBSCAN hotspot membership",
+          "value": 1.0,
+          "weight": 7.0,
+          "contribution": 7.0
+        },
+        {
+          "name": "Police station workload",
+          "value": 0.7215,
+          "weight": 7.0,
+          "contribution": 5.05
+        },
+        {
+          "name": "Corridor frequency",
+          "value": 0.194,
+          "weight": 10.0,
+          "contribution": 1.94
+        },
+        {
+          "name": "Zone frequency",
+          "value": 0.2,
+          "weight": 8.0,
+          "contribution": 1.6
+        },
+        {
+          "name": "Junction frequency",
+          "value": 0.2,
+          "weight": 8.0,
+          "contribution": 1.6
+        }
+      ],
+      "explanation": [
+        "Road closure requirement materially increases operational disruption risk.",
+        "The event cause has high historical disruption potential.",
+        "High priority classification indicates elevated operational attention.",
+        "Longer estimated event duration raises deployment and barricading needs."
+      ],
+      "recommendation": {
+        "officers": 9,
+        "barricades": 5,
+        "patrol_units": 2,
+        "response_priority": "Priority intervention",
+        "risk_category": "High",
+        "barricade_points": [
+          {
+            "label": "Primary incident point",
+            "latitude": 13.0248346,
+            "longitude": 77.5824579
+          },
+          {
+            "label": "Terminal road-closure point",
+            "latitude": 13.0248346,
+            "longitude": 77.5824579
+          }
+        ],
+        "diversion_advisory": {
+          "type": "dataset_advisory",
+          "message": "Avoid the affected corridor where feasible; this is a dataset-only advisory, not turn-by-turn routing.",
+          "avoid_corridor": "Bellary Road 1",
+          "candidate_corridors": [
+            {
+              "corridor": "IRR(Thanisandra road)",
+              "average_tis": 43.8,
+              "count": 44
+            },
+            {
+              "corridor": "Bannerghata Road",
+              "average_tis": 45.4,
+              "count": 117
+            },
+            {
+              "corridor": "West of Chord Road",
+              "average_tis": 45.4,
+              "count": 101
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

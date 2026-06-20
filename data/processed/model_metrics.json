@@ -1,0 +1,156 @@
+{
+  "trained_at": "2026-06-19T08:17:40.111691+00:00",
+  "data_source": "Only data/processed/events.json generated from the instructor-provided ASTraM CSV was used.",
+  "target": "traffic_impact_score",
+  "target_type": "surrogate operational risk score, not measured congestion",
+  "features": [
+    "event_type",
+    "event_cause",
+    "requires_road_closure",
+    "event_duration_hours_capped",
+    "corridor",
+    "priority",
+    "police_station",
+    "zone",
+    "junction",
+    "status",
+    "start_hour",
+    "start_day",
+    "start_month",
+    "spatial_cluster_id",
+    "cluster_risk"
+  ],
+  "categorical_features": [
+    "event_type",
+    "event_cause",
+    "corridor",
+    "priority",
+    "police_station",
+    "zone",
+    "junction",
+    "status",
+    "start_day",
+    "start_month"
+  ],
+  "row_count": 8173,
+  "train_rows": 6539,
+  "test_rows": 1634,
+  "random_seed": 42,
+  "best_model": "CatBoostRegressor",
+  "best_model_path": "models\\tis_surrogate_model.pkl",
+  "catboost_model_path": "models\\catboost_tis_surrogate.cbm",
+  "best_metrics": {
+    "r2": 0.9921,
+    "mae": 0.3726,
+    "rmse": 0.5958
+  },
+  "model_comparison": [
+    {
+      "model": "CatBoostRegressor",
+      "role": "Primary surrogate model for Traffic Impact Score",
+      "fit_status": "trained",
+      "r2": 0.9921,
+      "mae": 0.3726,
+      "rmse": 0.5958
+    },
+    {
+      "model": "RandomForestRegressor",
+      "role": "Benchmark tree ensemble",
+      "fit_status": "trained",
+      "r2": 0.9512,
+      "mae": 1.0803,
+      "rmse": 1.4806
+    },
+    {
+      "model": "ExtraTreesRegressor",
+      "role": "Benchmark high-variance tree ensemble",
+      "fit_status": "trained",
+      "r2": 0.9515,
+      "mae": 1.0948,
+      "rmse": 1.4762
+    },
+    {
+      "model": "XGBRegressor",
+      "role": "Optional benchmark",
+      "fit_status": "trained",
+      "r2": 0.9802,
+      "mae": 0.708,
+      "rmse": 0.9434
+    },
+    {
+      "model": "LGBMRegressor",
+      "role": "Optional benchmark",
+      "fit_status": "trained",
+      "r2": 0.9824,
+      "mae": 0.6104,
+      "rmse": 0.8906
+    }
+  ],
+  "feature_importance": [
+    {
+      "feature": "requires_road_closure",
+      "importance": 40.9985
+    },
+    {
+      "feature": "event_duration_hours_capped",
+      "importance": 13.0733
+    },
+    {
+      "feature": "cluster_risk",
+      "importance": 10.866
+    },
+    {
+      "feature": "zone",
+      "importance": 10.7938
+    },
+    {
+      "feature": "police_station",
+      "importance": 9.4714
+    },
+    {
+      "feature": "event_cause",
+      "importance": 5.4908
+    },
+    {
+      "feature": "start_hour",
+      "importance": 2.7923
+    },
+    {
+      "feature": "junction",
+      "importance": 1.9699
+    },
+    {
+      "feature": "status",
+      "importance": 1.9016
+    },
+    {
+      "feature": "corridor",
+      "importance": 0.8965
+    },
+    {
+      "feature": "start_day",
+      "importance": 0.675
+    },
+    {
+      "feature": "start_month",
+      "importance": 0.4619
+    },
+    {
+      "feature": "spatial_cluster_id",
+      "importance": 0.3127
+    },
+    {
+      "feature": "event_type",
+      "importance": 0.2153
+    },
+    {
+      "feature": "priority",
+      "importance": 0.0809
+    }
+  ],
+  "shap_summary": {
+    "status": "available",
+    "note": "SHAP package imported successfully. Per-event explanations are still served from deterministic TIS components for demo speed.",
+    "sample_size": 100
+  }
+}
