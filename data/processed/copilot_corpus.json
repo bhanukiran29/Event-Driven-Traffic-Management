@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generated_at": "2026-06-18T12:43:23.162500+00:00",
+    "generated_at": "2026-06-20T09:51:21.532415+00:00",
     "data_source": "ASTraM instructor-provided anonymized event dataset only",
     "honesty_notice": "The dataset does not contain measured congestion, vehicle counts, travel time, or delay duration. Scores represent operational traffic impact risk.",
     "data_quality": {
@@ -590,6 +590,9 @@
         "row_index": 6893,
         "id": "FKID006893",
         "event_type": "unplanned",
+        "expected_attendance": 250,
+        "venue_capacity": 500,
+        "event_scale": "Small",
         "latitude": 13.0991084,
         "longitude": 77.5971696,
         "end_latitude": 13.09878,
@@ -689,11 +692,18 @@
           "Longer estimated event duration raises deployment and barricading needs."
         ],
         "recommendation": {
-          "officers": 12,
-          "barricades": 6,
-          "patrol_units": 3,
+          "officers": 20,
+          "barricades": 13,
+          "patrol_units": 4,
           "response_priority": "Immediate intervention",
           "risk_category": "Critical",
+          "allocation_explanation": [
+            "250 expected attendees add 1 officer units and 1 barricade units.",
+            "TIS 80.2 adds 5 officer units; critical severity adds 5 barricade units.",
+            "Road closure adds 4 officers and 3 barricades.",
+            "72.0 hours adds 9 officer units.",
+            "Hotspot risk 100% adds 4 barricade units."
+          ],
           "barricade_points": [
             {
               "label": "Primary incident point",
@@ -734,6 +744,9 @@
         "row_index": 6647,
         "id": "FKID006647",
         "event_type": "planned",
+        "expected_attendance": 5000,
+        "venue_capacity": 7500,
+        "event_scale": "Large",
         "latitude": 12.9887246,
         "longitude": 77.5741049,
         "end_latitude": 12.9875849,
@@ -833,11 +846,18 @@
           "The corridor has repeated historical disruption records in the ASTraM dataset."
         ],
         "recommendation": {
-          "officers": 9,
-          "barricades": 5,
-          "patrol_units": 2,
+          "officers": 28,
+          "barricades": 15,
+          "patrol_units": 5,
           "response_priority": "Priority intervention",
           "risk_category": "High",
+          "allocation_explanation": [
+            "5,000 expected attendees add 10 officer units and 5 barricade units.",
+            "TIS 77.2 adds 4 officer units; high severity adds 3 barricade units.",
+            "Road closure adds 4 officers and 3 barricades.",
+            "72.0 hours adds 9 officer units.",
+            "Hotspot risk 100% adds 4 barricade units."
+          ],
           "barricade_points": [
             {
               "label": "Primary incident point",
@@ -878,6 +898,9 @@
         "row_index": 6648,
         "id": "FKID006648",
         "event_type": "planned",
+        "expected_attendance": 5000,
+        "venue_capacity": 7500,
+        "event_scale": "Large",
         "latitude": 12.9887246,
         "longitude": 77.5741049,
         "end_latitude": 12.9875849,
@@ -977,11 +1000,18 @@
           "The corridor has repeated historical disruption records in the ASTraM dataset."
         ],
         "recommendation": {
-          "officers": 9,
-          "barricades": 5,
-          "patrol_units": 2,
+          "officers": 28,
+          "barricades": 15,
+          "patrol_units": 5,
           "response_priority": "Priority intervention",
           "risk_category": "High",
+          "allocation_explanation": [
+            "5,000 expected attendees add 10 officer units and 5 barricade units.",
+            "TIS 77.2 adds 4 officer units; high severity adds 3 barricade units.",
+            "Road closure adds 4 officers and 3 barricades.",
+            "72.0 hours adds 9 officer units.",
+            "Hotspot risk 100% adds 4 barricade units."
+          ],
           "barricade_points": [
             {
               "label": "Primary incident point",
@@ -1022,6 +1052,9 @@
         "row_index": 1670,
         "id": "FKID001670",
         "event_type": "unplanned",
+        "expected_attendance": 250,
+        "venue_capacity": 500,
+        "event_scale": "Small",
         "latitude": 13.0977085,
         "longitude": 77.5984317,
         "end_latitude": 13.0980233,
@@ -1121,11 +1154,18 @@
           "Longer estimated event duration raises deployment and barricading needs."
         ],
         "recommendation": {
-          "officers": 9,
-          "barricades": 5,
-          "patrol_units": 2,
+          "officers": 19,
+          "barricades": 11,
+          "patrol_units": 4,
           "response_priority": "Priority intervention",
           "risk_category": "High",
+          "allocation_explanation": [
+            "250 expected attendees add 1 officer units and 1 barricade units.",
+            "TIS 77.1 adds 4 officer units; high severity adds 3 barricade units.",
+            "Road closure adds 4 officers and 3 barricades.",
+            "72.0 hours adds 9 officer units.",
+            "Hotspot risk 100% adds 4 barricade units."
+          ],
           "barricade_points": [
             {
               "label": "Primary incident point",
@@ -1166,6 +1206,9 @@
         "row_index": 7660,
         "id": "FKID007660",
         "event_type": "planned",
+        "expected_attendance": 5000,
+        "venue_capacity": 7500,
+        "event_scale": "Large",
         "latitude": 12.9743854,
         "longitude": 77.5747985,
         "end_latitude": 12.9746882,
@@ -1265,11 +1308,18 @@
           "The corridor has repeated historical disruption records in the ASTraM dataset."
         ],
         "recommendation": {
-          "officers": 9,
-          "barricades": 5,
-          "patrol_units": 2,
+          "officers": 28,
+          "barricades": 15,
+          "patrol_units": 5,
           "response_priority": "Priority intervention",
           "risk_category": "High",
+          "allocation_explanation": [
+            "5,000 expected attendees add 10 officer units and 5 barricade units.",
+            "TIS 77.0 adds 4 officer units; high severity adds 3 barricade units.",
+            "Road closure adds 4 officers and 3 barricades.",
+            "72.0 hours adds 9 officer units.",
+            "Hotspot risk 100% adds 4 barricade units."
+          ],
           "barricade_points": [
             {
               "label": "Primary incident point",
@@ -1310,6 +1360,9 @@
         "row_index": 2486,
         "id": "FKID002486",
         "event_type": "planned",
+        "expected_attendance": 5000,
+        "venue_capacity": 7500,
+        "event_scale": "Large",
         "latitude": 12.9832468,
         "longitude": 77.5771577,
         "end_latitude": 12.9810302,
@@ -1409,11 +1462,18 @@
           "The corridor has repeated historical disruption records in the ASTraM dataset."
         ],
         "recommendation": {
-          "officers": 9,
-          "barricades": 5,
-          "patrol_units": 2,
+          "officers": 28,
+          "barricades": 15,
+          "patrol_units": 5,
           "response_priority": "Priority intervention",
           "risk_category": "High",
+          "allocation_explanation": [
+            "5,000 expected attendees add 10 officer units and 5 barricade units.",
+            "TIS 76.8 adds 4 officer units; high severity adds 3 barricade units.",
+            "Road closure adds 4 officers and 3 barricades.",
+            "72.0 hours adds 9 officer units.",
+            "Hotspot risk 100% adds 4 barricade units."
+          ],
           "barricade_points": [
             {
               "label": "Primary incident point",
@@ -1454,6 +1514,9 @@
         "row_index": 4711,
         "id": "FKID004711",
         "event_type": "planned",
+        "expected_attendance": 5000,
+        "venue_capacity": 7500,
+        "event_scale": "Large",
         "latitude": 12.990028,
         "longitude": 77.4871935,
         "end_latitude": 12.989977,
@@ -1553,11 +1616,18 @@
           "Longer estimated event duration raises deployment and barricading needs."
         ],
         "recommendation": {
-          "officers": 9,
-          "barricades": 5,
-          "patrol_units": 2,
+          "officers": 27,
+          "barricades": 15,
+          "patrol_units": 5,
           "response_priority": "Priority intervention",
           "risk_category": "High",
+          "allocation_explanation": [
+            "5,000 expected attendees add 10 officer units and 5 barricade units.",
+            "TIS 76.7 adds 4 officer units; high severity adds 3 barricade units.",
+            "Road closure adds 4 officers and 3 barricades.",
+            "61.0 hours adds 8 officer units.",
+            "Hotspot risk 100% adds 4 barricade units."
+          ],
           "barricade_points": [
             {
               "label": "Primary incident point",
@@ -1598,6 +1668,9 @@
         "row_index": 7729,
         "id": "FKID007729",
         "event_type": "unplanned",
+        "expected_attendance": 250,
+        "venue_capacity": 500,
+        "event_scale": "Small",
         "latitude": 13.0460503,
         "longitude": 77.5560309,
         "end_latitude": 13.0457144,
@@ -1697,11 +1770,18 @@
           "Longer estimated event duration raises deployment and barricading needs."
         ],
         "recommendation": {
-          "officers": 9,
-          "barricades": 5,
-          "patrol_units": 2,
+          "officers": 19,
+          "barricades": 11,
+          "patrol_units": 4,
           "response_priority": "Priority intervention",
           "risk_category": "High",
+          "allocation_explanation": [
+            "250 expected attendees add 1 officer units and 1 barricade units.",
+            "TIS 76.4 adds 4 officer units; high severity adds 3 barricade units.",
+            "Road closure adds 4 officers and 3 barricades.",
+            "72.0 hours adds 9 officer units.",
+            "Hotspot risk 100% adds 4 barricade units."
+          ],
           "barricade_points": [
             {
               "label": "Primary incident point",
@@ -1742,6 +1822,9 @@
         "row_index": 7189,
         "id": "FKID007189",
         "event_type": "unplanned",
+        "expected_attendance": 250,
+        "venue_capacity": 500,
+        "event_scale": "Small",
         "latitude": 13.1008567,
         "longitude": 77.582507,
         "end_latitude": 13.1007663,
@@ -1841,11 +1924,18 @@
           "The corridor has repeated historical disruption records in the ASTraM dataset."
         ],
         "recommendation": {
-          "officers": 9,
-          "barricades": 5,
-          "patrol_units": 2,
+          "officers": 19,
+          "barricades": 11,
+          "patrol_units": 4,
           "response_priority": "Priority intervention",
           "risk_category": "High",
+          "allocation_explanation": [
+            "250 expected attendees add 1 officer units and 1 barricade units.",
+            "TIS 76.3 adds 4 officer units; high severity adds 3 barricade units.",
+            "Road closure adds 4 officers and 3 barricades.",
+            "72.0 hours adds 9 officer units.",
+            "Hotspot risk 100% adds 4 barricade units."
+          ],
           "barricade_points": [
             {
               "label": "Primary incident point",
@@ -1886,6 +1976,9 @@
         "row_index": 894,
         "id": "FKID000894",
         "event_type": "planned",
+        "expected_attendance": 5000,
+        "venue_capacity": 7500,
+        "event_scale": "Large",
         "latitude": 12.985061,
         "longitude": 77.5721347,
         "end_latitude": 12.9895606,
@@ -1985,11 +2078,18 @@
           "The corridor has repeated historical disruption records in the ASTraM dataset."
         ],
         "recommendation": {
-          "officers": 9,
-          "barricades": 5,
-          "patrol_units": 2,
+          "officers": 28,
+          "barricades": 15,
+          "patrol_units": 5,
           "response_priority": "Priority intervention",
           "risk_category": "High",
+          "allocation_explanation": [
+            "5,000 expected attendees add 10 officer units and 5 barricade units.",
+            "TIS 76.1 adds 4 officer units; high severity adds 3 barricade units.",
+            "Road closure adds 4 officers and 3 barricades.",
+            "72.0 hours adds 9 officer units.",
+            "Hotspot risk 100% adds 4 barricade units."
+          ],
           "barricade_points": [
             {
               "label": "Primary incident point",
@@ -2030,6 +2130,9 @@
         "row_index": 898,
         "id": "FKID000898",
         "event_type": "planned",
+        "expected_attendance": 5000,
+        "venue_capacity": 7500,
+        "event_scale": "Large",
         "latitude": 12.985061,
         "longitude": 77.5721347,
         "end_latitude": 12.9895606,
@@ -2129,11 +2232,18 @@
           "The corridor has repeated historical disruption records in the ASTraM dataset."
         ],
         "recommendation": {
-          "officers": 9,
-          "barricades": 5,
-          "patrol_units": 2,
+          "officers": 28,
+          "barricades": 15,
+          "patrol_units": 5,
           "response_priority": "Priority intervention",
           "risk_category": "High",
+          "allocation_explanation": [
+            "5,000 expected attendees add 10 officer units and 5 barricade units.",
+            "TIS 76.1 adds 4 officer units; high severity adds 3 barricade units.",
+            "Road closure adds 4 officers and 3 barricades.",
+            "72.0 hours adds 9 officer units.",
+            "Hotspot risk 100% adds 4 barricade units."
+          ],
           "barricade_points": [
             {
               "label": "Primary incident point",
@@ -2174,6 +2284,9 @@
         "row_index": 2312,
         "id": "FKID002312",
         "event_type": "unplanned",
+        "expected_attendance": 250,
+        "venue_capacity": 500,
+        "event_scale": "Small",
         "latitude": 13.0248346,
         "longitude": 77.5824579,
         "end_latitude": 13.0248346,
@@ -2273,11 +2386,18 @@
           "Longer estimated event duration raises deployment and barricading needs."
         ],
         "recommendation": {
-          "officers": 9,
-          "barricades": 5,
-          "patrol_units": 2,
+          "officers": 19,
+          "barricades": 11,
+          "patrol_units": 4,
           "response_priority": "Priority intervention",
           "risk_category": "High",
+          "allocation_explanation": [
+            "250 expected attendees add 1 officer units and 1 barricade units.",
+            "TIS 75.8 adds 4 officer units; high severity adds 3 barricade units.",
+            "Road closure adds 4 officers and 3 barricades.",
+            "72.0 hours adds 9 officer units.",
+            "Hotspot risk 100% adds 4 barricade units."
+          ],
           "barricade_points": [
             {
               "label": "Primary incident point",
@@ -2321,6 +2441,9 @@
       "row_index": 6893,
       "id": "FKID006893",
       "event_type": "unplanned",
+      "expected_attendance": 250,
+      "venue_capacity": 500,
+      "event_scale": "Small",
       "latitude": 13.0991084,
       "longitude": 77.5971696,
       "end_latitude": 13.09878,
@@ -2420,11 +2543,18 @@
         "Longer estimated event duration raises deployment and barricading needs."
       ],
       "recommendation": {
-        "officers": 12,
-        "barricades": 6,
-        "patrol_units": 3,
+        "officers": 20,
+        "barricades": 13,
+        "patrol_units": 4,
         "response_priority": "Immediate intervention",
         "risk_category": "Critical",
+        "allocation_explanation": [
+          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "TIS 80.2 adds 5 officer units; critical severity adds 5 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -2465,6 +2595,9 @@
       "row_index": 6647,
       "id": "FKID006647",
       "event_type": "planned",
+      "expected_attendance": 5000,
+      "venue_capacity": 7500,
+      "event_scale": "Large",
       "latitude": 12.9887246,
       "longitude": 77.5741049,
       "end_latitude": 12.9875849,
@@ -2564,11 +2697,18 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 28,
+        "barricades": 15,
+        "patrol_units": 5,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "TIS 77.2 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -2609,6 +2749,9 @@
       "row_index": 6648,
       "id": "FKID006648",
       "event_type": "planned",
+      "expected_attendance": 5000,
+      "venue_capacity": 7500,
+      "event_scale": "Large",
       "latitude": 12.9887246,
       "longitude": 77.5741049,
       "end_latitude": 12.9875849,
@@ -2708,11 +2851,18 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 28,
+        "barricades": 15,
+        "patrol_units": 5,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "TIS 77.2 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -2753,6 +2903,9 @@
       "row_index": 1670,
       "id": "FKID001670",
       "event_type": "unplanned",
+      "expected_attendance": 250,
+      "venue_capacity": 500,
+      "event_scale": "Small",
       "latitude": 13.0977085,
       "longitude": 77.5984317,
       "end_latitude": 13.0980233,
@@ -2852,11 +3005,18 @@
         "Longer estimated event duration raises deployment and barricading needs."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 19,
+        "barricades": 11,
+        "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "TIS 77.1 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -2897,6 +3057,9 @@
       "row_index": 7660,
       "id": "FKID007660",
       "event_type": "planned",
+      "expected_attendance": 5000,
+      "venue_capacity": 7500,
+      "event_scale": "Large",
       "latitude": 12.9743854,
       "longitude": 77.5747985,
       "end_latitude": 12.9746882,
@@ -2996,11 +3159,18 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 28,
+        "barricades": 15,
+        "patrol_units": 5,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "TIS 77.0 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -3041,6 +3211,9 @@
       "row_index": 2486,
       "id": "FKID002486",
       "event_type": "planned",
+      "expected_attendance": 5000,
+      "venue_capacity": 7500,
+      "event_scale": "Large",
       "latitude": 12.9832468,
       "longitude": 77.5771577,
       "end_latitude": 12.9810302,
@@ -3140,11 +3313,18 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 28,
+        "barricades": 15,
+        "patrol_units": 5,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "TIS 76.8 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -3185,6 +3365,9 @@
       "row_index": 4711,
       "id": "FKID004711",
       "event_type": "planned",
+      "expected_attendance": 5000,
+      "venue_capacity": 7500,
+      "event_scale": "Large",
       "latitude": 12.990028,
       "longitude": 77.4871935,
       "end_latitude": 12.989977,
@@ -3284,11 +3467,18 @@
         "Longer estimated event duration raises deployment and barricading needs."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 27,
+        "barricades": 15,
+        "patrol_units": 5,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "TIS 76.7 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "61.0 hours adds 8 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -3329,6 +3519,9 @@
       "row_index": 7729,
       "id": "FKID007729",
       "event_type": "unplanned",
+      "expected_attendance": 250,
+      "venue_capacity": 500,
+      "event_scale": "Small",
       "latitude": 13.0460503,
       "longitude": 77.5560309,
       "end_latitude": 13.0457144,
@@ -3428,11 +3621,18 @@
         "Longer estimated event duration raises deployment and barricading needs."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 19,
+        "barricades": 11,
+        "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "TIS 76.4 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -3473,6 +3673,9 @@
       "row_index": 7189,
       "id": "FKID007189",
       "event_type": "unplanned",
+      "expected_attendance": 250,
+      "venue_capacity": 500,
+      "event_scale": "Small",
       "latitude": 13.1008567,
       "longitude": 77.582507,
       "end_latitude": 13.1007663,
@@ -3572,11 +3775,18 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 19,
+        "barricades": 11,
+        "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "TIS 76.3 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -3617,6 +3827,9 @@
       "row_index": 894,
       "id": "FKID000894",
       "event_type": "planned",
+      "expected_attendance": 5000,
+      "venue_capacity": 7500,
+      "event_scale": "Large",
       "latitude": 12.985061,
       "longitude": 77.5721347,
       "end_latitude": 12.9895606,
@@ -3716,11 +3929,18 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 28,
+        "barricades": 15,
+        "patrol_units": 5,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "TIS 76.1 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -3761,6 +3981,9 @@
       "row_index": 898,
       "id": "FKID000898",
       "event_type": "planned",
+      "expected_attendance": 5000,
+      "venue_capacity": 7500,
+      "event_scale": "Large",
       "latitude": 12.985061,
       "longitude": 77.5721347,
       "end_latitude": 12.9895606,
@@ -3860,11 +4083,18 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 28,
+        "barricades": 15,
+        "patrol_units": 5,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "TIS 76.1 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -3905,6 +4135,9 @@
       "row_index": 2312,
       "id": "FKID002312",
       "event_type": "unplanned",
+      "expected_attendance": 250,
+      "venue_capacity": 500,
+      "event_scale": "Small",
       "latitude": 13.0248346,
       "longitude": 77.5824579,
       "end_latitude": 13.0248346,
@@ -4004,11 +4237,18 @@
         "Longer estimated event duration raises deployment and barricading needs."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 19,
+        "barricades": 11,
+        "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "TIS 75.8 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -4049,6 +4289,9 @@
       "row_index": 6030,
       "id": "FKID006030",
       "event_type": "planned",
+      "expected_attendance": 5000,
+      "venue_capacity": 7500,
+      "event_scale": "Large",
       "latitude": 12.9827077,
       "longitude": 77.5767293,
       "end_latitude": 12.9807211,
@@ -4148,11 +4391,18 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 28,
+        "barricades": 15,
+        "patrol_units": 5,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "TIS 75.8 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -4193,6 +4443,9 @@
       "row_index": 2354,
       "id": "FKID002354",
       "event_type": "planned",
+      "expected_attendance": 5000,
+      "venue_capacity": 7500,
+      "event_scale": "Large",
       "latitude": 12.9842561,
       "longitude": 77.5824076,
       "end_latitude": 12.9832628,
@@ -4292,11 +4545,18 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 28,
+        "barricades": 15,
+        "patrol_units": 5,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "TIS 75.7 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -4337,6 +4597,9 @@
       "row_index": 7646,
       "id": "FKID007646",
       "event_type": "planned",
+      "expected_attendance": 5000,
+      "venue_capacity": 7500,
+      "event_scale": "Large",
       "latitude": 12.9363041,
       "longitude": 77.5124571,
       "end_latitude": 12.9418884,
@@ -4436,11 +4699,18 @@
         "Longer estimated event duration raises deployment and barricading needs."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 25,
+        "barricades": 15,
+        "patrol_units": 5,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "TIS 75.7 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "42.0 hours adds 6 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -4481,6 +4751,9 @@
       "row_index": 7263,
       "id": "FKID007263",
       "event_type": "unplanned",
+      "expected_attendance": 250,
+      "venue_capacity": 500,
+      "event_scale": "Small",
       "latitude": 12.9756519,
       "longitude": 77.5875113,
       "end_latitude": 12.9756622,
@@ -4580,11 +4853,18 @@
         "The zone has dense historical event activity."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
+        "officers": 11,
+        "barricades": 11,
         "patrol_units": 2,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "TIS 74.9 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "2.3 hours adds 1 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -4625,6 +4905,9 @@
       "row_index": 1135,
       "id": "FKID001135",
       "event_type": "planned",
+      "expected_attendance": 5000,
+      "venue_capacity": 7500,
+      "event_scale": "Large",
       "latitude": 12.9641735,
       "longitude": 77.5698015,
       "end_latitude": 12.9631326,
@@ -4724,11 +5007,18 @@
         "Longer estimated event duration raises deployment and barricading needs."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 28,
+        "barricades": 15,
+        "patrol_units": 5,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "TIS 74.8 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -4769,6 +5059,9 @@
       "row_index": 5432,
       "id": "FKID005432",
       "event_type": "unplanned",
+      "expected_attendance": 250,
+      "venue_capacity": 500,
+      "event_scale": "Small",
       "latitude": 12.9839509,
       "longitude": 77.5286651,
       "end_latitude": 12.9839271,
@@ -4868,11 +5161,18 @@
         "Longer estimated event duration raises deployment and barricading needs."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 18,
+        "barricades": 11,
+        "patrol_units": 3,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "TIS 74.8 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "60.0 hours adds 8 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -4913,6 +5213,9 @@
       "row_index": 5343,
       "id": "FKID005343",
       "event_type": "unplanned",
+      "expected_attendance": 250,
+      "venue_capacity": 500,
+      "event_scale": "Small",
       "latitude": 12.9444066,
       "longitude": 77.6978095,
       "end_latitude": 12.9455721,
@@ -5012,11 +5315,18 @@
         "Longer estimated event duration raises deployment and barricading needs."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 18,
+        "barricades": 11,
+        "patrol_units": 3,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "TIS 74.7 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "63.8 hours adds 8 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -5057,6 +5367,9 @@
       "row_index": 6233,
       "id": "FKID006233",
       "event_type": "unplanned",
+      "expected_attendance": 250,
+      "venue_capacity": 500,
+      "event_scale": "Small",
       "latitude": 13.0145233,
       "longitude": 77.5839869,
       "end_latitude": 13.0145694,
@@ -5156,11 +5469,18 @@
         "The junction appears frequently in historical event records."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
+        "officers": 11,
+        "barricades": 11,
         "patrol_units": 2,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "TIS 74.5 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "4.8 hours adds 1 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -5201,6 +5521,9 @@
       "row_index": 6606,
       "id": "FKID006606",
       "event_type": "unplanned",
+      "expected_attendance": 250,
+      "venue_capacity": 500,
+      "event_scale": "Small",
       "latitude": 12.9633886,
       "longitude": 77.5834722,
       "end_latitude": 12.9633886,
@@ -5300,11 +5623,18 @@
         "The zone has dense historical event activity."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
+        "officers": 11,
+        "barricades": 11,
         "patrol_units": 2,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "TIS 74.5 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "2.3 hours adds 1 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -5345,6 +5675,9 @@
       "row_index": 1734,
       "id": "FKID001734",
       "event_type": "planned",
+      "expected_attendance": 5000,
+      "venue_capacity": 7500,
+      "event_scale": "Large",
       "latitude": 13.0149535,
       "longitude": 77.6542219,
       "end_latitude": 13.0123499,
@@ -5360,7 +5693,7 @@
       "start_month": "2024-02",
       "status": "closed",
       "authenticated": "yes",
-      "description": "[PERSON] organizes the Brahma Rathotsava, the festival of the palanquins of Sri Kodandaramaswamy, and the [PERSON] program.",
+      "description": "[PERSON]\r organizes the Brahma Rathotsava,\r the festival of the palanquins of Sri\r Kodandaramaswamy, and the\r [PERSON] program.",
       "veh_type": "Unknown vehicle",
       "veh_no": "Masked",
       "corridor": "Non-corridor",
@@ -5444,11 +5777,18 @@
         "Longer estimated event duration raises deployment and barricading needs."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 28,
+        "barricades": 15,
+        "patrol_units": 5,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "TIS 74.3 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "71.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -5489,6 +5829,9 @@
       "row_index": 827,
       "id": "FKID000827",
       "event_type": "unplanned",
+      "expected_attendance": 250,
+      "venue_capacity": 500,
+      "event_scale": "Small",
       "latitude": 12.9584994,
       "longitude": 77.6017538,
       "end_latitude": 12.9584967,
@@ -5588,11 +5931,18 @@
         "The corridor has repeated historical disruption records in the ASTraM dataset."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 19,
+        "barricades": 11,
+        "patrol_units": 4,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "TIS 74.2 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "72.0 hours adds 9 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -5633,6 +5983,9 @@
       "row_index": 1002,
       "id": "FKID001002",
       "event_type": "unplanned",
+      "expected_attendance": 250,
+      "venue_capacity": 500,
+      "event_scale": "Small",
       "latitude": 12.9693517,
       "longitude": 77.7006465,
       "end_latitude": 12.9694217,
@@ -5732,11 +6085,18 @@
         "Longer estimated event duration raises deployment and barricading needs."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 16,
+        "barricades": 11,
+        "patrol_units": 3,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "250 expected attendees add 1 officer units and 1 barricade units.",
+          "TIS 74.2 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "47.5 hours adds 6 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",
@@ -5777,6 +6137,9 @@
       "row_index": 4771,
       "id": "FKID004771",
       "event_type": "planned",
+      "expected_attendance": 5000,
+      "venue_capacity": 7500,
+      "event_scale": "Large",
       "latitude": 12.9903709,
       "longitude": 77.4873556,
       "end_latitude": 12.9874538,
@@ -5876,11 +6239,18 @@
         "Longer estimated event duration raises deployment and barricading needs."
       ],
       "recommendation": {
-        "officers": 9,
-        "barricades": 5,
-        "patrol_units": 2,
+        "officers": 25,
+        "barricades": 15,
+        "patrol_units": 5,
         "response_priority": "Priority intervention",
         "risk_category": "High",
+        "allocation_explanation": [
+          "5,000 expected attendees add 10 officer units and 5 barricade units.",
+          "TIS 74.2 adds 4 officer units; high severity adds 3 barricade units.",
+          "Road closure adds 4 officers and 3 barricades.",
+          "48.0 hours adds 6 officer units.",
+          "Hotspot risk 100% adds 4 barricade units."
+        ],
         "barricade_points": [
           {
             "label": "Primary incident point",

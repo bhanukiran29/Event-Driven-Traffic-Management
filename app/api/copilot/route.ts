@@ -35,8 +35,8 @@ export async function POST(request: Request) {
     supporting_facts = clusters.map((item) => `Cluster ${item.id}: ${item.count} events near ${item.top_police_station}, top cause ${item.top_cause}`);
   } else if (question.includes("resource") || question.includes("officer") || question.includes("barricade")) {
     const events = corpus.top_events.slice(0, 3);
-    answer = `For immediate resource planning, start with the top-risk events and apply the TIS recommendation bands. Current top events require ${list(events.map((event) => `${event.recommendation.officers} officers for ${event.id}`))}.`;
-    supporting_facts = events.map((event) => `${event.id}: TIS ${event.traffic_impact_score}, ${event.recommendation.officers} officers, ${event.recommendation.barricades} barricades`);
+    answer = `For immediate resource planning, start with the top-risk events and apply the attendance-aware allocation model. Current top events require ${list(events.map((event) => `${event.recommendation.officers} officers for ${event.id}`))}.`;
+    supporting_facts = events.map((event) => `${event.id}: ${event.expected_attendance} expected attendees, TIS ${event.traffic_impact_score}, ${event.recommendation.officers} officers, ${event.recommendation.barricades} barricades`);
   } else if (question.includes("why") || question.includes("high risk")) {
     const event = corpus.top_events[0];
     answer = `${event.id} is the highest-risk event. Its risk is driven by ${event.explanation.join(" ")}`;

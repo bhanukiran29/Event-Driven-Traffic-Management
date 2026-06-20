@@ -250,6 +250,7 @@ export function OperationsDashboard() {
   const [query, setQuery] = useState("");
   const [selectedEventId, setSelectedEventId] = useState<string>("");
   const [simDuration, setSimDuration] = useState(2);
+  const [simAttendance, setSimAttendance] = useState(250);
   const [simPriority, setSimPriority] = useState("High");
   const [simClosure, setSimClosure] = useState(false);
   const [simCause, setSimCause] = useState("vehicle_breakdown");
@@ -286,6 +287,7 @@ export function OperationsDashboard() {
       return;
     }
     setSimDuration(Math.min(72, Math.max(0, Math.round(selectedEvent.event_duration_hours * 10) / 10)));
+    setSimAttendance(selectedEvent.expected_attendance);
     setSimPriority(selectedEvent.priority);
     setSimClosure(selectedEvent.requires_road_closure);
     setSimCause(selectedEvent.event_cause);
@@ -319,6 +321,7 @@ export function OperationsDashboard() {
         requiresRoadClosure: simClosure,
         priority: simPriority,
         durationHours: simDuration,
+        expectedAttendance: simAttendance,
         corridor: selectedEvent.corridor,
         zone: selectedEvent.zone,
         junction: selectedEvent.junction,
@@ -589,6 +592,9 @@ export function OperationsDashboard() {
                       <div className="rounded border border-ops-line p-3"><div className="text-2xl font-semibold text-ops-text">{event.recommendation.patrol_units}</div><div className="text-ops-muted">Patrols</div></div>
                     </div>
                     <div className="mt-3 text-sm text-ops-cyan">{event.recommendation.response_priority}</div>
+                    <div className="mt-3 text-xs text-ops-muted">
+                      {event.expected_attendance.toLocaleString("en-IN")} expected attendees - {event.event_scale} event
+                    </div>
                   </div>
                 ))}
               </div>
@@ -605,6 +611,14 @@ export function OperationsDashboard() {
                           <span>{point.label}</span>
                           <span className="text-ops-muted">{point.latitude.toFixed(4)}, {point.longitude.toFixed(4)}</span>
                         </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="rounded border border-ops-line bg-slate-950 p-4">
+                    <div className="flex items-center gap-2 text-ops-cyan"><Users size={17} /> Allocation rationale</div>
+                    <div className="mt-3 grid gap-2">
+                      {displayEvent.recommendation.allocation_explanation.map((reason) => (
+                        <div key={reason} className="rounded border border-ops-line px-3 py-2 text-sm text-ops-muted">{reason}</div>
                       ))}
                     </div>
                   </div>
@@ -634,6 +648,18 @@ export function OperationsDashboard() {
                 <SelectControl label="Cause" value={simCause} onChange={setSimCause} options={causes} />
                 <SelectControl label="Priority" value={simPriority} onChange={setSimPriority} options={["High", "Low"]} />
                 <label className="grid gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-ops-muted">
+                  Expected Attendance
+                  <input
+                    type="number"
+                    min={0}
+                    max={1000000}
+                    step={100}
+                    value={simAttendance}
+                    onChange={(event) => setSimAttendance(Math.max(0, Number(event.target.value)))}
+                    className="h-10 rounded border border-ops-line bg-slate-950 px-3 text-sm text-ops-text outline-none focus:border-ops-cyan"
+                  />
+                </label>
+                <label className="grid gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-ops-muted">
                   Duration Hours
                   <input
                     type="number"
@@ -659,6 +685,9 @@ export function OperationsDashboard() {
                     <div className="text-sm text-ops-muted">Scenario TIS</div>
                     <div className="mt-2 text-6xl font-semibold text-ops-text">{simulationResult.traffic_impact_score}</div>
                     <div className="mt-4"><RiskBadge risk={simulationResult.risk_category} /></div>
+                    <div className="mt-2 text-sm text-ops-muted">
+                      {simulationResult.expected_attendance.toLocaleString("en-IN")} attendees - {simulationResult.event_scale} event
+                    </div>
                     <div className="mt-5 grid grid-cols-3 gap-2 text-center text-sm">
                       <div className="rounded border border-ops-line p-3"><div className="text-2xl text-ops-text">{simulationResult.recommendation.officers}</div><div className="text-ops-muted">Officers</div></div>
                       <div className="rounded border border-ops-line p-3"><div className="text-2xl text-ops-text">{simulationResult.recommendation.barricades}</div><div className="text-ops-muted">Barricades</div></div>
@@ -668,6 +697,7 @@ export function OperationsDashboard() {
                   <div>
                     <ScoreBreakdown event={{ ...(displayEvent as RiskEvent), score_components: simulationResult.score_components }} />
                     <div className="mt-5 grid gap-2 text-sm text-ops-muted">
+                      {simulationResult.recommendation.allocation_explanation.map((item) => <div key={item} className="rounded border border-ops-cyan/30 bg-slate-950 p-3">{item}</div>)}
                       {simulationResult.explanation.map((item) => <div key={item} className="rounded border border-ops-line bg-slate-950 p-3">{item}</div>)}
                     </div>
                   </div>

@@ -10,7 +10,8 @@ GridSense AI turns the instructor-provided ASTraM event dataset into an operatio
 - Trains a **CatBoost surrogate model** to learn the TIS target from event features.
 - Benchmarks CatBoost against Random Forest, Extra Trees, XGBoost, and LightGBM.
 - Detects spatial hotspots with DBSCAN.
-- Recommends officers, barricades, patrol units, and response priority.
+- Estimates event attendance and venue capacity from historical event type.
+- Dynamically recommends officers, barricades, patrol units, and response priority from attendance and operational risk factors.
 - Provides dataset-only diversion advisories without external routing intelligence.
 - Renders a Mapbox-based Bengaluru operations map with heatmap and event layers.
 - Includes an offline copilot that answers from processed local dataset insights.

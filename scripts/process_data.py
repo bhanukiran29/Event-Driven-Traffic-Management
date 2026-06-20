@@ -44,6 +44,11 @@ CAUSE_RISK = {
     "others": 0.50,
 }
 PRIORITY_RISK = {"high": 1.0, "medium": 0.62, "low": 0.35}
+ATTENDANCE_PROFILES = {
+    "planned": {"expected_attendance": 5000, "venue_capacity": 7500},
+    "unplanned": {"expected_attendance": 250, "venue_capacity": 500},
+    "unknown": {"expected_attendance": 1000, "venue_capacity": 2000},
+}
 
 
 def clean(value: Any) -> str | None:
@@ -134,6 +139,22 @@ def risk_category(score: float) -> str:
     if score >= 45:
         return "Medium"
     return "Low"
+
+
+def event_scale(attendance: int) -> str:
+    if attendance <= 500:
+        return "Small"
+    if attendance <= 2500:
+        return "Medium"
+    if attendance <= 10000:
+        return "Large"
+    return "Mega"
+
+
+def attendance_estimate(event_type: str) -> dict[str, Any]:
+    profile = ATTENDANCE_PROFILES.get(key_text(event_type), ATTENDANCE_PROFILES["unknown"])
+    attendance = int(profile["expected_attendance"])
+    return {**profile, "event_scale": event_scale(attendance)}
 
 
 def normalized_counter(counter: Counter[str], missing_fallbacks: set[str] | None = None) -> dict[str, float]:
@@ -246,19 +267,39 @@ def score_components(row: dict[str, Any], context: dict[str, Any]) -> tuple[floa
     return round(min(max(total, 0.0), 100.0), 1), sorted(components, key=lambda item: item["contribution"], reverse=True)
 
 
-def recommendation(score: float, closure: bool) -> dict[str, Any]:
+def recommendation(score: float, closure: bool, attendance: int, duration_hours: float, cluster_risk: float) -> dict[str, Any]:
     category = risk_category(score)
-    base = {
-        "Low": {"officers": 2, "barricades": 0 if score < 35 else 1, "patrol_units": 0, "response_priority": "Monitor"},
-        "Medium": {"officers": 4, "barricades": 2, "patrol_units": 1, "response_priority": "Scheduled deployment"},
-        "High": {"officers": 7, "barricades": 3, "patrol_units": 2, "response_priority": "Priority intervention"},
-        "Critical": {"officers": 10, "barricades": 5, "patrol_units": 3, "response_priority": "Immediate intervention"},
-    }[category].copy()
-    if closure:
-        base["officers"] = min(12, base["officers"] + 2)
-        base["barricades"] = min(6, base["barricades"] + 2)
-    base["risk_category"] = category
-    return base
+    safe_attendance = max(0, round(attendance))
+    safe_duration = min(72.0, max(0.0, duration_hours))
+    attendance_officers = math.ceil(safe_attendance / 500)
+    impact_officers = math.ceil(score / 20)
+    closure_officers = 4 if closure else 0
+    duration_officers = math.ceil(safe_duration / 8)
+    officers = min(80, max(2, 1 + attendance_officers + impact_officers + closure_officers + duration_officers))
+    severity_barricades = {"Low": 0, "Medium": 1, "High": 3, "Critical": 5}[category]
+    attendance_barricades = math.ceil(safe_attendance / 1000)
+    closure_barricades = 3 if closure else 0
+    bounded_hotspot_risk = min(1.0, max(0.0, cluster_risk))
+    hotspot_barricades = math.ceil(bounded_hotspot_risk * 4)
+    barricades = min(40, attendance_barricades + closure_barricades + severity_barricades + hotspot_barricades)
+    response_priority = {
+        "Low": "Monitor", "Medium": "Scheduled deployment",
+        "High": "Priority intervention", "Critical": "Immediate intervention",
+    }[category]
+    return {
+        "officers": officers,
+        "barricades": barricades,
+        "patrol_units": max(1, math.ceil(officers / 6)),
+        "response_priority": response_priority,
+        "risk_category": category,
+        "allocation_explanation": [
+            f"{safe_attendance:,} expected attendees add {attendance_officers} officer units and {attendance_barricades} barricade units.",
+            f"TIS {score:.1f} adds {impact_officers} officer units; {category.lower()} severity adds {severity_barricades} barricade units.",
+            "Road closure adds 4 officers and 3 barricades." if closure else "No road closure increment is applied.",
+            f"{safe_duration:.1f} hours adds {duration_officers} officer units.",
+            f"Hotspot risk {bounded_hotspot_risk * 100:.0f}% adds {hotspot_barricades} barricade units.",
+        ],
+    }
 
 
 def explanation(components: list[dict[str, Any]]) -> list[str]:
@@ -328,11 +369,13 @@ def main() -> None:
         end_coords = valid_coordinate(raw.get("endlatitude"), raw.get("endlongitude"))
         duration, duration_source = duration_hours(raw)
         duration_source_counts[duration_source] += 1
+        attendance = attendance_estimate(display_text(raw.get("event_type"), "unplanned"))
         rows.append(
             {
                 "row_index": index,
                 "id": display_text(raw.get("id"), f"ASTRAM-{index:05d}"),
                 "event_type": display_text(raw.get("event_type"), "unplanned"),
+                **attendance,
                 "latitude": round(coords[0], 7),
                 "longitude": round(coords[1], 7),
                 "end_latitude": round(end_coords[0], 7) if end_coords else None,
@@ -438,7 +481,10 @@ def main() -> None:
     cluster_by_id = {cluster["id"]: cluster for cluster in clusters}
 
     for row in rows:
-        rec = recommendation(row["traffic_impact_score"], row["requires_road_closure"])
+        rec = recommendation(
+            row["traffic_impact_score"], row["requires_road_closure"], row["expected_attendance"],
+            row["event_duration_hours"], row["cluster_risk"],
+        )
         barricade_points = [
             {"label": "Primary incident point", "latitude": row["latitude"], "longitude": row["longitude"]}
         ]

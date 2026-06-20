@@ -1,4 +1,5 @@
 export type RiskCategory = "Critical" | "High" | "Medium" | "Low";
+export type EventScale = "Small" | "Medium" | "Large" | "Mega";
 
 export type ScoreComponent = {
   name: string;
@@ -13,6 +14,7 @@ export type ResourceRecommendation = {
   patrol_units: number;
   response_priority: string;
   risk_category: RiskCategory;
+  allocation_explanation: string[];
   barricade_points: Array<{
     label: string;
     latitude: number;
@@ -33,6 +35,9 @@ export type ResourceRecommendation = {
 export type EventRecord = {
   id: string;
   event_type: string;
+  expected_attendance: number;
+  venue_capacity: number;
+  event_scale: EventScale;
   latitude: number;
   longitude: number;
   end_latitude: number | null;
@@ -171,6 +176,7 @@ export type SimulationRequest = {
   startHour?: number;
   startDay?: string;
   clusterRisk?: number;
+  expectedAttendance?: number;
 };
 
 export type SimulationResult = {
@@ -178,6 +184,8 @@ export type SimulationResult = {
   baseline_score: number | null;
   traffic_impact_score: number;
   risk_category: RiskCategory;
+  expected_attendance: number;
+  event_scale: EventScale;
   score_components: ScoreComponent[];
   explanation: string[];
   recommendation: ResourceRecommendation;

@@ -1,5 +1,6 @@
 import type {
   ResourceRecommendation,
+  EventScale,
   RiskCategory,
   RiskEvent,
   ScoreComponent,
@@ -38,29 +39,46 @@ function category(score: number): RiskCategory {
   return "Low";
 }
 
+function eventScale(attendance: number): EventScale {
+  if (attendance <= 500) return "Small";
+  if (attendance <= 2500) return "Medium";
+  if (attendance <= 10000) return "Large";
+  return "Mega";
+}
+
 function recommendation(
   score: number,
   closure: boolean,
   corridor: string,
   zone: string,
   context: ScoringContext,
+  attendance: number,
+  durationHours: number,
+  clusterRisk: number,
   latitude?: number,
   longitude?: number,
   endLatitude?: number | null,
   endLongitude?: number | null
 ): ResourceRecommendation {
   const risk = category(score);
-  const base: Record<RiskCategory, Omit<ResourceRecommendation, "risk_category" | "barricade_points" | "diversion_advisory">> = {
-    Low: { officers: 2, barricades: score < 35 ? 0 : 1, patrol_units: 0, response_priority: "Monitor" },
-    Medium: { officers: 4, barricades: 2, patrol_units: 1, response_priority: "Scheduled deployment" },
-    High: { officers: 7, barricades: 3, patrol_units: 2, response_priority: "Priority intervention" },
-    Critical: { officers: 10, barricades: 5, patrol_units: 3, response_priority: "Immediate intervention" }
+  const safeAttendance = Math.max(0, Math.round(attendance));
+  const safeDuration = Math.min(72, Math.max(0, durationHours));
+  const attendanceOfficers = Math.ceil(safeAttendance / 500);
+  const impactOfficers = Math.ceil(score / 20);
+  const closureOfficers = closure ? 4 : 0;
+  const durationOfficers = Math.ceil(safeDuration / 8);
+  const officers = Math.min(80, Math.max(2, 1 + attendanceOfficers + impactOfficers + closureOfficers + durationOfficers));
+  const severityBarricades: Record<RiskCategory, number> = { Low: 0, Medium: 1, High: 3, Critical: 5 };
+  const attendanceBarricades = Math.ceil(safeAttendance / 1000);
+  const closureBarricades = closure ? 3 : 0;
+  const hotspotBarricades = Math.ceil(Math.min(1, Math.max(0, clusterRisk)) * 4);
+  const barricades = Math.min(40, attendanceBarricades + closureBarricades + severityBarricades[risk] + hotspotBarricades);
+  const responsePriority: Record<RiskCategory, string> = {
+    Low: "Monitor",
+    Medium: "Scheduled deployment",
+    High: "Priority intervention",
+    Critical: "Immediate intervention"
   };
-  const output = { ...base[risk] };
-  if (closure) {
-    output.officers = Math.min(12, output.officers + 2);
-    output.barricades = Math.min(6, output.barricades + 2);
-  }
   const barricadePoints = latitude && longitude
     ? [{ label: "Primary incident point", latitude, longitude }]
     : [];
@@ -72,8 +90,20 @@ function recommendation(
     });
   }
   return {
-    ...output,
+    officers,
+    barricades,
+    patrol_units: Math.max(1, Math.ceil(officers / 6)),
+    response_priority: responsePriority[risk],
     risk_category: risk,
+    allocation_explanation: [
+      `${safeAttendance.toLocaleString("en-IN")} expected attendees add ${attendanceOfficers} officer units and ${attendanceBarricades} barricade units.`,
+      `TIS ${score.toFixed(1)} adds ${impactOfficers} officer units; ${risk.toLowerCase()} severity adds ${severityBarricades[risk]} barricade units.`,
+      closure
+        ? "Road closure adds 4 officers and 3 barricades."
+        : "No road closure increment is applied.",
+      `${safeDuration.toFixed(1)} hours adds ${durationOfficers} officer units.`,
+      `Hotspot risk ${(Math.min(1, Math.max(0, clusterRisk)) * 100).toFixed(0)}% adds ${hotspotBarricades} barricade units.`
+    ],
     barricade_points: barricadePoints,
     diversion_advisory: {
       type: "dataset_advisory",
@@ -133,6 +163,7 @@ export function scoreScenario(
   const startHour = request.startHour ?? baseEvent?.start_hour ?? 0;
   const startDay = request.startDay || baseEvent?.start_day || "Monday";
   const clusterRisk = request.clusterRisk ?? baseEvent?.cluster_risk ?? 0;
+  const expectedAttendance = Math.max(0, Math.round(request.expectedAttendance ?? baseEvent?.expected_attendance ?? 0));
 
   const durationRisk = Math.log1p(Math.min(Math.max(durationHours, 0), 72)) / Math.log1p(72);
   const values: Record<string, number> = {
@@ -166,6 +197,8 @@ export function scoreScenario(
     baseline_score: baseEvent?.traffic_impact_score ?? null,
     traffic_impact_score: score,
     risk_category: category(score),
+    expected_attendance: expectedAttendance,
+    event_scale: eventScale(expectedAttendance),
     score_components: components,
     explanation: explanation(components),
     recommendation: recommendation(
@@ -174,6 +207,9 @@ export function scoreScenario(
       corridor,
       zone,
       context,
+      expectedAttendance,
+      durationHours,
+      clusterRisk,
       baseEvent?.latitude,
       baseEvent?.longitude,
       baseEvent?.end_latitude,

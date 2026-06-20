@@ -24,6 +24,9 @@ def main() -> None:
         "start_day",
         "start_month",
         "event_duration_hours",
+        "expected_attendance",
+        "venue_capacity",
+        "event_scale",
         "traffic_impact_score",
         "risk_category",
         "spatial_cluster_id",
@@ -35,6 +38,13 @@ def main() -> None:
         score = event["traffic_impact_score"]
         assert 0 <= score <= 100, f"{event.get('id')} score out of range: {score}"
         category = event["risk_category"]
+        assert event["expected_attendance"] >= 0
+        assert event["venue_capacity"] >= event["expected_attendance"]
+        assert event["event_scale"] in {"Small", "Medium", "Large", "Mega"}
+        recommendation = event["recommendation"]
+        assert recommendation["officers"] >= 2
+        assert recommendation["barricades"] >= 0
+        assert recommendation["allocation_explanation"]
         if score >= 80:
             assert category == "Critical"
         elif score >= 65:
@@ -45,6 +55,10 @@ def main() -> None:
             assert category == "Low"
 
     assert hotspots["clusters"], "Expected DBSCAN clusters"
+    planned = next(event for event in events if event["event_type"].lower() == "planned")
+    unplanned = next(event for event in events if event["event_type"].lower() == "unplanned")
+    assert planned["expected_attendance"] > unplanned["expected_attendance"]
+    assert planned["recommendation"]["officers"] > unplanned["recommendation"]["officers"]
     assert summary["data_source"].lower().find("instructor") >= 0
     assert context["scoring_version"] == "tis-v1-standard-library"
     print("Data verification passed")
