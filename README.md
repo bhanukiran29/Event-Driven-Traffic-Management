@@ -2,7 +2,22 @@
 
 AI-powered Traffic Operations Copilot for Bengaluru Traffic Police, built for Flipkart Gridlock 2.0.
 
-GridSense AI turns the instructor-provided ASTraM event dataset into an operations dashboard for event impact scoring, hotspot discovery, manpower planning, barricading advisories, scenario simulation, and offline traffic-copilot answers.
+GridSense AI turns the instructor-provided ASTraM event dataset into a premium event intelligence command center — covering event impact scoring, spatial hotspot discovery, manpower planning, barricading advisories, scenario simulation, and offline AI-copilot answers.
+
+## Interface
+
+The application is a **persistent-map command center** with a light-theme, executive-ready design.
+
+**Sidebar modes**
+
+| Mode | What it shows |
+|---|---|
+| Command Center | Operational Risk Index gauge · Critical event alerts · Risk distribution · Monthly trend · Top causes · Event feed |
+| Simulator | Scenario builder (cause, attendance, duration, closure, priority) · Animated TIS output · Intervention comparison |
+| Hotspots | DBSCAN spatial cluster intelligence on the live map |
+| Explainability | Per-event score breakdown · Global feature importance chart · AI explanation bullets |
+
+**Copilot** — click the sparkle icon below the sidebar modes to open the offline AI assistant as a slide-in overlay. It answers questions from the processed ASTraM dataset without any external API calls.
 
 ## What This Prototype Does
 
@@ -14,7 +29,7 @@ GridSense AI turns the instructor-provided ASTraM event dataset into an operatio
 - Dynamically recommends officers, barricades, patrol units, and response priority from attendance and operational risk factors.
 - Plans primary and secondary diversion corridors using local historical risk, hotspot density, closure resilience, zone density, and event proximity.
 - Compares four intervention strategies and recommends the lowest-risk operational scenario.
-- Renders a Mapbox-based Bengaluru operations map with heatmap and event layers.
+- Renders a Mapbox-based Bengaluru operations map (Mapbox Light style) with heatmap and event layers.
 - Includes an offline copilot that answers from processed local dataset insights.
 
 ## Data Boundary
@@ -31,8 +46,8 @@ The model is trained as a **surrogate model for Traffic Impact Score**, not as a
 
 Current trained model:
 
-| Model | Role | R2 | MAE | RMSE |
-|---|---:|---:|---:|---:|
+| Model | Role | R² | MAE | RMSE |
+|---|---|---:|---:|---:|
 | CatBoostRegressor | Primary TIS surrogate | 0.9921 | 0.3726 | 0.5958 |
 | RandomForestRegressor | Benchmark | 0.9512 | 1.0803 | 1.4806 |
 | ExtraTreesRegressor | Benchmark | 0.9515 | 1.0948 | 1.4762 |
@@ -50,17 +65,13 @@ Model artifacts:
 
 ## Tech Stack
 
-- Next.js
-- TypeScript
-- Tailwind CSS
-- Mapbox GL
-- Recharts
-- Python
-- CatBoost
-- Scikit-learn
-- XGBoost
-- LightGBM
-- SHAP
+**Frontend**
+- Next.js 15 · TypeScript · Tailwind CSS
+- Mapbox GL · Recharts · Framer Motion
+- Inter (Google Fonts via `next/font`)
+
+**ML / Data**
+- Python · CatBoost · Scikit-learn · XGBoost · LightGBM · SHAP
 
 ## Local Setup
 
@@ -72,7 +83,7 @@ npm install
 
 Create `.env.local`:
 
-```bash
+```
 NEXT_PUBLIC_MAPBOX_TOKEN=your_mapbox_token
 ```
 
@@ -82,17 +93,13 @@ Run the app:
 npm run dev
 ```
 
-Open:
-
-```text
-http://127.0.0.1:3000
-```
+Open `http://localhost:3000`
 
 ## Data Processing
 
 The raw CSV is expected at:
 
-```text
+```
 data/raw/astram_events.csv
 ```
 
@@ -134,18 +141,20 @@ scripts\run-prod.cmd
 
 ## API Routes
 
-- `GET /api/summary`
-- `GET /api/events`
-- `GET /api/hotspots`
-- `POST /api/simulate`
-- `POST /api/copilot`
+| Method | Route | Description |
+|---|---|---|
+| GET | `/api/summary` | Citywide metrics, risk bands, trends, model comparison |
+| GET | `/api/events` | Full event list with TIS scores and recommendations |
+| GET | `/api/hotspots` | DBSCAN clusters and heatmap points |
+| POST | `/api/simulate` | Run a what-if scenario and return updated TIS + intervention analysis |
+| POST | `/api/copilot` | Offline RAG answer from processed dataset insights |
 
 ## Notes For Deployment
 
-- Set `NEXT_PUBLIC_MAPBOX_TOKEN` in the hosting provider.
+- Set `NEXT_PUBLIC_MAPBOX_TOKEN` in the hosting provider environment.
 - Do not commit `.env.local`.
-- The app reads generated JSON files from `data/processed`.
-- The current version is a demo app using Next.js API routes, not FastAPI/PostgreSQL.
+- The app reads generated JSON files from `data/processed/` — run data processing before deploying.
+- The current version uses Next.js API routes, not FastAPI/PostgreSQL.
 - The post-event learning schema is documented for future integration; no feedback database is implemented.
 
 ## License
