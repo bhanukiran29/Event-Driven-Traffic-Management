@@ -366,7 +366,7 @@ export function OperationsDashboard() {
   if (loading || !summary || !hotspots) {
     return (
       <main className="flex min-h-screen items-center justify-center bg-ops-bg text-ops-text">
-        <div className="rounded border border-ops-line bg-ops-panel p-6 text-sm text-ops-muted">Loading GridSense AI operations console...</div>
+        <div className="rounded border border-ops-line bg-ops-panel p-6 text-sm text-ops-muted">Loading Traffic Operations Console...</div>
       </main>
     );
   }
@@ -383,7 +383,7 @@ export function OperationsDashboard() {
           <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
             <div>
               <div className="mb-2 text-xs font-bold uppercase tracking-[0.22em] text-ops-cyan">Bengaluru Traffic Police ASTraM</div>
-              <h1 className="text-3xl font-semibold text-ops-text md:text-5xl">GridSense AI</h1>
+              <h1 className="text-3xl font-semibold text-ops-text md:text-5xl">Traffic Operations Copilot</h1>
               <p className="mt-2 max-w-4xl text-sm leading-6 text-ops-muted md:text-base">
                 Predict. Prioritize. Prevent. Operational traffic impact intelligence using only the provided ASTraM event dataset.
               </p>

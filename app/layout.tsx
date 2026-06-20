@@ -4,7 +4,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GridSense AI",
+  title: "Traffic Operations Copilot",
   description: "Event-driven traffic impact intelligence for Bengaluru operations",
   icons: {
     icon: "/favicon.svg"

@@ -1,5 +1,5 @@
 {
-  "name": "GridSense AI TIS Surrogate Model",
+  "name": "Traffic Operations Impact Model",
   "purpose": "Learn the proprietary Traffic Impact Score from ASTraM event features for fast ranking, benchmarking, and explainability.",
   "not_for": "This model is not a measured congestion, vehicle-count, travel-time, or delay-duration predictor.",
   "data_boundary": "No external training data was used.",
